@@ -15,7 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var userType: UISegmentedControl!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBAction func buttonPressed(_ sender: Any) {
+        print(userType.selectedSegmentIndex)
+    }
 }
 
