@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */; };
+		B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E00748284BB36A002607C7 /* SearchTableViewController.swift */; };
 		B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9B828459E870028ABC3 /* AppDelegate.swift */; };
 		B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */; };
 		B9F7C9BD28459E870028ABC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9BC28459E870028ABC3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B9E00748284BB36A002607C7 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		B9F7C9B528459E870028ABC3 /* LocalTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7C9B828459E870028ABC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				B9F7C9C128459E890028ABC3 /* Assets.xcassets */,
 				B9F7C9C328459E890028ABC3 /* LaunchScreen.storyboard */,
 				B9F7C9C628459E890028ABC3 /* Info.plist */,
+				B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */,
+				B9E00748284BB36A002607C7 /* SearchTableViewController.swift */,
 			);
 			path = LocalTour;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				B9F7C9BD28459E870028ABC3 /* ViewController.swift in Sources */,
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
+				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
+				B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
