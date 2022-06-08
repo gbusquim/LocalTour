@@ -11,11 +11,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     let data = ["Restaurant 1", "Restaurant 2", "Restaurant 3", "Accomodation"]
     var filteredData: [String]!
+    var selectedPlace = ""
     
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            self.tableView.delegate = self
+        self.tableView.dataSource = self
         filteredData = data
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -42,12 +45,25 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = filteredData[indexPath.row]
-
         // Configure the cell...
 
         return cell
     }
     
+
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPlace = filteredData[indexPath.row]
+        print(indexPath)
+        self.performSegue(withIdentifier: "playerSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+               let yourNextViewController = (segue.destination as! PlaceViewController)
+               yourNextViewController.placeName = selectedPlace
+               
+        print(yourNextViewController.placeName)
+        }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
         if(searchText == "") {
