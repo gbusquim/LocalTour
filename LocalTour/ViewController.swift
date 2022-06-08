@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func buttonPressed(_ sender: Any) {
-        print(userType.selectedSegmentIndex)
+    
     }
 }
 

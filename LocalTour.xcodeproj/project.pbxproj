@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95A1D2A28502FA1006C649A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A1D2928502FA1006C649A /* Place.swift */; };
 		B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97389E8284FA5E100B438A2 /* TableViewCell.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
 		B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B97389E8284FA5E100B438A2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B9E00748284BB36A002607C7 /* SearchTableViewController.swift */,
 				B9967EDA284BE51800194A60 /* PlaceViewController.swift */,
 				B97389E8284FA5E100B438A2 /* TableViewCell.swift */,
+				B95A1D2928502FA1006C649A /* Place.swift */,
 			);
 			path = LocalTour;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
 				B9F7C9BD28459E870028ABC3 /* ViewController.swift in Sources */,
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
+				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
 				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
 				B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */,

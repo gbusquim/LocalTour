@@ -20,23 +20,16 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             self.tableView.delegate = self
         self.tableView.dataSource = self
         filteredData = data
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         searchBar.delegate = self
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return filteredData.count
     }
 
@@ -54,7 +47,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedPlace = filteredData[indexPath.row]
-        print(indexPath)
         self.performSegue(withIdentifier: "playerSegue", sender: nil)
     }
     
@@ -62,7 +54,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                let yourNextViewController = (segue.destination as! PlaceViewController)
                yourNextViewController.placeName = selectedPlace
                
-        print(yourNextViewController.placeName)
         }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
