@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59B0168528517CB20047570D /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 59B0168428517CB20047570D /* assets */; };
 		B95A1D2A28502FA1006C649A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A1D2928502FA1006C649A /* Place.swift */; };
 		B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97389E8284FA5E100B438A2 /* TableViewCell.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59B0168428517CB20047570D /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B97389E8284FA5E100B438A2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */,
 				B9F7C9BC28459E870028ABC3 /* ViewController.swift */,
 				B9F7C9BE28459E870028ABC3 /* Main.storyboard */,
+				59B0168428517CB20047570D /* assets */,
 				B9F7C9C128459E890028ABC3 /* Assets.xcassets */,
 				B9F7C9C328459E890028ABC3 /* LaunchScreen.storyboard */,
 				B9F7C9C628459E890028ABC3 /* Info.plist */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F7C9C528459E890028ABC3 /* LaunchScreen.storyboard in Resources */,
+				59B0168528517CB20047570D /* assets in Resources */,
 				B9F7C9C228459E890028ABC3 /* Assets.xcassets in Resources */,
 				B9F7C9C028459E870028ABC3 /* Main.storyboard in Resources */,
 			);
