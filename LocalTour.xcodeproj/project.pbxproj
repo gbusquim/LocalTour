@@ -22,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		59B0168428517CB20047570D /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B911738D2851452800B3A869 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B911738F2851456900B3A869 /* PublicArt.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PublicArt.geojson; sourceTree = "<group>"; };
+		B911739128514B0C00B3A869 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B97071492853C9B800D575BC /* MapAnnotationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationDetail.swift; sourceTree = "<group>"; };
 		B97389E8284FA5E100B438A2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B911739328514B3B00B3A869 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B911739128514B0C00B3A869 /* MapAnnotation.swift */,
+				B97071492853C9B800D575BC /* MapAnnotationDetail.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B9F7C9AC28459E870028ABC3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 			children = (
 				B9F7C9B828459E870028ABC3 /* AppDelegate.swift */,
 				B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */,
+				B911739328514B3B00B3A869 /* New Group */,
 				B9F7C9BC28459E870028ABC3 /* ViewController.swift */,
 				B9F7C9BE28459E870028ABC3 /* Main.storyboard */,
 				59B0168428517CB20047570D /* assets */,
@@ -81,6 +94,8 @@
 				B9967EDA284BE51800194A60 /* PlaceViewController.swift */,
 				B97389E8284FA5E100B438A2 /* TableViewCell.swift */,
 				B95A1D2928502FA1006C649A /* Place.swift */,
+				B911738D2851452800B3A869 /* MapViewController.swift */,
+				B911738F2851456900B3A869 /* PublicArt.geojson */,
 			);
 			path = LocalTour;
 			sourceTree = "<group>";
@@ -146,6 +161,7 @@
 				B9F7C9C528459E890028ABC3 /* LaunchScreen.storyboard in Resources */,
 				59B0168528517CB20047570D /* assets in Resources */,
 				B9F7C9C228459E890028ABC3 /* Assets.xcassets in Resources */,
+				B91173902851456900B3A869 /* PublicArt.geojson in Resources */,
 				B9F7C9C028459E870028ABC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,9 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
+				B911739228514B0C00B3A869 /* MapAnnotation.swift in Sources */,
 				B9F7C9BD28459E870028ABC3 /* ViewController.swift in Sources */,
+				B970714A2853C9B800D575BC /* MapAnnotationDetail.swift in Sources */,
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
+				B911738E2851452800B3A869 /* MapViewController.swift in Sources */,
 				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
 				B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */,
