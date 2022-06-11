@@ -8,6 +8,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Kxm-fp-PV4">
+            <objects>
+                <viewController id="0N6-V2-D9s" customClass="MapViewController" customModule="LocalTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ta1-g9-EQf">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-R6-PK6">
+                                <rect key="frame" x="0.0" y="62" width="428" height="776"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH3-OG-jt1">
+                                <rect key="frame" x="141" y="5" width="147" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pesquisar"/>
+                                <connections>
+                                    <segue destination="5Z1-ti-xIr" kind="show" id="hbk-WM-xYK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h7F-Tn-5Ez"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LU7-sA-xBd"/>
+                    <connections>
+                        <outlet property="map" destination="o3m-R6-PK6" id="K10-Xq-3TK"/>
+                        <segue destination="8A0-jI-4MF" kind="show" identifier="mapSegue" id="BdH-Gi-CQi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAV-Zt-fYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272.8971962616822" y="-371.27429805615554"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -63,7 +98,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UZ-Dh-bKq"/>
-                                    <segue destination="5Z1-ti-xIr" kind="showDetail" id="0Dg-7W-w81"/>
+                                    <segue destination="0N6-V2-D9s" kind="show" id="AXB-Ng-OI2"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-H6-plq">
@@ -145,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsS-Mg-HlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="527"/>
+            <point key="canvasLocation" x="-1089" y="946"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UGs-hA-Km8">
@@ -281,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6i-lc-PmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2255.6074766355141" y="352.48380129589634"/>
+            <point key="canvasLocation" x="1566" y="601"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="oWJ-p1-rtp">
@@ -328,7 +363,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WS-LF-Jl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1615" y="-309"/>
+            <point key="canvasLocation" x="2456" y="-908"/>
         </scene>
         <!--Place View Controller-->
         <scene sceneID="LmN-R2-yyM">
@@ -410,9 +445,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7a-P9-FG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652.3364485981306" y="-412.7429805615551"/>
+            <point key="canvasLocation" x="3436" y="-404"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BdH-Gi-CQi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button.png" width="120" height="120"/>
         <image name="bed-big.png" width="56.25" height="45"/>

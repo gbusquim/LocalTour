@@ -1,10 +1,3 @@
-//
-//  MapAnnotation.swift
-//  LocalTour
-//
-//  Created by user221918 on 6/8/22.
-//
-
 import Foundation
 import MapKit
 import Contacts
