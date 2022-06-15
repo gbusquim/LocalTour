@@ -210,7 +210,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UZ-Dh-bKq"/>
-                                    <segue destination="qRL-SC-20h" kind="showDetail" animates="NO" id="OM6-un-XEI"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-H6-plq">
@@ -221,20 +220,6 @@
                                     <segment title="Owner"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-mC-IDJ" userLabel="Sign In - - OWNER">
-                                <rect key="frame" x="101" y="661" width="213" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SignIn - OWNER">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGU-FZ-W2P"/>
-                                    <segue destination="yCY-He-Xzo" kind="show" id="ROC-ZU-3RZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don’t have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oif-2N-KmC">
                                 <rect key="frame" x="73" y="582" width="179" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,11 +243,13 @@
                         <outlet property="loginField" destination="vg0-gG-ABl" id="88E-8J-e74"/>
                         <outlet property="passwordField" destination="vg0-gG-ABl" id="W7H-t6-1Zq"/>
                         <outlet property="userType" destination="EVV-H6-plq" id="VH1-Bf-Mji"/>
+                        <segue destination="qRL-SC-20h" kind="show" identifier="loginTouristSegue" id="Kw2-sQ-YcZ"/>
+                        <segue destination="yCY-He-Xzo" kind="show" identifier="loginOwnerSegue" id="cH8-ir-SKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="57"/>
+            <point key="canvasLocation" x="529" y="-239"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="SHy-sp-izx">
@@ -309,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="-1089" y="946"/>
         </scene>
-        <!--View Controller-->
+        <!--Owner Profile View Controller-->
         <scene sceneID="UGs-hA-Km8">
             <objects>
-                <viewController id="yCY-He-Xzo" sceneMemberID="viewController">
+                <viewController id="yCY-He-Xzo" customClass="OwnerProfileViewController" customModule="LocalTour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9M8-ub-bzP">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,14 +389,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Market Z" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-Wa-Psh">
-                                <rect key="frame" x="28" y="446" width="345" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94158631559999995" green="0.61463820930000002" blue="0.12926015260000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurants-big-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="xjG-Um-OFW">
                                 <rect key="frame" x="321" y="340" width="34" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -432,6 +411,14 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Market Z" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-Wa-Psh">
+                                <rect key="frame" x="28" y="446" width="345" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94158631559999995" green="0.61463820930000002" blue="0.12926015260000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -688,8 +675,8 @@
     <resources>
         <image name="add-new-place-button.png" width="120" height="120"/>
         <image name="bed-big.png" width="56.25" height="45"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="restaurants-big-icon.png" width="48.75" height="60"/>
         <image name="shopping-cart-big.png" width="49.5" height="60"/>
         <systemColor name="systemBackgroundColor">

@@ -19,7 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func buttonPressed(_ sender: Any) {
-    
+        
+        //TODO: colocar metodo de login
+        if (userType.selectedSegmentIndex ==  0) {
+        performSegue(withIdentifier: "loginTouristSegue", sender: self)
+        }
+        else if(userType.selectedSegmentIndex == 1) {
+            performSegue(withIdentifier: "loginOwnerSegue", sender: self)
+        }
     }
 }
 

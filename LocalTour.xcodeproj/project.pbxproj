@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
+		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
 		B95A1D2A28502FA1006C649A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A1D2928502FA1006C649A /* Place.swift */; };
 		B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97389E8284FA5E100B438A2 /* TableViewCell.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
 		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B97389E8284FA5E100B438A2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				B97389E8284FA5E100B438A2 /* TableViewCell.swift */,
 				B9E00748284BB36A002607C7 /* SearchTableViewController.swift */,
 				B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */,
+				B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */,
 				B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
 				B9F7C9BD28459E870028ABC3 /* LoginViewController.swift in Sources */,
