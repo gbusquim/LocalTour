@@ -35,9 +35,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! SearchPlaceTableViewCell
         
-        cell.textLabel?.text = filteredData[indexPath.row]
+        cell.resultLabel.text? = filteredData[indexPath.row]
+        //TODO: alterar a imagem/cor de fundo de acordo com os dados do place
+        cell.resultImage.image = UIImage(named: "Mural")
+        cell.contentView.backgroundColor = UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
+        
         // Configure the cell...
 
         return cell

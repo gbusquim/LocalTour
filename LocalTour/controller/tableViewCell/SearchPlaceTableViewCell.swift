@@ -1,14 +1,16 @@
 //
-//  TableViewCell.swift
+//  SearchPlaceTableViewCell.swift
 //  LocalTour
 //
-//  Created by user221918 on 6/7/22.
+//  Created by user221918 on 6/15/22.
 //
 
 import UIKit
 
-class PTableViewCell: UITableViewCell {
+class SearchPlaceTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var resultImage: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

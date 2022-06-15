@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
+		B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */; };
 		B95A1D2A28502FA1006C649A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A1D2928502FA1006C649A /* Place.swift */; };
-		B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97389E8284FA5E100B438A2 /* TableViewCell.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
 		B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */; };
 		B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E00748284BB36A002607C7 /* SearchTableViewController.swift */; };
@@ -28,8 +28,8 @@
 
 /* Begin PBXFileReference section */
 		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
+		B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceTableViewCell.swift; sourceTree = "<group>"; };
 		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		B97389E8284FA5E100B438A2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B9E00748284BB36A002607C7 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -78,13 +78,21 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		B91742C7285A64330098AB01 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
 		B98F028C285955E30074D0A8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				B91742C7285A64330098AB01 /* tableViewCell */,
 				B911739328514B3B00B3A869 /* map */,
 				B9967EDA284BE51800194A60 /* PlaceViewController.swift */,
 				B9F7C9BC28459E870028ABC3 /* LoginViewController.swift */,
-				B97389E8284FA5E100B438A2 /* TableViewCell.swift */,
 				B9E00748284BB36A002607C7 /* SearchTableViewController.swift */,
 				B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */,
 				B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */,
@@ -212,9 +220,9 @@
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
 				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
-				B97389E9284FA5E100B438A2 /* TableViewCell.swift in Sources */,
 				B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */,
 				B9E60DAB28554EFB00AAB18C /* MapViewController.swift in Sources */,
+				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
