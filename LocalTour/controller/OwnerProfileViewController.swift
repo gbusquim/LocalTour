@@ -25,5 +25,11 @@ class OwnerProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func tmpDeleteOwnerAction(_ sender: Any) {
+        performSegue(withIdentifier: "segueTMPdeleteOwnerProfile", sender: self)
+    }
+    
+    @IBAction func tmpGoToNext(_ sender: Any) {
+        performSegue(withIdentifier: "segueTMPdeleteOwnerProfile", sender: self)
+    }
 }

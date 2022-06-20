@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
+		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
+		59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FCC2860D5C200C12C74 /* Owner.swift */; };
+		59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */; };
 		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
 		B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */; };
 		B91742CF285A83DE0098AB01 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742CE285A83DE0098AB01 /* ReviewTableViewCell.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
+		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerProfileScreenTableViewController.swift; path = LocalTour/controller/OwnerProfileScreenTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
 		B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceTableViewCell.swift; sourceTree = "<group>"; };
 		B91742CE285A83DE0098AB01 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		B98F028C285955E30074D0A8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */,
 				B91742C7285A64330098AB01 /* tableViewCell */,
 				B911739328514B3B00B3A869 /* map */,
 				B9967EDA284BE51800194A60 /* PlaceViewController.swift */,
@@ -110,6 +119,9 @@
 			children = (
 				B95A1D2928502FA1006C649A /* Place.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
+				598DCAB5285BC2F40018C4DB /* User.swift */,
+				59C88FCC2860D5C200C12C74 /* Owner.swift */,
+				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -225,12 +237,16 @@
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
 				B9E60DA928554E7C00AAB18C /* MapIconDetail.swift in Sources */,
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
+				598DCAB6285BC2F40018C4DB /* User.swift in Sources */,
 				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,
 				B91742D1285A87710098AB01 /* Review.swift in Sources */,
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
 				B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */,
 				B9E60DAB28554EFB00AAB18C /* MapViewController.swift in Sources */,
+				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
+				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
+				59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
