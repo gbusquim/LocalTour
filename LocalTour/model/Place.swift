@@ -14,6 +14,8 @@ class Place {
     var score: Float
     var phoneNumber: String
     var adress: String
+//    var cnpj: String // TODO: add cnpj
+//    var owner: Owner // TODO: add owner
     
     init(id: Int,name:String, description:String, score: Float, phoneNumber: String, adress: String){
         self.id = id
