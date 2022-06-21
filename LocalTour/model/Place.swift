@@ -65,7 +65,7 @@ class Place: ActivityObservableProtocol {
     func notifyObserver() {
         let latestReview = self.userReviews.last
         print(latestReview)
-        // TODO-FIX: ERROR!!!
-//        self.ownerObserver.forEach({$0.onUpdate(review: latestReview)})
+//         TODO-FIX: ERROR!!!
+        self.ownerObserver.forEach({$0.onUpdate(review: latestReview!)})
     }
 }
