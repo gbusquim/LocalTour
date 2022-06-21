@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593FC32D2861365800079B70 /* OnwerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* OnwerObserver.swift */; };
+		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
 		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		593FC32C2861365800079B70 /* OnwerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnwerObserver.swift; path = LocalTour/model/OnwerObserver.swift; sourceTree = SOURCE_ROOT; };
+		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
 		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
+				593FC32C2861365800079B70 /* OnwerObserver.swift */,
+				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				B9F7C9BD28459E870028ABC3 /* LoginViewController.swift in Sources */,
 				B91742CF285A83DE0098AB01 /* ReviewTableViewCell.swift in Sources */,
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
+				59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */,
 				B9E60DA928554E7C00AAB18C /* MapIconDetail.swift in Sources */,
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
 				598DCAB6285BC2F40018C4DB /* User.swift in Sources */,
@@ -253,6 +260,7 @@
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
 				B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */,
 				B9E60DAB28554EFB00AAB18C /* MapViewController.swift in Sources */,
+				593FC32D2861365800079B70 /* OnwerObserver.swift in Sources */,
 				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,

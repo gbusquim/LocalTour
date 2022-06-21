@@ -17,6 +17,6 @@ class Traveler:User {
     }
     
     func writeReview(place:Place, review:Review) {
-        print(2)	
+        print(2)
     }
 }
