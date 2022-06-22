@@ -4,35 +4,15 @@
     {
       "type": "Feature",
       "properties": {
-        "location": "Vamos?",
-        "latitude": "-22.974532150362137",
-        "description": "Um lugar",
-        "thumb": null,
-        "credit": "Funded by the Works Progress Administration",
-        "objectid": "Restaurant 1 - ",
-        "creator": "Robert Lee Eskridge",
-        "longitude": "-43.2257270313408",
-        "imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
-        "date": "1935",
-        "discipline": "Mural",
         "title": "Restaurant 1",
-        "access": "Limited"
+        "imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+        "objectid": "Restaurant 1 - "
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          [
-            -43.2257270313408,
-            -22.974532150362137
-          ],
-          [
-            -23.027809, 
-            -43.466053
-          ],
-          [
-            -22.978448,
-            -43.229669
-          ]
+          -43.2257270313408,
+          -22.974532150362137
         ]
       }
     }
