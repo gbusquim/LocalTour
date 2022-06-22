@@ -1,20 +1,246 @@
 {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Restaurant 1",
-        "imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
-        "objectid": "Restaurant 1 - "
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.2257270313408,
-          -22.974532150362137
-        ]
-      }
-    }
-  ]
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 1",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#1"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.030405, -43.479075]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 2",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.030113, -43.475366]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 3",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#3"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.021095, -43.458732]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 4",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#4"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.010607, -43.453607]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Accomodation 5",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "accomodation-id#5"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.000416, -43.416852]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 6",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#6"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-23.000135, -43.380091]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 7",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#7"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.986949, -43.36858]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Accomodation 8",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "accomodation-id#8"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.884833, -43.227766]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 9",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#9"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.903375, -43.186466]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 10",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#10"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.909741, -43.221177]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 11",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#11"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.972475, -43.2033]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 12",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#12"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.973775, -43.205827]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 13",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#13"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.935024, -43.518246]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Accomodation 14",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "accomodation-id#14"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.96682, -43.231357]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 15",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#15"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.961865, -43.215135]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 16",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#16"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.940811, -43.176289]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 17",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#17"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.916374, -43.209337]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 18",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#18"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.92361, -43.229545]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 19",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#19"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.885643, -43.300395]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Accomodation 20",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "accomodation-id#20"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.877125, -43.33793]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Restaurant 21",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "restaurant-id#21"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.978448, -43.229669]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"title": "Shopping 22",
+			"imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+			"objectid": "shopping-id#22"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-22.935825, -43.174294]
+		}
+	}]
 }
