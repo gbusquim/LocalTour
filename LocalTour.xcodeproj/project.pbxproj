@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		593FC32D2861365800079B70 /* OnwerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* OnwerObserver.swift */; };
+		593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* TravelerObserver.swift */; };
 		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
 		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
+		598FB443286A68D000CA404D /* DataDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB442286A68D000CA404D /* DataDemo.swift */; };
+		598FB445286A6B4300CA404D /* AlertNewPlaceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */; };
+		598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */; };
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FCC2860D5C200C12C74 /* Owner.swift */; };
 		59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */; };
 		59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */; };
 		59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */; };
 		59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD42860FB4600C12C74 /* DataPlaces.swift */; };
+		59D0E2C128664F7D00D832FA /* DaoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0E2C028664F7D00D832FA /* DaoOwner.swift */; };
+		59D0E2C328664FFB00D832FA /* DaoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0E2C228664FFB00D832FA /* DaoPlace.swift */; };
+		59D0E2C52866501500D832FA /* DaoTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0E2C42866501500D832FA /* DaoTraveler.swift */; };
+		59D0E2C72866502D00D832FA /* DaoReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0E2C62866502D00D832FA /* DaoReview.swift */; };
 		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
 		B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */; };
 		B91742CF285A83DE0098AB01 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742CE285A83DE0098AB01 /* ReviewTableViewCell.swift */; };
@@ -38,15 +45,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		593FC32C2861365800079B70 /* OnwerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnwerObserver.swift; path = LocalTour/model/OnwerObserver.swift; sourceTree = SOURCE_ROOT; };
+		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/model/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
+		598FB442286A68D000CA404D /* DataDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDemo.swift; sourceTree = "<group>"; };
+		598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNewPlaceStrategy.swift; sourceTree = "<group>"; };
+		598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesNotificationStrategy.swift; sourceTree = "<group>"; };
 		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerProfileScreenTableViewController.swift; path = LocalTour/controller/OwnerProfileScreenTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewController.swift; sourceTree = "<group>"; };
 		59C88FD42860FB4600C12C74 /* DataPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlaces.swift; path = LocalTour/model/DataPlaces.swift; sourceTree = SOURCE_ROOT; };
+		59D0E2C028664F7D00D832FA /* DaoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoOwner.swift; sourceTree = "<group>"; };
+		59D0E2C228664FFB00D832FA /* DaoPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoPlace.swift; sourceTree = "<group>"; };
+		59D0E2C42866501500D832FA /* DaoTraveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoTraveler.swift; sourceTree = "<group>"; };
+		59D0E2C62866502D00D832FA /* DaoReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoReview.swift; sourceTree = "<group>"; };
 		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
 		B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceTableViewCell.swift; sourceTree = "<group>"; };
 		B91742CE285A83DE0098AB01 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59D0E2BF28664F0D00D832FA /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				59D0E2C028664F7D00D832FA /* DaoOwner.swift */,
+				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
+				59D0E2C228664FFB00D832FA /* DaoPlace.swift */,
+				59D0E2C42866501500D832FA /* DaoTraveler.swift */,
+				59D0E2C62866502D00D832FA /* DaoReview.swift */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
 		B911739328514B3B00B3A869 /* map */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +157,14 @@
 			children = (
 				B95A1D2928502FA1006C649A /* Place.swift */,
 				59C88FD42860FB4600C12C74 /* DataPlaces.swift */,
+				598FB442286A68D000CA404D /* DataDemo.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
-				593FC32C2861365800079B70 /* OnwerObserver.swift */,
+				593FC32C2861365800079B70 /* TravelerObserver.swift */,
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
+				598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -160,6 +188,7 @@
 		B9F7C9B728459E870028ABC3 /* LocalTour */ = {
 			isa = PBXGroup;
 			children = (
+				59D0E2BF28664F0D00D832FA /* framework */,
 				B9DA67BD2859545600C56C4B /* model */,
 				B9F7C9B828459E870028ABC3 /* AppDelegate.swift */,
 				B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */,
@@ -244,14 +273,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */,
 				B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */,
 				B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */,
 				59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
+				598FB443286A68D000CA404D /* DataDemo.swift in Sources */,
 				B9F7C9BD28459E870028ABC3 /* LoginViewController.swift in Sources */,
 				B91742CF285A83DE0098AB01 /* ReviewTableViewCell.swift in Sources */,
 				B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */,
 				59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */,
+				598FB445286A6B4300CA404D /* AlertNewPlaceStrategy.swift in Sources */,
+				59D0E2C128664F7D00D832FA /* DaoOwner.swift in Sources */,
+				59D0E2C72866502D00D832FA /* DaoReview.swift in Sources */,
 				B9E60DA928554E7C00AAB18C /* MapIconDetail.swift in Sources */,
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
 				598DCAB6285BC2F40018C4DB /* User.swift in Sources */,
@@ -260,13 +294,15 @@
 				B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */,
 				B9BAB0BC284AC07D0096F3E3 /* MenuViewController.swift in Sources */,
 				B9E60DAB28554EFB00AAB18C /* MapViewController.swift in Sources */,
-				593FC32D2861365800079B70 /* OnwerObserver.swift in Sources */,
+				59D0E2C52866501500D832FA /* DaoTraveler.swift in Sources */,
+				593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */,
 				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,
 				59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */,
 				59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */,
+				59D0E2C328664FFB00D832FA /* DaoPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
