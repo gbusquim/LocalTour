@@ -10,9 +10,20 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var loginField: UITextField!
+    var strategyNotification:NewPlacesNotificationStrategy?
+    var data:DataDemo?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.data = DataDemo.getInstance()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //Se houver reviews novas nos places do owner conectado
+        self.strategyNotification = AlertNewPlaceStrategy(view: self)
+        strategyNotification!.strategy()
     }
 
     @IBOutlet weak var userType: UISegmentedControl!

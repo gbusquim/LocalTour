@@ -52,7 +52,7 @@ class OwnerPlacesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOwnersPlace", for: indexPath) as! OwnerPlacesCollectionViewCell
         
-        cell.IconBigPlaceType.image = UIImage(named: DataPlaces.places[indexPath.row].imgTypePath ?? "bed-big")
+        cell.IconBigPlaceType.image = UIImage(named: DataPlaces.places[indexPath.row].imgName ?? "bed-big")
         cell.lblPlaceName.text = DataPlaces.places[indexPath.row].name
     
         // Configure the cell

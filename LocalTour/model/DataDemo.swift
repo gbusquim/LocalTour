@@ -14,9 +14,9 @@ class DataDemo {
     var owner:Owner?
     
     private init(){
+        createOnwer()
         createPlaces()
         createTraveler()
-        createOnwer()
     }
     
     static func getInstance() ->DataDemo{
@@ -28,8 +28,19 @@ class DataDemo {
     }
     
     func createPlaces(){
-        var place = Place(id: 1, name: "Place1", description: "Decription Place 1", score: 5, phoneNumber: "99999999", adress: "Rua XXXX ")
-        places.append(place)
+//        var place = Place(id: 1, name: "Place1", description: "Decription Place 1", score: 5, phoneNumber: "99999999", adress: "Rua XXXX ")
+//        places.append(place)
+        let p1 = Place(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "restaurants-big")
+        let p2 = Place(id: 1,name: "Restaurant 2",description: "Restaurant 2 e bom",score: 2,phoneNumber: "123",address: "Rua b", imgName: "restaurants-big")
+        let p3 = Place(id: 1,name: "Shopping 1",description: "Restaurant 3 e bom",score: 3,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
+        let p4 = Place(id: 1,name: "Hostel 1",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "bed-big")
+        let p5 = Place(id: 1,name: "Shopping 2",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
+        places.append(p1)
+        places.append(p2)
+        places.append(p3)
+        places.append(p4)
+        places.append(p5)
+        
     }
     
     func createTraveler(){

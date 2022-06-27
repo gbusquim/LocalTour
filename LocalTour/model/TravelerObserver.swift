@@ -7,7 +7,7 @@
 
 import Foundation
 	
-protocol OnwerObserverProtocol {
+protocol TravelerObserverProtocol {
 //    var id: Int {get set}
     func onUpdate(review: Review)
 	    

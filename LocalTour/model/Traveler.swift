@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Traveler:User {
+class Traveler:User, TravelerObserverProtocol {
     // var currPosition: Float[]
     // var signedIn: Bool
     // Should be in User? In case user doesn`t login we still get its position? Tho email, password etc is not required
@@ -18,5 +18,13 @@ class Traveler:User {
     
     func writeReview(place:Place, review:Review) {
         print(2)
+    }
+    
+    func onUpdate(review: Review) {
+        if (review.score < 5) {
+            print("Need to improve")
+            print(review.text)
+            // TODO: Use SMS-Notification HERE
+        }
     }
 }

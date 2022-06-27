@@ -7,35 +7,52 @@
 
 import Foundation
 
-class Place: ActivityObservableProtocol {
+class Place {
     var id: Int
     var name: String
     var description: String
     var score: Float // TODO: deixar de acordo com o diagrama da arq (avgRating) -> Ou mudar no diagrama pra ficar igual aqui, o importante eh manter a consistencia
     var phoneNumber: String
-    var adress: String?
-//    var cnpj: String // TODO: add cnpj
-//    var owner: Owner // TODO: add owner
+    var address: String?
+    var cnpj: String
+    var owner: String // TODO: change to onwerID (cpf)
+    var imgName: String?
     var userReviews: [Review]
+    // TODO: Fix this - Add composite with subtypes...
     
     // Apesar de sempre termos apenas um observer que eh o proprio Owner...
 //    private var ownerObserver: [OnwerObserverProtocol] // TODO: How to do this? (Need to be in constructor?)
     
-    // TODO: Fix this, need to create subtypes classes...
-    var imgTypePath: String?
+    
+    
     
     // TODO: Conferir se eh assim... Como owner jah eh uma var de Place precisa de um OwnerObserverProtocol?
-    private var ownerObserver = [OnwerObserverProtocol]()
+//    private var ownerObserver = [OnwerObserverProtocol]()
     
-    init(id: Int,name:String, description:String, score: Float, phoneNumber: String, adress: String, imgTypePath:String? = "", userReviews:[Review]? = []){
+    init(id: Int,name:String, description:String, score: Float, phoneNumber: String, address: String, imgName:String? = "", userReviews:[Review]? = []){
         self.id = id
         self.name = name
         self.description = description
         self.score = score
         self.phoneNumber = phoneNumber
-        self.adress = adress
-        self.imgTypePath = imgTypePath
+        self.address = address
+        self.imgName = imgName
         self.userReviews = userReviews ?? [] // TODO: fix this
+        self.owner = ""
+        self.cnpj = ""
+    }
+    
+    init(id: Int, name:String, description:String, score: Float, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = []){
+        self.id = id
+        self.name = name
+        self.description = description
+        self.score = score
+        self.phoneNumber = phoneNumber
+        self.address = address
+        self.imgName = imgName
+        self.userReviews = userReviews ?? [] // TODO: fix this
+        self.owner = owner
+        self.cnpj = cnpj
     }
     
     func addNewReview(user:Traveler, review:Review) {
@@ -49,23 +66,23 @@ class Place: ActivityObservableProtocol {
 //        notifyObserver(review:Review)
         //   TODO: Posso usar o notify assim ou precisa ser sem parametros?
         
-        notifyObserver()
-        // TODO: Usar assim e apenas passar o ultimo item da lista?
-        
+//        notifyObserver()
+//        // TODO: Usar assim e apenas passar o ultimo item da lista?
+//        
     }
-    
-    func registerObserver() {
-        
-    }
-    
-    func removeObserver() {
-        
-    }
-    
-    func notifyObserver() {
-        let latestReview = self.userReviews.last
-        print(latestReview)
-//         TODO-FIX: ERROR!!!
-        self.ownerObserver.forEach({$0.onUpdate(review: latestReview!)})
-    }
+//    
+//    func registerObserver() {
+//        
+//    }
+//    
+//    func removeObserver() {
+//        
+//    }
+//    
+//    func notifyObserver() {
+//        let latestReview = self.userReviews.last
+//        print(latestReview)
+////         TODO-FIX: ERROR!!!
+//        self.ownerObserver.forEach({$0.onUpdate(review: latestReview!)})
+//    }
 }
