@@ -43,8 +43,8 @@ class OwnerPlacesCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-//        return Owner.places.count // TODO use owner.places
-        return DataPlaces.places.count
+//        return Owner.places.count // TODO: use owner.places
+        return DataPlaces.places.count  // TODO: use DataDemo instead
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -22,7 +22,9 @@ class OwnerProfileViewController: UIViewController {
     func tmpCreatePlaces() {
         let p6 = Place(id: 6,name: "Newest Place",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "bed-big")
 
-        DataPlaces.places.append(p6)
+        self.data?.places.append(p6)
+        DataPlaces.places.append(p6)  // TODO: stop using DataPlaces
+        // TODO: Send/make notifications for new place created
     }
 
     /*
@@ -39,7 +41,6 @@ class OwnerProfileViewController: UIViewController {
     }
     
     @IBAction func tmpGoToNext(_ sender: Any) {
-        self.tmpCreatePlaces()
         performSegue(withIdentifier: "segueTMPdeleteOwnerProfile", sender: self)
     }
     
