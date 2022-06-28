@@ -68,7 +68,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         }
         else {
             for place in self.data!.places {
-                if(place.name.lowercased().contains(searchText.lowercased())) {
+                if(place.name.lowercased().starts(with: searchText.lowercased())) {
                     filteredData.append(place)
                 }
             }
