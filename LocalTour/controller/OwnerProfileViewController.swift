@@ -13,7 +13,7 @@ class OwnerProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = DataDemo.getInstance()
+        self.data = DataDemo.getInstance() // TODO: Utilizar DAO aqui ao inves de acessar o Singleton direto?
         DataPlaces.places = self.data!.places
         // Do any additional setup after loading the view.
     }

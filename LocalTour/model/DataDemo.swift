@@ -19,7 +19,7 @@ class DataDemo {
         createTraveler()
     }
     
-    static func getInstance() ->DataDemo{
+    static func getInstance() -> DataDemo {
         if (DataDemo.instance == nil){
             DataDemo.instance = DataDemo()
             
