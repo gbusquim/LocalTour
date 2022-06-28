@@ -17,10 +17,13 @@ class OwnerProfileScreenTableViewController: UITableViewController {
 //        Place(id: 1,name: "Accomodation",description: "Accomodation e bom",score: 1,phoneNumber: "123",adress: "Rua b")
 //    ]
   
-    var places = ["rest 1", "rest 2", "rest 3"]
+    var places = [Place]()
+    var data:DataDemo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.data = DataDemo.getInstance()
+        places = self.data!.places
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,7 +47,7 @@ class OwnerProfileScreenTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerProfileScreen2", for: indexPath)
         
-        cell.textLabel!.text = places[indexPath.row]
+        cell.textLabel!.text = places[indexPath.row].name
         // Configure the cell...
 
         return cell

@@ -9,8 +9,9 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
-    let data = ["Restaurant 1", "Restaurant 2", "Restaurant 3", "Accomodation"]
-    var filteredData: [String]!
+//    let data = ["Restaurant 1", "Restaurant 2", "Restaurant 3", "Accomodation"]
+    var data:DataDemo?
+    var filteredData: [Place]!
     var selectedPlace = ""
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,7 +20,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
             self.tableView.delegate = self
         self.tableView.dataSource = self
-        filteredData = data
+        self.data = DataDemo.getInstance()
+        filteredData = self.data!.places
         searchBar.delegate = self
     }
 
@@ -37,7 +39,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! SearchPlaceTableViewCell
         
-        cell.resultLabel.text? = filteredData[indexPath.row]
+        cell.resultLabel.text? = filteredData[indexPath.row].name
         //TODO: alterar a imagem/cor de fundo de acordo com os dados do place
         cell.resultImage.image = UIImage(named: "Mural")
         cell.contentView.backgroundColor = UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
@@ -50,7 +52,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlace = filteredData[indexPath.row]
+        selectedPlace = filteredData[indexPath.row].name
         self.performSegue(withIdentifier: "playerSegue", sender: nil)
     }
     
@@ -62,11 +64,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
         if(searchText == "") {
-            filteredData = data
+            filteredData = self.data?.places
         }
         else {
-            for place in data {
-                if(place.lowercased().contains(searchText.lowercased())) {
+            for place in self.data!.places {
+                if(place.name.lowercased().contains(searchText.lowercased())) {
                     filteredData.append(place)
                 }
             }

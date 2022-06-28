@@ -11,8 +11,6 @@ private let reuseIdentifier = "Cell"
 
 class OwnerPlacesCollectionViewController: UICollectionViewController {
 
-    var places = ["restaurant 1", "hostel 1", "restaurant 2", "shop 1", "hostel 2"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,12 +44,14 @@ class OwnerPlacesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
 //        return Owner.places.count // TODO use owner.places
-        return places.count
+        return DataPlaces.places.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOwnersPlace", for: indexPath) as! OwnerPlacesCollectionViewCell
         
+//        cell.IconBigPlaceType.image = UIImage(named: DataPlaces.places[indexPath.row].imgName ?? "bed-big")
+//        cell.lblPlaceName.text = DataPlaces.places[indexPath.row].name
         cell.IconBigPlaceType.image = UIImage(named: DataPlaces.places[indexPath.row].imgName ?? "bed-big")
         cell.lblPlaceName.text = DataPlaces.places[indexPath.row].name
     
