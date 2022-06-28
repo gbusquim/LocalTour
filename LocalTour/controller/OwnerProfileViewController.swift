@@ -20,7 +20,8 @@ class OwnerProfileViewController: UIViewController {
     
     // TODO: remover dados mockados (lembrar de atualizar OwnerProfile...Controllers)
     func tmpCreatePlaces() {
-        let p6 = Place(id: 6,name: "Newest Place",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "bed-big")
+        let rc = RestaurantCreator()
+        let p6 = rc.factoryMethod(id: 6,name: "Newest Place",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "111",imgName:"imagem")
 
         self.data?.places.append(p6)
         DataPlaces.places.append(p6)  // TODO: stop using DataPlaces
