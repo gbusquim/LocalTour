@@ -49,4 +49,9 @@ class OwnerProfileViewController: UIViewController {
         self.tmpCreatePlaces()
         performSegue(withIdentifier: "segueTMPPlaces", sender: self)
     }
+    
+    @IBAction func createPlace(_ sender: Any) {
+        performSegue(withIdentifier: "placeCreationSegue", sender: self)
+    }
+    
 }
