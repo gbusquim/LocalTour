@@ -32,6 +32,7 @@
 		B95A1D2A28502FA1006C649A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A1D2928502FA1006C649A /* Place.swift */; };
 		B98BAE2C286B8C6100165C49 /* PlaceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAE2B286B8C6100165C49 /* PlaceMethods.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
+		B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8633E286C9C2500E54B43 /* CreateAccountViewController.swift */; };
 		B9B2AD01286B40AA0048596E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD00286B40AA0048596E /* Restaurant.swift */; };
 		B9B2AD03286B41840048596E /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD02286B41840048596E /* Shopping.swift */; };
 		B9B2AD05286B42400048596E /* RestaurantCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD04286B42400048596E /* RestaurantCreator.swift */; };
@@ -76,6 +77,7 @@
 		B95A1D2928502FA1006C649A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B98BAE2B286B8C6100165C49 /* PlaceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMethods.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		B9A8633E286C9C2500E54B43 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B9B2AD00286B40AA0048596E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B9B2AD02286B41840048596E /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		B9B2AD04286B42400048596E /* RestaurantCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCreator.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				B9BAB0BB284AC07D0096F3E3 /* MenuViewController.swift */,
 				B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */,
 				B9137DB7286BC4060061A0B2 /* TouristProfileViewController.swift */,
+				B9A8633E286C9C2500E54B43 /* CreateAccountViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */,
 				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
 				B9B2AD09286B43290048596E /* ShoppingCreator.swift in Sources */,
+				B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */,
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,

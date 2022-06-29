@@ -9,12 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="sAW-Rn-shl">
             <objects>
-                <viewController id="X28-YY-t9p" sceneMemberID="viewController">
+                <viewController id="X28-YY-t9p" customClass="CreateAccountViewController" customModule="LocalTour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PhO-Bw-qIw">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg9-Ab-vFE">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="80" y="561" width="268" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" red="0.84705882349999995" green="0.85882352939999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,13 +79,14 @@
                                 <rect key="frame" x="81" y="654" width="266" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                <buttonConfiguration key="configuration" style="plain" title="Create Account">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDE-v2-cwv"/>
+                                    <action selector="createAccount:" destination="X28-YY-t9p" eventType="touchUpInside" id="KIm-yx-b4Y"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AWN-gv-2d7">
@@ -96,25 +97,19 @@
                                     <segment title="Owner"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-4g-80w">
-                                <rect key="frame" x="82" y="793" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-1U-Iwq">
-                                <rect key="frame" x="208" y="784" width="95" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
-                                    <backgroundConfiguration key="background"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3so-tt-15u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gra-8x-Yaf"/>
+                    <connections>
+                        <outlet property="cpfField" destination="fIy-M2-a6N" id="oXV-Uv-0A4"/>
+                        <outlet property="emailField" destination="Vsb-LA-Aqb" id="CLL-oh-Tl7"/>
+                        <outlet property="nameField" destination="T3P-Gg-zCI" id="Nws-rG-Ifz"/>
+                        <outlet property="passwordField" destination="6nH-Hn-iZI" id="C0Z-gK-6tU"/>
+                        <outlet property="userType" destination="AWN-gv-2d7" id="7od-MT-7CO"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="accountCreatedLogin" id="ddA-bs-cyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seu-nC-TWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +177,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-ze-vna">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-ze-vna">
                                 <rect key="frame" x="73" y="357" width="268" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -243,9 +238,12 @@
                                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5l-RP-Zn3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don’t have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oif-2N-KmC">
-                                <rect key="frame" x="117" y="588" width="179" height="21"/>
+                                <rect key="frame" x="117" y="592" width="179" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -257,11 +255,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="DYu-gg-Opj"/>
                     <connections>
-                        <outlet property="loginField" destination="vg0-gG-ABl" id="88E-8J-e74"/>
-                        <outlet property="passwordField" destination="vg0-gG-ABl" id="W7H-t6-1Zq"/>
+                        <outlet property="emailField" destination="ML9-ze-vna" id="bMg-Wc-2wE"/>
+                        <outlet property="passwordField" destination="vg0-gG-ABl" id="dMW-cu-8Ef"/>
                         <outlet property="userType" destination="EVV-H6-plq" id="VH1-Bf-Mji"/>
                         <segue destination="qRL-SC-20h" kind="show" identifier="loginTouristSegue" id="Kw2-sQ-YcZ"/>
                         <segue destination="yCY-He-Xzo" kind="show" identifier="loginOwnerSegue" id="cH8-ir-SKY"/>
+                        <segue destination="X28-YY-t9p" kind="show" identifier="createAccountSegue" id="ozr-2C-Kfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -844,6 +843,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7uE-3x-Jnd"/>
+        <segue reference="ddA-bs-cyw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button.png" width="120" height="120"/>

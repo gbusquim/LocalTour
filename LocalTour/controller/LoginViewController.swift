@@ -8,8 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var loginField: UITextField!
+    
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var userType: UISegmentedControl!
+    @IBOutlet weak var passwordField: UITextField!
+  
+    
     var strategyNotification:NewPlacesNotificationStrategy?
     var data:DataDemo?
     override func viewDidLoad() {
@@ -26,10 +31,12 @@ class ViewController: UIViewController {
         strategyNotification!.strategy()
     }
 
-    @IBOutlet weak var userType: UISegmentedControl!
-    @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func login(_ sender: Any) {
+        
+        print(emailField.text!)
+        print(passwordField.text!)
+        print(userType.selectedSegmentIndex)
         
         //TODO: colocar metodo de login
         if (userType.selectedSegmentIndex ==  0) {
@@ -43,5 +50,10 @@ class ViewController: UIViewController {
     @IBAction func continueWithoutLogin(_ sender: Any) {
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
+    
+    @IBAction func createAccount(_ sender: Any) {
+        performSegue(withIdentifier: "createAccountSegue", sender: self)
+    }
+    
 }
 
