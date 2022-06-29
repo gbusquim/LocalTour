@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userType: UISegmentedControl!
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBAction func buttonPressed(_ sender: Any) {
+    @IBAction func login(_ sender: Any) {
         
         //TODO: colocar metodo de login
         if (userType.selectedSegmentIndex ==  0) {
@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         else if(userType.selectedSegmentIndex == 1) {
             performSegue(withIdentifier: "loginOwnerSegue", sender: self)
         }
+    }
+    
+    @IBAction func continueWithoutLogin(_ sender: Any) {
+        performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
 }
 
