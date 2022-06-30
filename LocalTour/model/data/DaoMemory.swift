@@ -19,6 +19,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         self.data = DataDemo.getInstance()
     }
     
+    // Get / Read Instances
     static func getInstance() -> DaoMemory {
         if (DaoMemory.instance == nil) {
             DaoMemory.instance = DaoMemory()
@@ -56,6 +57,13 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         return self.data!.places
     }
     
+    // TODO: DELETE
+    func printUsers() {
+        print(self.data!.travelers!)
+        print(self.data!.owners!)
+    }
+
+
     func getAllUsers() -> [User] {
         var users: [User] = []
         users.append(self.data!.owner!)
@@ -80,7 +88,10 @@ class DaoMemory:DAO, ActivityObservableProtocol {
     }
     
 //    func updateOwner() {}
-//    func addNewOwner() {}
+    func addNewOwner(password:String, email:String, name:String, cpf:String) {
+        let newOwner = Owner(password:password, email:email, name:name, cpf:cpf)
+        self.data!.owners!.append(newOwner)
+    }
 //    
 //    // Place
 //    func getPlace() -> Place {}
@@ -92,8 +103,13 @@ class DaoMemory:DAO, ActivityObservableProtocol {
 //    
 //    // Traveler
 //    func getTraveler() -> Traveler {}
-//    func addNewTraveler() {}
+   func addNewTraveler(password:String, email:String, name:String, cpf:String) {
+        let newTraveler = Traveler(password:password, email:email, name:name, cpf:cpf)
+        self.data!.travelers!.append(newTraveler)
+   }
     
+
+    // Observer
     func registerObserver(_ traveler: Traveler) {
         self.travelerObservers.append(traveler)
     }

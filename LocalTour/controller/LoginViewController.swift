@@ -14,9 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var userType: UISegmentedControl!
     @IBOutlet weak var passwordField: UITextField!
   
-    
     var strategyNotification:NewPlacesNotificationStrategy?
-    var dao:DaoMemory?
+    var dao:DaoMemory?  // Check-TODO: Keep Dao here only to set current user?
     var authenticator:Authenticator?
     
     override func viewDidLoad() {

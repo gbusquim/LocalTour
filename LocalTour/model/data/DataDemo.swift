@@ -10,6 +10,10 @@ import Foundation
 class DataDemo {
     private static var instance:DataDemo?
     var places:[Place] = []
+    var travelers:[Traveler] = []
+    var owners:[Owner] = []
+
+    // TODO: After list o travelers and owners work, remove bellow
     var traveler:Traveler?
     var owner:Owner?
     
@@ -28,10 +32,12 @@ class DataDemo {
     
     func createTraveler(){
         traveler = Traveler(password: "t", email: "t", name: "traveler", cpf: "11111111")
+        travelers.append(traveler)
     }
     
     func createOnwer(){
         owner = Owner(password: "o", email: "o", name: "Owner", cpf: "99999999")
+        owners.append(owner)
     }
     
     func createPlaces(){

@@ -16,7 +16,7 @@ class Traveler:User, TravelerObserverProtocol {
     // Should be in User? In case user doesn`t login we still get its position? Tho email, password etc is not required
 
     override init(password:String, email:String, name:String, cpf:String) {
-        self.status = true
+        self.status = true  // TODO: fix this, need to be setted to true, only after authenticator performs login
         self.lastLogin = Date()
         // TODO: Change this (decide if this should be treated by DAO, Authenticator or Traveler classes)
         super.init(password: password, email: email, name: name, cpf: cpf)

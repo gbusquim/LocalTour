@@ -50,6 +50,10 @@ class Authenticator {
         self.alertUserNotFound()
         return false
     }
+
+    // TODO: Ideal sollution would be to use Authenticator to validate new account information and pass it do DAO to store in the DB or memory-list...
+    // func validateNewAccount() {}
+
     
     func alertEmptyInput() {
         let alert = UIAlertController(title: "Email or Password field is empty", message: "Please type your email and password", preferredStyle: UIAlertController.Style.alert)

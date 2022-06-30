@@ -11,7 +11,7 @@ protocol DAO {
     // Owner
     func getOwner(id:String) -> Owner?
 //    func updateOwner()
-//    func addNewOwner()
+    func addNewOwner(password:String, email:String, name:String, cpf:String)
 //
 //    // Place
 //    func getPlace(id:String) -> Place?
@@ -24,6 +24,6 @@ protocol DAO {
 //    
 //    // Traveler
 //    func getTraveler(id:String) -> Traveler?
-//    func addNewTraveler()
+   func addNewTraveler(password:String, email:String, name:String, cpf:String)
 
 }
