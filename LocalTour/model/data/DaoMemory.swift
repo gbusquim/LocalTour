@@ -11,6 +11,7 @@ class DaoMemory:DAO {
     
     private static var instance:DaoMemory?
     var data:DataDemo?
+    var currentUser:User?
     
     private init() {
         self.data = DataDemo.getInstance()
@@ -48,8 +49,24 @@ class DaoMemory:DAO {
         return nil
     }
     
+    // TODO: Check if it's ok to use aux functions like this
     func getAllPlaces() -> [Place] {
         return self.data!.places
+    }
+    
+    func getAllUsers() -> [User] {
+        var users: [User] = []
+        users.append(self.data!.owner!)
+        users.append(self.data!.traveler!)
+        return users
+    }
+    
+    // TODO: Verify this idea
+    func getCurrentUser() -> User {
+        return self.currentUser!
+    }
+    func updateCurrentUser(user: User) {
+        
     }
     
 //    func updateOwner() {}

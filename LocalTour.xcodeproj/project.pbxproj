@@ -11,6 +11,7 @@
 		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598D722C286D21900011C61B /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722B286D21900011C61B /* Dao.swift */; };
 		598D722F286D22610011C61B /* DaoMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722E286D22610011C61B /* DaoMemory.swift */; };
+		598D7231286D34E00011C61B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D7230286D34E00011C61B /* Authenticator.swift */; };
 		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
 		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
 		598FB443286A68D000CA404D /* DataDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB442286A68D000CA404D /* DataDemo.swift */; };
@@ -56,6 +57,7 @@
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598D722B286D21900011C61B /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		598D722E286D22610011C61B /* DaoMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoMemory.swift; sourceTree = "<group>"; };
+		598D7230286D34E00011C61B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
 		598FB442286A68D000CA404D /* DataDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDemo.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				593FC32C2861365800079B70 /* TravelerObserver.swift */,
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 				598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */,
+				598D7230286D34E00011C61B /* Authenticator.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */,
+				598D7231286D34E00011C61B /* Authenticator.swift in Sources */,
 				B9B2AD05286B42400048596E /* RestaurantCreator.swift in Sources */,
 				B9137DB8286BC4060061A0B2 /* TouristProfileViewController.swift in Sources */,
 				B98BAE2C286B8C6100165C49 /* PlaceMethods.swift in Sources */,

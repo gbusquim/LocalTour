@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     
     var strategyNotification:NewPlacesNotificationStrategy?
     var dao:DaoMemory?
+    var authenticator:Authenticator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.dao = DaoMemory.getInstance()
+        self.authenticator = Authenticator.getInstance()
         
     }
     
@@ -34,21 +36,34 @@ class ViewController: UIViewController {
 
     
     @IBAction func login(_ sender: Any) {
+        let email = emailField.text!
+        let passwd = passwordField.text!
         
-        print(emailField.text!)
-        print(passwordField.text!)
+        print(email)
+        print(passwd)
         print(userType.selectedSegmentIndex)
         
-        //TODO: colocar metodo de login
-        if (userType.selectedSegmentIndex ==  0) {
-        performSegue(withIdentifier: "loginTouristSegue", sender: self)
+        //TODO: decide if authenticator should return instance or create new one here... And if
+        // TODO: Use 'typeOf' instance to check if it's a Traveler or Owner
+ 
+        if (self.authenticator!.authenticateUser(email, passwd)) {
+            if (userType.selectedSegmentIndex ==  0) {
+
+            performSegue(withIdentifier: "loginTouristSegue", sender: self)
+            }
+            else if(userType.selectedSegmentIndex == 1) {
+                performSegue(withIdentifier: "loginOwnerSegue", sender: self)
+            }
         }
-        else if(userType.selectedSegmentIndex == 1) {
-            performSegue(withIdentifier: "loginOwnerSegue", sender: self)
+        else {
+            // TODO: Create new alert for wrong login
+            self.strategyNotification = AlertNewPlaceStrategy(view: self)
+            strategyNotification!.strategy()
         }
     }
     
     @IBAction func continueWithoutLogin(_ sender: Any) {
+        self.dao?.updateCurrentUser(user: Traveler.createAnonymousTraveler()) // TODO: check
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
     
