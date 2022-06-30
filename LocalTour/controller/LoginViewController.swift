@@ -16,11 +16,12 @@ class ViewController: UIViewController {
   
     
     var strategyNotification:NewPlacesNotificationStrategy?
-    var data:DataDemo?
+    var dao:DaoMemory?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.data = DataDemo.getInstance()
+        self.dao = DaoMemory.getInstance()
         
     }
     

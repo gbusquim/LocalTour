@@ -13,18 +13,25 @@ class DataDemo {
     var traveler:Traveler?
     var owner:Owner?
     
-    private init(){
+    private init() {
         createOnwer()
         createPlaces()
         createTraveler()
     }
     
     static func getInstance() -> DataDemo {
-        if (DataDemo.instance == nil){
+        if (DataDemo.instance == nil) {
             DataDemo.instance = DataDemo()
-            
         }
         return DataDemo.instance!
+    }
+    
+    func createTraveler(){
+        traveler = Traveler(password: "t", email: "t", name: "traveler", cpf: "11111111")
+    }
+    
+    func createOnwer(){
+        owner = Owner(password: "o", email: "o", name: "Owner", cpf: "99999999")
     }
     
     func createPlaces(){
@@ -35,9 +42,6 @@ class DataDemo {
 //        let p3 = Place(id: 1,name: "Shopping 1",description: "Restaurant 3 e bom",score: 3,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
 //        let p4 = Place(id: 1,name: "Hostel 1",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "bed-big")
 //        let p5 = Place(id: 1,name: "Shopping 2",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
-        
-        
-        
         
         let rc1 = RestaurantCreator()
         let p1 = rc1.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem")
@@ -51,15 +55,6 @@ class DataDemo {
 //        places.append(p5)
         
     }
-    
-    func createTraveler(){
-        traveler = Traveler(password: "t", email: "t", name: "traveler", cpf: "12111111")
-    }
-    
-    func createOnwer(){
-        owner = Owner(password: "o", email: "o", name: "Owner", cpf: "99999999")
-    }
-    
 }
 
 

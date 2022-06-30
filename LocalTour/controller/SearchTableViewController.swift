@@ -10,7 +10,7 @@ import UIKit
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
 //    let data = ["Restaurant 1", "Restaurant 2", "Restaurant 3", "Accomodation"]
-    var data:DataDemo?
+    var dao:DaoMemory?
     var filteredData: [Place]!
     var selectedPlace = ""
     
@@ -20,8 +20,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
             self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.data = DataDemo.getInstance()
-        filteredData = self.data!.places
+        self.dao = DaoMemory.getInstance()
+        filteredData = self.dao!.getAllPlaces()
         searchBar.delegate = self
     }
 
@@ -64,10 +64,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
         if(searchText == "") {
-            filteredData = self.data?.places
+            filteredData = self.dao!.getAllPlaces()
         }
         else {
-            for place in self.data!.places {
+            for place in self.dao!.getAllPlaces() {
                 if(place.name.lowercased().starts(with: searchText.lowercased())) {
                     filteredData.append(place)
                 }

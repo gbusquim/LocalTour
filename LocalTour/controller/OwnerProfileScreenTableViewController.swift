@@ -8,22 +8,14 @@
 import UIKit
 
 class OwnerProfileScreenTableViewController: UITableViewController {
-
-//    var places = [Place]!
-//    var places = [
-//        Place(id: 1,name: "Restaurant 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Restaurant 2",description: "Restaurant 2 e bom",score: 2,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Restaurant 3",description: "Restaurant 3 e bom",score: 3,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Accomodation",description: "Accomodation e bom",score: 1,phoneNumber: "123",adress: "Rua b")
-//    ]
   
     var places = [Place]()
-    var data:DataDemo?
+    var dao:DaoMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = DataDemo.getInstance()
-        places = self.data!.places
+        self.dao = DaoMemory.getInstance()
+        places = self.dao!.getAllPlaces()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
