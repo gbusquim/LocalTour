@@ -22,10 +22,16 @@ class TouristProfileViewController: UIViewController {
     @IBOutlet weak var notLoggedIMessage: UILabel!
     @IBOutlet weak var logInButton: UIButton!
     
+    var dao:DaoMemory?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if (true) {
+        self.dao = DaoMemory.getInstance()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        // TODO: [WIP] Finish login
+        if (self.dao!.getCurrentUser().isLoggedIn()) {
             nameValue.text = "Joao"
             emailValue.text = "joao@email.com"
             cpfValue.text = "12345678909"
@@ -42,7 +48,8 @@ class TouristProfileViewController: UIViewController {
             cpfLabel.isHidden = true
             logOutButton.isHidden = true
             
-        }    }
+        } 
+    }
     
     @IBAction func logOut(_ sender: Any) {
         performSegue(withIdentifier: "logOutProfileSegue", sender: self)

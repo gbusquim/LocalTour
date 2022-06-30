@@ -12,4 +12,6 @@ class User {
         self.name = name
         self.cpf = cpf
     }
+
+    func isLoggedIn() -> Bool {}
 }

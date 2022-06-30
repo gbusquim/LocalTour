@@ -18,6 +18,11 @@ class Owner:User {
 //        self.id = 1
     }
     
+    func isLogged() -> Bool {
+        return true
+    }
+
+    
 //    func onUpdate(review: Review) {
 //        if (review.score < 5) {
 //            print("Need to improve")
