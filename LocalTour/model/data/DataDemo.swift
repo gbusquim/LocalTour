@@ -32,12 +32,12 @@ class DataDemo {
     
     func createTraveler(){
         traveler = Traveler(password: "t", email: "t", name: "traveler", cpf: "11111111")
-        travelers.append(traveler)
+        travelers.append(traveler!)
     }
     
     func createOnwer(){
         owner = Owner(password: "o", email: "o", name: "Owner", cpf: "99999999")
-        owners.append(owner)
+        owners.append(owner!)
     }
     
     func createPlaces(){

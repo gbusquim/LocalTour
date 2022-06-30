@@ -59,8 +59,8 @@ class DaoMemory:DAO, ActivityObservableProtocol {
     
     // TODO: DELETE
     func printUsers() {
-        print(self.data!.travelers!)
-        print(self.data!.owners!)
+        print(self.data!.travelers)
+        print(self.data!.owners)
     }
 
 
@@ -90,7 +90,8 @@ class DaoMemory:DAO, ActivityObservableProtocol {
 //    func updateOwner() {}
     func addNewOwner(password:String, email:String, name:String, cpf:String) {
         let newOwner = Owner(password:password, email:email, name:name, cpf:cpf)
-        self.data!.owners!.append(newOwner)
+        self.data?.owners.append(newOwner)
+      
     }
 //    
 //    // Place
@@ -105,7 +106,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
 //    func getTraveler() -> Traveler {}
    func addNewTraveler(password:String, email:String, name:String, cpf:String) {
         let newTraveler = Traveler(password:password, email:email, name:name, cpf:cpf)
-        self.data!.travelers!.append(newTraveler)
+       self.data!.travelers.append(newTraveler)
    }
     
 

@@ -37,19 +37,19 @@ class CreateAccountViewController: UIViewController {
         if (userType.selectedSegmentIndex ==  0) {
             // Traveler Account Selected
             self.dao!.addNewTraveler(
-                password: passwordField.text,
-                email: emailField.text,
-                name: nameField.text,
-                cpf: cpfField.text
+                password: passwordField.text! ,
+                email: emailField.text!,
+                name: nameField.text!,
+                cpf: cpfField.text!
             )
         }        
         else if (userType.selectedSegmentIndex ==  1) {
             // Owner Account Selected
             self.dao!.addNewOwner(
-                password: passwordField.text,
-                email: emailField.text,
-                name: nameField.text,
-                cpf: cpfField.text
+                password: passwordField.text!,
+                email: emailField.text!,
+                name: nameField.text!,
+                cpf: cpfField.text!
             )
         }
 
