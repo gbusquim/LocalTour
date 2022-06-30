@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* TravelerObserver.swift */; };
 		59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE0286E431A00702063 /* CreateReviewViewController.swift */; };
+		59642AE4286E5A6200702063 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE3286E5A6200702063 /* Component.swift */; };
+		59642AE6286E5BE400702063 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE5286E5BE400702063 /* Composite.swift */; };
 		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598D722C286D21900011C61B /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722B286D21900011C61B /* Dao.swift */; };
 		598D722F286D22610011C61B /* DaoMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722E286D22610011C61B /* DaoMemory.swift */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/framework/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59642AE0286E431A00702063 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
+		59642AE3286E5A6200702063 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		59642AE5286E5BE400702063 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598D722B286D21900011C61B /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		598D722E286D22610011C61B /* DaoMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoMemory.swift; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59642AE2286E5A3F00702063 /* composite */ = {
+			isa = PBXGroup;
+			children = (
+				59642AE3286E5A6200702063 /* Component.swift */,
+				59642AE5286E5BE400702063 /* Composite.swift */,
+			);
+			path = composite;
+			sourceTree = "<group>";
+		};
 		598D722D286D22470011C61B /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 		59D0E2BF28664F0D00D832FA /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				59642AE2286E5A3F00702063 /* composite */,
 				B9B2ACFE286B3EE30048596E /* factory */,
 				598D722B286D21900011C61B /* Dao.swift */,
 				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
@@ -335,6 +349,7 @@
 				59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */,
 				598D722C286D21900011C61B /* Dao.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
+				59642AE6286E5BE400702063 /* Composite.swift in Sources */,
 				598FB443286A68D000CA404D /* DataDemo.swift in Sources */,
 				B9F7C9BD28459E870028ABC3 /* LoginViewController.swift in Sources */,
 				B91742CF285A83DE0098AB01 /* ReviewTableViewCell.swift in Sources */,
@@ -353,6 +368,7 @@
 				59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */,
 				593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */,
 				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
+				59642AE4286E5A6200702063 /* Component.swift in Sources */,
 				B9B2AD09286B43290048596E /* ShoppingCreator.swift in Sources */,
 				B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */,
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,

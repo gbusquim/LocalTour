@@ -25,7 +25,7 @@ class TouristProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (true) {
+        if (false) {
             nameValue.text = "Joao"
             emailValue.text = "joao@email.com"
             cpfValue.text = "12345678909"
