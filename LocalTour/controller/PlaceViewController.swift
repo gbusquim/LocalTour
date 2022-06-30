@@ -73,4 +73,10 @@ class PlaceViewController: UIViewController,
         cell.reviewScore.text = review.score.description
         return cell
     }
+    
+    @IBAction func createReview(_ sender: Any) {
+        performSegue(withIdentifier: "CreateReviewSegue", sender: self)
+    }
+    
+    
 }

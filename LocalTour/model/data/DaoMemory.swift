@@ -96,7 +96,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
 //    
 //    // Place
 //    func getPlace() -> Place {}
-//    func addNewPlace() {}
+//    func addNewPlace() {}	
 //    
 //    // Review
 //    func getReview() -> Review {}
