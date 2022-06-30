@@ -7,11 +7,13 @@
 
 import Foundation
 
-class DaoMemory:DAO {
-    
+class DaoMemory:DAO, ActivityObservableProtocol {
     private static var instance:DaoMemory?
     var data:DataDemo?
-    var currentUser:User?
+    private var currentUser:User?
+    
+    // Major-TODO: Verifiy if DAO can be used as Observable for Pattern (instead of Owner)
+    private var travelerObservers = [TravelerObserverProtocol]()
     
     private init() {
         self.data = DataDemo.getInstance()
@@ -61,12 +63,20 @@ class DaoMemory:DAO {
         return users
     }
     
+    // TODO: Remove
+    func getTempTraveler() -> Traveler {
+        return self.data!.traveler!
+    }
+    func getTempOwner() -> Owner {
+        return self.data!.owner!
+    }
+    
     // TODO: Verify this idea
     func getCurrentUser() -> User {
         return self.currentUser!
     }
-    func updateCurrentUser(user: User) {
-        
+    func updateCurrentUser(_ user: User) {
+        self.currentUser = user
     }
     
 //    func updateOwner() {}
@@ -84,5 +94,21 @@ class DaoMemory:DAO {
 //    func getTraveler() -> Traveler {}
 //    func addNewTraveler() {}
     
+    func registerObserver(_ traveler: Traveler) {
+        self.travelerObservers.append(traveler)
+    }
+    
+    // TODO: Check error
+//    func removeObserver(_ traveler: Traveler) {
+//        if let index = self.travelerObservers.firstIndex(where: {$0.value == traveler}) {
+//            self.travelerObservers.remove(at: index)
+//        }
+//    }
+    
+    func notifyObserver() {
+        let places = self.getAllPlaces()
+//        let latest = places.last
+        self.travelerObservers.forEach({$0.onUpdate(places: places)})
+    }
 
 }

@@ -11,6 +11,5 @@ class User {
         self.email = email
         self.name = name
         self.cpf = cpf
-
     }
 }

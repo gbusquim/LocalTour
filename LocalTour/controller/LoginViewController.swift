@@ -48,15 +48,19 @@ class ViewController: UIViewController {
         if (self.authenticator!.authenticateUser(email, passwd, userType.selectedSegmentIndex)) {
             if (userType.selectedSegmentIndex ==  0) {
                 performSegue(withIdentifier: "loginTouristSegue", sender: self)
+                // TODO: TEMP REMOVE
+                self.dao!.updateCurrentUser(self.dao!.getTempTraveler())
             }
             else if(userType.selectedSegmentIndex == 1) {
+                // TODO: TEMP REMOVE
+                self.dao!.updateCurrentUser(self.dao!.getTempOwner())
                 performSegue(withIdentifier: "loginOwnerSegue", sender: self)
             }
         }
     }
     
     @IBAction func continueWithoutLogin(_ sender: Any) {
-        self.dao?.updateCurrentUser(user: Traveler.createAnonymousTraveler()) // TODO: check
+        self.dao?.updateCurrentUser(Traveler.createAnonymousTraveler()) // TODO: check
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
     

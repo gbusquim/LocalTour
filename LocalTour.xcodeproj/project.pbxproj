@@ -53,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/model/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
+		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/framework/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598D722B286D21900011C61B /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		598D722E286D22610011C61B /* DaoMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoMemory.swift; sourceTree = "<group>"; };
@@ -125,6 +125,8 @@
 				B9B2ACFE286B3EE30048596E /* factory */,
 				598D722B286D21900011C61B /* Dao.swift */,
 				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
+				593FC32C2861365800079B70 /* TravelerObserver.swift */,
+				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -209,8 +211,6 @@
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
-				593FC32C2861365800079B70 /* TravelerObserver.swift */,
-				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 				598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */,
 				598D7230286D34E00011C61B /* Authenticator.swift */,
 			);

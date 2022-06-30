@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ActivityObservableProtocol {
-    func registerObserver()
-    func removeObserver()
+    func registerObserver(_ traveler: Traveler)
+//    func removeObserver(_ traveler: Traveler) // TODO: Check error		
     func notifyObserver()
 }
