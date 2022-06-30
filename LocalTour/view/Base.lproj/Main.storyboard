@@ -1160,12 +1160,24 @@
                                     <action selector="fifthStarSelected:" destination="fp9-qg-NoA" eventType="touchUpInside" id="HNE-np-BaL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75H-4N-Zx6">
+                                <rect key="frame" x="94" y="552" width="241" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Review"/>
+                                <connections>
+                                    <action selector="createReview:" destination="fp9-qg-NoA" eventType="touchUpInside" id="bcb-IG-z8g"/>
+                                    <action selector="createReview:" destination="8A0-jI-4MF" eventType="touchUpInside" id="zYo-Su-8Z9"/>
+                                    <segue destination="8A0-jI-4MF" kind="show" identifier="reviewCreatedSegue" id="1In-CM-PkI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eeq-ub-cDt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jrC-32-zUi"/>
                     <connections>
+                        <outlet property="commentField" destination="NVx-h3-Gcn" id="th5-sW-kzx"/>
                         <outlet property="starLabel1" destination="tTg-Qa-SHz" id="Qg8-eS-YzA"/>
                         <outlet property="starLabel2" destination="6Jn-Cf-K2T" id="FFl-TW-u6B"/>
                         <outlet property="starLabel3" destination="byQ-aD-gkD" id="p2p-zc-7cS"/>
@@ -1175,11 +1187,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T07-ta-zFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5905" y="-239"/>
+            <point key="canvasLocation" x="5904.6728971962611" y="-239.0928725701944"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7uE-3x-Jnd"/>
+        <segue reference="1In-CM-PkI"/>
         <segue reference="GsR-AE-RTS"/>
         <segue reference="ddA-bs-cyw"/>
     </inferredMetricsTieBreakers>

@@ -9,14 +9,17 @@ import UIKit
 
 class CreateReviewViewController: UIViewController {
 
+    var starArray = [UIButton]()
     @IBOutlet weak var starLabel1: UIButton!
-    
     @IBOutlet weak var starLabel2: UIButton!
     @IBOutlet weak var starLabel3: UIButton!
-    
-    @IBOutlet weak var starLabel5: UIButton!
     @IBOutlet weak var starLabel4: UIButton!
-    var starArray = [UIButton]()
+    @IBOutlet weak var starLabel5: UIButton!
+    
+    @IBOutlet weak var commentField: UITextView!
+    
+    var currentScore = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,22 +50,34 @@ class CreateReviewViewController: UIViewController {
     
     @IBAction func fifthStarSelected(_ sender: Any) {
         fillStars(starNumber: 4)
+        currentScore = 5
     }
     
     @IBAction func fourthStarSelected(_ sender: Any) {
         fillStars(starNumber: 3)
+        currentScore = 4
     }
     
     @IBAction func thirdStarSelected(_ sender: Any) {
         fillStars(starNumber: 2)
+        currentScore = 3
     }
     
     @IBAction func secondStarSelected(_ sender: Any) {
         fillStars(starNumber: 1)
+        currentScore = 2
     }
     
     @IBAction func firstStarSelected(_ sender: Any) {
         fillStars(starNumber: 0)
+        currentScore = 1
     }
+    
+    @IBAction func createReview(_ sender: Any) {
+        print(commentField.text!)
+        print(currentScore)
+        performSegue(withIdentifier: "reviewCreatedSegue", sender: self)
+    }
+    
     
 }

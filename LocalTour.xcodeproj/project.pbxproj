@@ -245,8 +245,8 @@
 				B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */,
 				B91742C1285A4F930098AB01 /* view */,
 				B98F028C285955E30074D0A8 /* controller */,
-				B9F7C9C128459E890028ABC3 /* Assets.xcassets */,
 				B9F7C9C628459E890028ABC3 /* Info.plist */,
+				B9F7C9C128459E890028ABC3 /* Assets.xcassets */,
 			);
 			path = LocalTour;
 			sourceTree = "<group>";
