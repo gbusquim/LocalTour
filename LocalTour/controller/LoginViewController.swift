@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.dao = DaoMemory.getInstance()
-        self.authenticator = Authenticator.getInstance()
+        self.authenticator = Authenticator.getInstance(view: self)
         
     }
     
@@ -45,20 +45,13 @@ class ViewController: UIViewController {
         
         //TODO: decide if authenticator should return instance or create new one here... And if
         // TODO: Use 'typeOf' instance to check if it's a Traveler or Owner
- 
         if (self.authenticator!.authenticateUser(email, passwd)) {
             if (userType.selectedSegmentIndex ==  0) {
-
-            performSegue(withIdentifier: "loginTouristSegue", sender: self)
+                performSegue(withIdentifier: "loginTouristSegue", sender: self)
             }
             else if(userType.selectedSegmentIndex == 1) {
                 performSegue(withIdentifier: "loginOwnerSegue", sender: self)
             }
-        }
-        else {
-            // TODO: Create new alert for wrong login
-            self.strategyNotification = AlertNewPlaceStrategy(view: self)
-            strategyNotification!.strategy()
         }
     }
     
