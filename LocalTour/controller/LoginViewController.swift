@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         //TODO: decide if authenticator should return instance or create new one here... And if
         // TODO: Use 'typeOf' instance to check if it's a Traveler or Owner
-        if (self.authenticator!.authenticateUser(email, passwd)) {
+        if (self.authenticator!.authenticateUser(email, passwd, userType.selectedSegmentIndex)) {
             if (userType.selectedSegmentIndex ==  0) {
                 performSegue(withIdentifier: "loginTouristSegue", sender: self)
             }

@@ -26,18 +26,25 @@ class Authenticator {
         return Authenticator.instance!
     }
     
-    func authenticateUser(_ email: String, _ passwd: String) -> Bool {
+    func authenticateUser(_ email: String, _ passwd: String, _ loginType:Int) -> Bool {
         if (email.isEmpty || passwd.isEmpty) {
             self.alertEmptyInput()
             return false
         }
+        // TODO: Can change later to only iterate through Travelers or Owners "list" instead of using "getAllUsers()"... Need to adapt alert notifications tho
         for user in self.dao!.getAllUsers() {
             if (email == user.email) {
-                if (passwd == user.passowrd) {
-                    return true
+                if ((loginType == 0 && user is Traveler) || (loginType == 1 && user is Owner)) {
+                    if (passwd == user.passowrd) {
+                        return true
+                    }
+                    self.alertInvalidPasswd()
+                    return false
                 }
-                self.alertInvalidPasswd()
-                return false
+                else {
+                    self.alertUserNotFound()
+                    return false
+                }
             }
         }
         self.alertUserNotFound()
@@ -52,7 +59,7 @@ class Authenticator {
     }
     
     func alertUserNotFound() {
-        let alert = UIAlertController(title: "Invalid User", message: "There is no user registered with this emai. Please create a new account or use a valid email", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Account not found", message: "There is no user registered with this emai. Please create a new account or use a valid email", preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         view.present(alert, animated: true, completion: nil)
@@ -65,7 +72,12 @@ class Authenticator {
         view.present(alert, animated: true, completion: nil)
     }
     
- 
+    func newText(text:String) {
+        let alert = UIAlertController(title: "OKAY", message: text, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        view.present(alert, animated: true, completion: nil)
+    }
   
     // TODO: Decide if this should be here or just use DaoMemory instead
 //    func createNewTravelerAccount() -> Bool {
