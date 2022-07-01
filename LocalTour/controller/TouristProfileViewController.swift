@@ -31,7 +31,7 @@ class TouristProfileViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         let user = self.dao!.getCurrentUser()
-        if (user!.isLoggedIn()) {
+        if (user.isLoggedIn()) {
             nameValue.text = user.name
             emailValue.text = user.email
             cpfValue.text = user.cpf

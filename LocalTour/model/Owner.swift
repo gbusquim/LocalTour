@@ -17,10 +17,7 @@ class Owner:User {
 //        self.places = DataDemo.places
 //        self.id = 1
     }
-    
-    func isLogged() -> Bool {
-        return true
-    }
+
 
     
 //    func onUpdate(review: Review) {

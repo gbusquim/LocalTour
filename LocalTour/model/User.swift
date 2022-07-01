@@ -13,5 +13,7 @@ class User {
         self.cpf = cpf
     }
 
-    func isLoggedIn() -> Bool {}
+    func isLoggedIn() -> Bool {
+        return true
+    }
 }
