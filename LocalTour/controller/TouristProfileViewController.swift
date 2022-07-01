@@ -30,11 +30,11 @@ class TouristProfileViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        // TODO: [WIP] Finish login
-        if (self.dao!.getCurrentUser().isLoggedIn()) {
-            nameValue.text = "Joao"
-            emailValue.text = "joao@email.com"
-            cpfValue.text = "12345678909"
+        let user = self.dao!.getCurrentUser()
+        if (user!.isLoggedIn()) {
+            nameValue.text = user.name
+            emailValue.text = user.email
+            cpfValue.text = user.cpf
             
             logInButton.isHidden = true
             notLoggedIMessage.isHidden = true
