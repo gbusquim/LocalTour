@@ -17,6 +17,8 @@ class Owner:User {
 //        self.places = DataDemo.places
 //        self.id = 1
     }
+
+
     
 //    func onUpdate(review: Review) {
 //        if (review.score < 5) {

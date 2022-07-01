@@ -30,7 +30,7 @@ class Traveler:User, TravelerObserverProtocol {
         return anonymous
     }
     
-    func isLoggedIn() -> Bool {
+    override func isLoggedIn() -> Bool {
         return self.status
     }
     
