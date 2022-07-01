@@ -8,6 +8,10 @@
 import Foundation
 
 protocol Component {
+    
+    var name: String { get set }
+    var imgPath: String { get set }
+    
     func showIcon ()
 }
 
