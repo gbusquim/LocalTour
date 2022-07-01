@@ -11,9 +11,6 @@
 		59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE0286E431A00702063 /* CreateReviewViewController.swift */; };
 		59642AE4286E5A6200702063 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE3286E5A6200702063 /* Component.swift */; };
 		59642AE6286E5BE400702063 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE5286E5BE400702063 /* Composite.swift */; };
-		59642AE9286E62D400702063 /* FairWage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE8286E62D400702063 /* FairWage.swift */; };
-		59642AEB286E632D00702063 /* EcoFriendly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AEA286E632D00702063 /* EcoFriendly.swift */; };
-		59642AED286E634700702063 /* LocalEstablishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AEC286E634700702063 /* LocalEstablishment.swift */; };
 		59642AEF286E65C400702063 /* SustainableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AEE286E65C400702063 /* SustainableInfo.swift */; };
 		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598D722C286D21900011C61B /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722B286D21900011C61B /* Dao.swift */; };
@@ -64,9 +61,6 @@
 		59642AE0286E431A00702063 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
 		59642AE3286E5A6200702063 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		59642AE5286E5BE400702063 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
-		59642AE8286E62D400702063 /* FairWage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairWage.swift; sourceTree = "<group>"; };
-		59642AEA286E632D00702063 /* EcoFriendly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoFriendly.swift; sourceTree = "<group>"; };
-		59642AEC286E634700702063 /* LocalEstablishment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEstablishment.swift; sourceTree = "<group>"; };
 		59642AEE286E65C400702063 /* SustainableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableInfo.swift; sourceTree = "<group>"; };
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598D722B286D21900011C61B /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
@@ -131,16 +125,6 @@
 				59642AE5286E5BE400702063 /* Composite.swift */,
 			);
 			path = composite;
-			sourceTree = "<group>";
-		};
-		59642AE7286E629200702063 /* sustainableInfo */ = {
-			isa = PBXGroup;
-			children = (
-				59642AE8286E62D400702063 /* FairWage.swift */,
-				59642AEA286E632D00702063 /* EcoFriendly.swift */,
-				59642AEC286E634700702063 /* LocalEstablishment.swift */,
-			);
-			path = sustainableInfo;
 			sourceTree = "<group>";
 		};
 		598D722D286D22470011C61B /* data */ = {
@@ -238,7 +222,6 @@
 		B9DA67BD2859545600C56C4B /* model */ = {
 			isa = PBXGroup;
 			children = (
-				59642AE7286E629200702063 /* sustainableInfo */,
 				598D722D286D22470011C61B /* data */,
 				B9B2ACFF286B3F880048596E /* places */,
 				B95A1D2928502FA1006C649A /* Place.swift */,
@@ -366,8 +349,6 @@
 				B9B2AD07286B42B80048596E /* CreatorPlace.swift in Sources */,
 				B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */,
 				B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */,
-				59642AEB286E632D00702063 /* EcoFriendly.swift in Sources */,
-				59642AED286E634700702063 /* LocalEstablishment.swift in Sources */,
 				59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */,
 				598D722C286D21900011C61B /* Dao.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
@@ -379,7 +360,6 @@
 				59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */,
 				598FB445286A6B4300CA404D /* AlertNewPlaceStrategy.swift in Sources */,
 				B9E60DA928554E7C00AAB18C /* MapIconDetail.swift in Sources */,
-				59642AE9286E62D400702063 /* FairWage.swift in Sources */,
 				B95A1D2A28502FA1006C649A /* Place.swift in Sources */,
 				598DCAB6285BC2F40018C4DB /* User.swift in Sources */,
 				B9E00749284BB36A002607C7 /* SearchTableViewController.swift in Sources */,

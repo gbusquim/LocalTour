@@ -18,7 +18,7 @@ class SustainableInfo: Component {
     }
     
     func showIcon() {
-        <#code#>
+        
     }
     
     

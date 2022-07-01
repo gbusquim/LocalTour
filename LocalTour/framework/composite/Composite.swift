@@ -8,6 +8,10 @@
 import Foundation
 
 class Composite: Component {
+    var name: String = ""
+    
+    var imgPath: String = ""
+    
     var parent: Component?
     private var children = [Component]()
     
