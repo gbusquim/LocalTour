@@ -93,6 +93,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         self.data?.owners.append(newOwner)
       
     }
+ 
 //    
 //    // Place
 //    func getPlace() -> Place {}

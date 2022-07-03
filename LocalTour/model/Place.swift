@@ -9,9 +9,8 @@ import Foundation
 
 class Place: PlaceMethods {
     func operation() -> String {
-        return "aa"
+        return ""
     }
-    
     
     var id: Int
     var name: String
@@ -26,8 +25,10 @@ class Place: PlaceMethods {
     var lon: Float
     var lat: Float
     var date: Date
+    var sustainableInfo: Component
     
-    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = []){
+    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String]) {
+
         self.id = id
         self.name = name
         self.description = description
@@ -42,12 +43,19 @@ class Place: PlaceMethods {
         self.lat = -43.21944727384322
         self.date = Date()
         
+        self.sustainableInfo = Composite()
+        for inputCategory in inputSustainableCategories {
+            let sustainableCategory = SustainableInfo(name: inputCategory)
+            self.sustainableInfo.add(component: sustainableCategory)
+        }
+        
         if !(self.userReviews.isEmpty) {
-            self.computeScore()
+            computeScore()
         }
         else {
             self.score = 0.0
         }
+
     }
     
     func getReviews() -> [Review] {
@@ -55,7 +63,7 @@ class Place: PlaceMethods {
     }
     
     private func updateScore(latestScore: Int) {
-        self.score = (self.score! + Float(latestScore)) / Float(userReviews.count)
+        self.score = (self.score! + Float(latestScore)) / Float(self.userReviews.count)
     }
     
     private func computeScore() {
@@ -84,6 +92,10 @@ class Place: PlaceMethods {
 //        notifyObserver()
 //        // TODO: Usar assim e apenas passar o ultimo item da lista?
 //
+    }
+    
+    func getSustainableInfo () -> [String] {
+        return self.sustainableInfo.getSustainableInfo()
     }
 
 }

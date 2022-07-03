@@ -22,11 +22,18 @@ class Composite: Component {
     func getChildren() -> [Component] {
         return children
     }
-    func showIcon() {
+    
+    func getSustainableInfo() -> [String] {
+        var sustainableInfo: [String] = []
         for child in children
         {
-            child.showIcon()
+            let sustainableCategory = child.getSustainableInfo()
+            for category in sustainableCategory {
+                
+                sustainableInfo.append(category)
+            }
         }
+        return sustainableInfo
     }
     
     func isComposite() -> Bool {

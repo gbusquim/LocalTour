@@ -17,11 +17,18 @@ class PlaceViewController: UIViewController,
     var reviews:[Review] = []
 
     var dao:DaoMemory?
+
+    var sustainableImages = [UIImageView]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    @IBOutlet weak var firstImageSlot: UIImageView!
+    @IBOutlet weak var secondImageSlot: UIImageView!
+    @IBOutlet weak var thirdImageSlot: UIImageView!
     
     
     override func viewDidLoad() {
@@ -38,7 +45,22 @@ class PlaceViewController: UIViewController,
         descriptionLabel.text = selectedPlace?.description
         scoreLabel.text = selectedPlace?.score?.description
         
+        sustainableImages.append(firstImageSlot)
+        sustainableImages.append(secondImageSlot)
+        sustainableImages.append(thirdImageSlot)
+        
+        showSustainableInfo()
+   
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func showSustainableInfo() {
+        let sustainableInfo = selectedPlace!.getSustainableInfo()
+        print (sustainableInfo[0])
+        for i in 0...sustainableInfo.count - 1{
+            sustainableImages[i].image = UIImage(named: sustainableInfo[i])
+        }
     }
     
 
