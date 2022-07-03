@@ -13,24 +13,10 @@ class PlaceViewController: UIViewController,
 
     //TODO: Usar outro dado que nao o nome do lugar escolhido?
     var placeName = String()
-    var data:DataDemo?
-    
-    //TODO: Obter reviews do place
-    var reviews = [Review(text: "muito bom", score: 2, author: "Gabriel"),
-                   Review(text: "muito bom", score: 2, author: "Gabriel"),
-                   Review(text: "muito bom", score: 2, author: "Gabriel"),
-                   Review(text: "muito bom", score: 2, author: "Gabriel"),
-                   Review(text: "muito bom", score: 2, author: "Gabriel"),
-                   Review(text: "muito bom", score: 2, author: "Gabriel"),]
-    
-//    var data = [
-//        Place(id: 1,name: "Restaurant 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Restaurant 2",description: "Restaurant 2 e bom",score: 2,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Restaurant 3",description: "Restaurant 3 e bom",score: 3,phoneNumber: "123",adress: "Rua b"),
-//        Place(id: 1,name: "Accomodation",description: "Accomodation e bom",score: 1,phoneNumber: "123",adress: "Rua b")
-//    ]
-    
-    
+    var selectedPlace:Place?
+    var reviews:[Review] = []
+
+    var dao:DaoMemory?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -42,8 +28,12 @@ class PlaceViewController: UIViewController,
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.dao = DaoMemory.getInstance()
+        let places = self.dao?.getAllPlaces()
+
         //TODO: usar o id do lugar escolhido
-        let selectedPlace = data?.places.first(where: {$0.name == placeName})
+        self.selectedPlace = places!.first(where: {$0.name == placeName})
+        self.reviews = (self.selectedPlace?.getReviews())!
         nameLabel.text = selectedPlace?.name
         descriptionLabel.text = selectedPlace?.description
         scoreLabel.text = selectedPlace?.score.description
@@ -62,7 +52,7 @@ class PlaceViewController: UIViewController,
     }
     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews.count
+        return self.reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -44,6 +44,9 @@ class Place: PlaceMethods {
         self.date = Date()
     }
     
+    func getReviews() -> [Review] {
+        return self.userReviews
+    }
   
     func addNewReview(user:Traveler, review:Review) {
         
