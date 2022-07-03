@@ -16,7 +16,7 @@ class Place: PlaceMethods {
     var id: Int
     var name: String
     var description: String
-    var score: Float  // TODO: deixar de acordo com o diagrama da arq (avgRating) -> Ou mudar no diagrama pra ficar igual aqui, o importante eh manter a consistencia
+    var score: Float?  // TODO: deixar de acordo com o diagrama da arq (avgRating) -> Ou mudar no diagrama pra ficar igual aqui, o importante eh manter a consistencia
     var phoneNumber: String
     var address: String?
     var cnpj: String
@@ -27,11 +27,10 @@ class Place: PlaceMethods {
     var lat: Float
     var date: Date
     
-    init (id: Int, name:String, description:String, score: Float, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = []){
+    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = []){
         self.id = id
         self.name = name
         self.description = description
-        self.score = score
         self.phoneNumber = phoneNumber
         self.address = address
         self.imgName = imgName // TODO: refactor
@@ -42,10 +41,27 @@ class Place: PlaceMethods {
         self.lon = -22.975301473976184
         self.lat = -43.21944727384322
         self.date = Date()
+        
+        if !(self.userReviews.isEmpty) {
+            self.computeScore()
+        }
+        else {
+            self.score = 0.0
+        }
     }
     
     func getReviews() -> [Review] {
         return self.userReviews
+    }
+    
+    private func updateScore(latestScore: Int) {
+        self.score = (self.score! + Float(latestScore)) / Float(userReviews.count)
+    }
+    
+    private func computeScore() {
+        // Sum of the score of all reviews
+        let total = self.userReviews.map( {Float($0.score)} ).reduce(0,+)
+        self.score = total / Float(self.userReviews.count)
     }
   
     func addNewReview(user:Traveler, review:Review) {
@@ -56,10 +72,10 @@ class Place: PlaceMethods {
 //        }
         
         // Add new review to list
-        userReviews.append(review)
+        self.userReviews.append(review)
         
         // Update Score
-        score = (score + Float(review.score)) / Float(userReviews.count)
+        self.updateScore(latestScore: review.score)
         
         // Notify owner
 //        notifyObserver(review:Review)

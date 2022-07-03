@@ -10,7 +10,7 @@ import Foundation
 class ShoppingCreator: CreatorPlace {
  
     
-    public func factoryMethod(id: Int,name:String, description:String, score: Float, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]? = []) -> Place {
-        return Shopping(id: id,name: name, description: description, score: score ,phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName, userReviews: userReviews)
+    public func factoryMethod(id: Int,name:String, description:String, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]? = []) -> Place {
+        return Shopping(id: id,name: name, description: description, phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName, userReviews: userReviews)
     }
 }

@@ -50,9 +50,9 @@ class DataDemo {
 //        let p5 = Place(id: 1,name: "Shopping 2",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
         
         let rc1 = RestaurantCreator()
-        let p1 = rc1.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP1())
+        let p1 = rc1.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP1())
         places.append(p1)
-        let p2 = rc1.factoryMethod(id: 1,name: "Armico 2",description: "Restaurant 1 e bom",score: 1,phoneNumber: "1234",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP2())
+        let p2 = rc1.factoryMethod(id: 1,name: "Armico 2",description: "Restaurant 1 e bom",phoneNumber: "1234",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP2())
         print(p1.operation())
         places.append(p2)
 //        places.append(p2)

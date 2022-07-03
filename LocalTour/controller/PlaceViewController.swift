@@ -36,7 +36,7 @@ class PlaceViewController: UIViewController,
         self.reviews = (self.selectedPlace?.getReviews())!
         nameLabel.text = selectedPlace?.name
         descriptionLabel.text = selectedPlace?.description
-        scoreLabel.text = selectedPlace?.score.description
+        scoreLabel.text = selectedPlace?.score?.description
         
         // Do any additional setup after loading the view.
     }
