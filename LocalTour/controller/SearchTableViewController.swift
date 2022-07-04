@@ -11,7 +11,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
 //    let data = ["Restaurant 1", "Restaurant 2", "Restaurant 3", "Accomodation"]
     var dao:DaoMemory?
-    var filteredData: [Place]!
+    var filteredPlaces: [Place]!
     var selectedPlace = ""
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -21,7 +21,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             self.tableView.delegate = self
         self.tableView.dataSource = self
         self.dao = DaoMemory.getInstance()
-        filteredData = self.dao!.getAllPlaces()
+        filteredPlaces = self.dao!.getAllPlaces()
         searchBar.delegate = self
     }
 
@@ -32,19 +32,18 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData.count
+        return filteredPlaces.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! SearchPlaceTableViewCell
         
-        cell.resultLabel.text? = filteredData[indexPath.row].name
+        let place = filteredPlaces[indexPath.row]
+        cell.resultLabel.text? = place.name
         //TODO: alterar a imagem/cor de fundo de acordo com os dados do place
-        cell.resultImage.image = UIImage(named: "Mural")
-        cell.contentView.backgroundColor = UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
-        
-        // Configure the cell...
+        cell.resultImage.image = UIImage(named: place.getIcon())
+        cell.contentView.backgroundColor = place.getBackgroundColor()
 
         return cell
     }
@@ -52,7 +51,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlace = filteredData[indexPath.row].name
+        selectedPlace = filteredPlaces[indexPath.row].name
         self.performSegue(withIdentifier: "playerSegue", sender: nil)
     }
     
@@ -62,14 +61,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = []
+        filteredPlaces = []
         if(searchText == "") {
-            filteredData = self.dao!.getAllPlaces()
+            filteredPlaces = self.dao!.getAllPlaces()
         }
         else {
             for place in self.dao!.getAllPlaces() {
                 if(place.name.lowercased().starts(with: searchText.lowercased())) {
-                    filteredData.append(place)
+                    filteredPlaces.append(place)
                 }
             }
         }

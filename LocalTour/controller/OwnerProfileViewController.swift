@@ -12,6 +12,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     var data:DataDemo?
     var dao:DaoMemory?
     var places:[Place] = []
+    var selectecPlace:String = ""
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -52,6 +53,17 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
 
         return cell
     }
+    
+    // TODO: Make it possible to select row from collectionview... ERROR WHY?
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectecPlace = places[indexPath.row].name
+        self.performSegue(withIdentifier: "playerSegue", sender: nil)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       let yourNextViewController = (segue.destination as! PlaceViewController)
+//       yourNextViewController.placeName = selectedPlace
+//    }
     
     /*
     // MARK: - Navigation
