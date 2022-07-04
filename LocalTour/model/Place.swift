@@ -81,17 +81,16 @@ class Place: PlaceMethods {
     }
   
     func addNewReview(user:Traveler, review:Review) {
-        
-        // TODO: exemplo de como usar o user anonimo
-//        if !(user.isLogged()) {
-////            return ALERTA
+        if (user.isLoggedIn()) {
+            // Add new review to list
+            self.userReviews.append(review)
+            
+            // Update Score
+            self.updateScore(latestScore: review.score)
+        }
+//        else { TODO: ALERTA para fazer login
+//            ALERTA
 //        }
-        
-        // Add new review to list
-        self.userReviews.append(review)
-        
-        // Update Score
-        self.updateScore(latestScore: review.score)
         
         // Notify owner
 //        notifyObserver(review:Review)

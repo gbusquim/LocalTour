@@ -20,24 +20,22 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     var sustainableImages = [UIImageView]()
     
-//    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var firstImageSlot: UIImageView!
     @IBOutlet weak var secondImageSlot: UIImageView!
     @IBOutlet weak var thirdImageSlot: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-//        tableView.delegate = self
-//        tableView.dataSource = self
         self.dao = DaoMemory.getInstance()
         places = (self.dao?.getAllPlaces())!
 
@@ -51,13 +49,14 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         descriptionLabel.text = selectedPlace?.description
         scoreLabel.text = selectedPlace?.score?.description
         
+        phoneNumberLabel.text = selectedPlace?.phoneNumber
+        addressLabel.text = selectedPlace?.address
+        
         sustainableImages.append(firstImageSlot)
         sustainableImages.append(secondImageSlot)
         sustainableImages.append(thirdImageSlot)
         
         showSustainableInfo()
-   
-        
         // Do any additional setup after loading the view.
     }
     
@@ -73,7 +72,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
             sustainableImages[i].image = UIImage(named: sustainableInfo[i])
         }
     }
-    
 
     /*
     // MARK: - Navigation
@@ -84,41 +82,28 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Pass the selected object to the new view controller.
     }
     */
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.reviews.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! ReviewTableViewCell
-//        let review = self.reviews[indexPath.row]
-//        cell.reviewComment.text = review.text
-//        cell.reviewerName.text = review.author
-//        cell.reviewScore.text = review.score.description
-//        return cell
-//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-//        return Owner.places.count // TODO: use owner.places
-        return 5  // TODO: use DataDemo instead
+        return self.selectedPlace!.getReviews().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellReview", for: indexPath) as! PlaceReviewsCollectionViewCell
         
-//        cell.IconBigPlaceType.image = UIImage(named: DataPlaces.places[indexPath.row].imgName ?? "bed-big")
-//        cell.lblPlaceName.text = DataPlaces.places[indexPath.row].name
-        cell.userTextReview.text = "TESTE"
+        let reviews = self.selectedPlace?.getReviews()
+        cell.userTextReview.text = reviews![indexPath.row].text
         cell.startReviewImage.image = UIImage(named: "bed-big")
-        cell.userRating.text = "5"
-        cell.userName.text = "Jorge"
-        // Configure the cell
+        cell.userRating.text = "★" + String(reviews![indexPath.row].score)
+        cell.userName.text = "-- " + reviews![indexPath.row].author
     
         return cell
     }
     
     @IBAction func createReview(_ sender: Any) {
-        performSegue(withIdentifier: "CreateReviewSegue", sender: self)
+        if (self.dao!.getCurrentUser().isLoggedIn()) {
+            performSegue(withIdentifier: "CreateReviewSegue", sender: self)
+        }
     }
     
     
