@@ -12,6 +12,7 @@ class User {
         self.email = email
         self.name = name
         self.cpf = cpf
+        self.setLoginStatus(status: false)
     }
 
     func isLoggedIn() -> Bool {

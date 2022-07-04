@@ -9,36 +9,63 @@ import Foundation
 import UIKit
 
 class Traveler:User, TravelerObserverProtocol {
-    // var currPosition: Float[]
-    var status: Bool
-    var lastLogin: Date
+    var lastLogin: Date?
 //    var view: UIViewController? // TODO: CHeck how to pass view to correctly notify the observer
     // Should be in User? In case user doesn`t login we still get its position? Tho email, password etc is not required
 
     override init(password:String, email:String, name:String, cpf:String) {
-        self.status = true  // TODO: fix this, need to be setted to true, only after authenticator performs login
-        self.lastLogin = Date()
         // TODO: Change this (decide if this should be treated by DAO, Authenticator or Traveler classes)
         super.init(password: password, email: email, name: name, cpf: cpf)
+    }
+    
+    func getLastLogin() -> Date {
+        return self.lastLogin!
+    }
+
+    override func performLogin() {
+        self.lastLogin = Date()
+        self.setLoginStatus(status: true)
     }
     
     // TODO: Change this (decide if this should be treated by DAO, Authenticator or Traveler classes)
     static func createAnonymousTraveler() -> Traveler {
         let anonymous: Traveler
         anonymous = Traveler(password: "", email: "", name: "", cpf: "")
-        anonymous.status = false
+//        anonymous.setLoginStatus(status: Bool) = false
         return anonymous
     }
     
-    override func isLoggedIn() -> Bool {
-        return self.status
-    }
-    
-    
     func onUpdate(places: [Place]) {
         let latestPlace = places.last
-        if (self.lastLogin < latestPlace!.date) {
+        if (self.getLastLogin() < latestPlace!.date) {
             print("NEW PLACE WAS ADDED")
         }
     }
 }
+
+// TODO: Traveler as frozen spot
+//import Foundation
+//
+//class Traveler:User, TravelerObserverProtocol {
+//    private var lastLogin: Date?
+//
+//    override init(password:String, email:String, name:String, cpf:String) {
+//        super.init(password: password, email: email, name: name, cpf: cpf)
+//    }
+//
+//    func getLastLogin() -> Date {
+//        return self.lastLogin!
+//    }
+//
+//    override func performLogin() {
+//        self.lastLogin = Date()
+//        self.setLoginStatus(status: true)
+//    }
+//
+//    func onUpdate(places: [Place]) {
+//        let latestPlace = places.last
+//        if (self.lastLogin! < latestPlace!.date) {
+//            print("Notify Observer")
+//        }
+//    }
+//}

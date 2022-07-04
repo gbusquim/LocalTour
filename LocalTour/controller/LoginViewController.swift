@@ -49,6 +49,7 @@ class ViewController: UIViewController {
             if (userType.selectedSegmentIndex ==  0) {
                 // TODO: TEMP REMOVE This global current user
                 self.dao!.updateCurrentUser(self.dao!.getTempTraveler())
+                self.dao!.getCurrentUser().performLogin()
                 
                 self.currentUser = self.dao!.getTraveler(id: email)
                 self.currentUser?.performLogin()
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
             else if(userType.selectedSegmentIndex == 1) {
                 // TODO: TEMP REMOVE This global current user
                 self.dao!.updateCurrentUser(self.dao!.getTempOwner())
+                self.dao!.getCurrentUser().performLogin()
                 
                 self.currentUser = self.dao!.getOwner(id: email)
                 self.currentUser?.performLogin()
