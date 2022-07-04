@@ -60,10 +60,10 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.performSegue(withIdentifier: "playerSegue", sender: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       let yourNextViewController = (segue.destination as! PlaceViewController)
-//       yourNextViewController.placeName = selectedPlace
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let yourNextViewController = (segue.destination as! PlaceViewController)
+       yourNextViewController.placeName = selectecPlace
+    }
     
     /*
     // MARK: - Navigation
