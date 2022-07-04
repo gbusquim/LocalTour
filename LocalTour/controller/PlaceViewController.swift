@@ -28,6 +28,9 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var imgInfoIcon: UIImageView!
+    @IBOutlet weak var lblAditionalInfo: UILabel!
+    
     @IBOutlet weak var firstImageSlot: UIImageView!
     @IBOutlet weak var secondImageSlot: UIImageView!
     @IBOutlet weak var thirdImageSlot: UIImageView!
@@ -51,6 +54,9 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         phoneNumberLabel.text = selectedPlace?.phoneNumber
         addressLabel.text = selectedPlace?.address
+        
+        imgInfoIcon.image = UIImage(named: (self.selectedPlace?.getInfoIcon())!)
+        lblAditionalInfo.text = self.selectedPlace?.getInfoText()
         
         sustainableImages.append(firstImageSlot)
         sustainableImages.append(secondImageSlot)

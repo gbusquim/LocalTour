@@ -12,6 +12,8 @@ class Shopping: Place {
     
     var teste: String?
     private let iconName = "shopping-cart-big"
+    private let aditionalInfoIcon = "place-details-icon-shopping"
+    private let aditionalInfo = "Type of products:"
     private let backgroundColor = UIColor(hue: 0.1278, saturation: 0.5, brightness: 0.99, alpha: 1.0) /* #fcde7e */
 
     
@@ -30,5 +32,13 @@ class Shopping: Place {
     
     override func getBackgroundColor() -> UIColor {
         return backgroundColor
+    }
+    
+    override func getInfoIcon() -> String {
+        return aditionalInfoIcon
+    }
+    
+    override func getInfoText() -> String {
+        return aditionalInfo
     }
 }

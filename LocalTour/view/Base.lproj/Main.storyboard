@@ -1103,6 +1103,8 @@
                         <outlet property="collectionView" destination="rnu-78-Es8" id="lT8-dL-7a7"/>
                         <outlet property="descriptionLabel" destination="awc-x6-b76" id="usE-qk-Bea"/>
                         <outlet property="firstImageSlot" destination="a59-mH-M27" id="qIm-ZP-RLG"/>
+                        <outlet property="imgInfoIcon" destination="PsG-V8-BlX" id="FrC-Da-AOW"/>
+                        <outlet property="lblAditionalInfo" destination="C99-pT-qIF" id="WgD-Wt-k53"/>
                         <outlet property="nameLabel" destination="XTM-yw-4CJ" id="FqL-yp-5Ly"/>
                         <outlet property="phoneNumberLabel" destination="ugD-IH-UE0" id="iCf-td-ASy"/>
                         <outlet property="scoreLabel" destination="Prn-vP-Obg" id="RR9-wD-5q4"/>
@@ -1408,7 +1410,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3qB-ev-jqD"/>
         <segue reference="Qx6-Gs-kvX"/>
         <segue reference="GsR-AE-RTS"/>
         <segue reference="NLE-1S-oPU"/>

@@ -13,6 +13,8 @@ class Restaurant: Place {
     var teste: String?
     
     private let iconName = "restaurants-big"
+    private let aditionalInfoIcon = "place-details-icon-food"
+    private let aditionalInfo = "Type of Food:"
     private let backgroundColor = UIColor(hue: 0, saturation: 0.4, brightness: 0.75, alpha: 1.0) /* #bf4c4c */
 
     
@@ -30,5 +32,13 @@ class Restaurant: Place {
     
     override func getBackgroundColor() -> UIColor {
         return backgroundColor
+    }
+    
+    override func getInfoIcon() -> String {
+        return aditionalInfoIcon
+    }
+    
+    override func getInfoText() -> String {
+        return aditionalInfo
     }
 }

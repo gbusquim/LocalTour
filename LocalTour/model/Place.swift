@@ -16,9 +16,14 @@ class Place: PlaceMethods {
     func getIcon() -> String {
         return "Mural"
     }
-    
     func getBackgroundColor() -> UIColor {
         return UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
+    }
+    func getInfoIcon() -> String {
+        ""
+    }
+    func getInfoText() -> String {
+        ""
     }
     
     var id: Int

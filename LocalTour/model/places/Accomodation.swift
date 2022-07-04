@@ -13,6 +13,8 @@ class Accomodation: Place {
     var teste: String?
     
     private let iconName = "bed-big"
+    private let aditionalInfoIcon = "place-details-icon-hotel"
+    private let aditionalInfo = "Number of rooms avaiable:"
     private let backgroundColor = UIColor(hue: 0.8417, saturation: 0.5, brightness: 0.92, alpha: 1.0) /* #ea75e4 */
     
     override init(id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String]) {
@@ -29,5 +31,13 @@ class Accomodation: Place {
     
     override func getBackgroundColor() -> UIColor {
         return backgroundColor
+    }
+    
+    override func getInfoIcon() -> String {
+        return aditionalInfoIcon
+    }
+    
+    override func getInfoText() -> String {
+        return aditionalInfo
     }
 }

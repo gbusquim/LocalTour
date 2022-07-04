@@ -13,4 +13,6 @@ protocol PlaceMethods {
     
     func getIcon() -> String
     func getBackgroundColor() -> UIColor
+    func getInfoIcon() -> String
+    func getInfoText() -> String
 }
