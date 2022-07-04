@@ -9,23 +9,6 @@ import Foundation
 import UIKit
 
 class Place: PlaceMethods {
-    func operation() -> String {
-        return ""
-    }
-    
-    func getIcon() -> String {
-        return "Mural"
-    }
-    func getBackgroundColor() -> UIColor {
-        return UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
-    }
-    func getInfoIcon() -> String {
-        ""
-    }
-    func getInfoText() -> String {
-        ""
-    }
-    
     var id: Int
     var name: String
     var description: String
@@ -80,13 +63,6 @@ class Place: PlaceMethods {
         return self.userReviews.map( {Float($0.score)} ).reduce(0,+)
     }
     
-    private func updateScore(latestScore: Int) {
-        let total = getTotalScore()
-        let avgScore = (total + Float(latestScore)) / Float(self.userReviews.count)
-        self.score = Float(round(10 * avgScore) / 10)
-        
-    }
-    
     private func computeScore() {
         // Sum of the score of all reviews
         let total = getTotalScore()
@@ -94,13 +70,13 @@ class Place: PlaceMethods {
         self.score = Float(round(10 * avgScore) / 10)
     }
   
-    func addNewReview(user:Traveler, review:Review) {
-        if (user.isLoggedIn()) {
+    func addNewReview(user:User, review:Review) {
+        if (user.isLoggedIn() && user is Traveler) {
             // Add new review to list
             self.userReviews.append(review)
             
             // Update Score
-            self.updateScore(latestScore: review.score)
+            self.computeScore()
         }
 //        else { TODO: ALERTA para fazer login
 //            ALERTA
@@ -117,6 +93,23 @@ class Place: PlaceMethods {
     
     func getSustainableInfo () -> [String] {
         return self.sustainableInfo.getSustainableInfo()
+    }
+    
+    func operation() -> String {
+        return ""
+    }
+    
+    func getIcon() -> String {
+        return "Mural"
+    }
+    func getBackgroundColor() -> UIColor {
+        return UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
+    }
+    func getInfoIcon() -> String {
+        ""
+    }
+    func getInfoText() -> String {
+        ""
     }
 
 }

@@ -106,7 +106,8 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     @IBAction func createReview(_ sender: Any) {
-        if (self.dao!.getCurrentUser().isLoggedIn()) {
+        // TODO: Temporary solution to disable option for Owner to write a Review
+        if (self.dao!.getCurrentUser().isLoggedIn() && self.dao!.getCurrentUser() is Traveler) {
             performSegue(withIdentifier: "CreateReviewSegue", sender: self)
         }
     }
