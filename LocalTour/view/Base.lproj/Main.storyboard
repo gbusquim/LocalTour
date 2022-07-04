@@ -337,7 +337,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Delete Account" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ea-RGn">
-                                <rect key="frame" x="28" y="651" width="345" height="34"/>
+                                <rect key="frame" x="28" y="756" width="345" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,7 +349,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByE-6T-md4">
-                                <rect key="frame" x="151" y="725" width="127" height="50"/>
+                                <rect key="frame" x="269" y="807" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <state key="normal" title="Button"/>
@@ -359,21 +359,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npk-Fg-78U">
-                                <rect key="frame" x="143" y="807" width="135" height="31"/>
+                                <rect key="frame" x="28" y="807" width="135" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Attempt 2"/>
                                 <connections>
                                     <action selector="tmpGoToNext2:" destination="yCY-He-Xzo" eventType="touchUpInside" id="aWA-7Q-U5V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-UL-WuX">
-                                <rect key="frame" x="123" y="489" width="163" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="add-new-place-button"/>
-                                <connections>
-                                    <action selector="createPlace:" destination="yCY-He-Xzo" eventType="touchUpInside" id="gav-hi-vjy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXt-uh-yP9">
@@ -420,12 +411,72 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-new-place-button" translatesAutoresizingMaskIntoConstraints="NO" id="tns-Ow-PG1">
+                                <rect key="frame" x="160" y="668" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1R3-xS-nK8">
+                                <rect key="frame" x="28" y="457" width="345" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oo2-VS-P9i">
+                                    <size key="itemSize" width="344" height="35"/>
+                                    <size key="estimatedItemSize" width="344" height="35"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCollectionPlaces" id="jb8-4y-G7g" customClass="PlacesCollectionViewCell" customModule="LocalTour" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L1N-2e-bK5">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVH-7A-mb1">
+                                                    <rect key="frame" x="8" y="3" width="281" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QwP-j3-bd1">
+                                                    <rect key="frame" x="297" y="0.0" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="345" height="40"/>
+                                        <connections>
+                                            <outlet property="imgPlaceIcon" destination="QwP-j3-bd1" id="ZvB-AN-125"/>
+                                            <outlet property="lblPlaceName" destination="vVH-7A-mb1" id="hB3-dq-MqA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-UL-WuX">
+                                <rect key="frame" x="153" y="663" width="95" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createPlace:" destination="yCY-He-Xzo" eventType="touchUpInside" id="gav-hi-vjy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IGS-pr-og8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="OvE-Ii-vtl"/>
                     <connections>
+                        <outlet property="collectionView" destination="1R3-xS-nK8" id="9GF-dB-7b6"/>
                         <segue destination="cxN-TT-NX0" kind="show" identifier="segueTMPdeleteOwnerProfile" id="Kfg-CF-Vp6"/>
                         <segue destination="wqp-cA-w5m" kind="show" identifier="segueTMPPlaces" id="Gm5-Mh-V7r"/>
                         <segue destination="NEq-6x-NdV" kind="showDetail" identifier="placeCreationSegue" id="3qB-ev-jqD"/>
@@ -1407,9 +1458,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3qB-ev-jqD"/>
         <segue reference="BdH-Gi-CQi"/>
         <segue reference="GsR-AE-RTS"/>
-        <segue reference="NLE-1S-oPU"/>
+        <segue reference="ddA-bs-cyw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
@@ -1421,6 +1473,7 @@
         <image name="place-info-icon-phone" width="50" height="50"/>
         <image name="restaurants-big-icon.png" width="48.75" height="60"/>
         <image name="shopping-cart-big.png" width="49.5" height="60"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -1435,6 +1488,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -7,14 +7,23 @@
 
 import UIKit
 
-class OwnerProfileViewController: UIViewController {
+class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var data:DataDemo?
+    var dao:DaoMemory?
+    var places:[Place] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         self.data = DataDemo.getInstance() // TODO: Utilizar DAO aqui ao inves de acessar o Singleton direto?
         DataPlaces.places = self.data!.places
+        self.dao = DaoMemory.getInstance()
+        self.places = self.dao!.getAllPlaces()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +38,20 @@ class OwnerProfileViewController: UIViewController {
         // TODO: Send/make notifications for new place created
     }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollectionPlaces", for: indexPath) as! PlacesCollectionViewCell
+        
+        cell.lblPlaceName.text = "aaa"
+        cell.imgPlaceIcon.image = UIImage(named: "bed-big")
+
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -55,4 +78,5 @@ class OwnerProfileViewController: UIViewController {
         performSegue(withIdentifier: "placeCreationSegue", sender: self)
     }
     
+
 }
