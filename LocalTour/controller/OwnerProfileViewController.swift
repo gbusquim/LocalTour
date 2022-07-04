@@ -15,10 +15,12 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     var data:DataDemo?
     var dao:DaoMemory?
     var places:[Place] = []
-    var selectecPlace:String = ""
-    var currPlace:Place?
+    var owner:Owner?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var lblOwnersName: UILabel!
+    @IBOutlet weak var lblOwnersCPF: UILabel!
+    @IBOutlet weak var lblOwnersEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         DataPlaces.places = self.data!.places
         self.dao = DaoMemory.getInstance()
         self.places = self.dao!.getAllPlaces()  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
+        self.owner = self.dao!.getCurrentUser() as? Owner
+        fillLabels()
         
         // TODO: Andrew adjust button
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addAction(tapGestureRecognizer:)))
@@ -35,6 +39,12 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
 //        btAdd.addGestureRecognizer(tapGestureRecognizer)
         
         // Do any additional setup after loading the view.
+    }
+    
+    private func fillLabels() {
+        lblOwnersName.text = self.owner?.name
+        lblOwnersCPF.text = self.owner?.cpf
+        lblOwnersEmail.text = self.owner?.email
     }
     
 //    @objc func addAction(tapGestureRecognizer: UITapGestureRecognizer){
