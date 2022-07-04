@@ -60,7 +60,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
     // Owner
     func getOwner(id: String) -> Owner? {
         // TODO: in case there are multiple owners iterate trough list
-        if (id == self.data?.owner?.cpf) {
+        if (id == self.data?.owner?.email) {
             return self.data!.owner!
         }
         return nil
@@ -114,7 +114,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
     // Traveler
     func getTraveler(id: String) -> Traveler? {
         // TODO: in case there are multiple travelers iterate trough list
-        if (id == self.data?.traveler?.cpf) {
+        if (id == self.data?.traveler?.email) {
             return self.data!.traveler!
         }
         return nil

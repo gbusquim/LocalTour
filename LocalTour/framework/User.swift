@@ -5,6 +5,7 @@ class User {
     var email: String
     var name: String
     var cpf: String
+    var loginStatus:Bool?
 
     init(password:String, email:String, name:String, cpf:String){
         self.passowrd = password
@@ -14,6 +15,18 @@ class User {
     }
 
     func isLoggedIn() -> Bool {
-        return true
+        return loginStatus!
+    }
+    
+    func setLoginStatus(status: Bool) {
+        self.loginStatus = status
+    }
+    
+    func performLogin() {
+        self.setLoginStatus(status: true)
+    }
+    
+    func performLogout() {
+        self.setLoginStatus(status: false)
     }
 }

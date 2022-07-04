@@ -157,6 +157,8 @@
 				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
 				593FC32C2861365800079B70 /* TravelerObserver.swift */,
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
+				598DCAB5285BC2F40018C4DB /* User.swift */,
+				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -253,8 +255,6 @@
 				B95A1D2928502FA1006C649A /* Place.swift */,
 				59C88FD42860FB4600C12C74 /* DataPlaces.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
-				598DCAB5285BC2F40018C4DB /* User.swift */,
-				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
 				598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */,
 				598D7230286D34E00011C61B /* Authenticator.swift */,
