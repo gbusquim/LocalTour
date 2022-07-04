@@ -9,7 +9,6 @@ import UIKit
 
 class PlaceReviewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userTextReview: UILabel!
-    @IBOutlet weak var startReviewImage: UIImageView!
     @IBOutlet weak var userRating: UILabel!
     @IBOutlet weak var userName: UILabel!
 }

@@ -93,7 +93,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         let reviews = self.selectedPlace?.getReviews()
         cell.userTextReview.text = reviews![indexPath.row].text
-        cell.startReviewImage.image = UIImage(named: "bed-big") // TODO: remove
         cell.userRating.text = "★" + String(reviews![indexPath.row].score)
         cell.userName.text = "-- " + reviews![indexPath.row].author
     
