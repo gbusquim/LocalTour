@@ -9,10 +9,14 @@ import UIKit
 
 class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+  
+    @IBOutlet weak var btAdd: UIImageView!
+    
     var data:DataDemo?
     var dao:DaoMemory?
     var places:[Place] = []
     var selectecPlace:String = ""
+    var currPlace:Place?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,8 +29,24 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.dao = DaoMemory.getInstance()
         self.places = self.dao!.getAllPlaces()  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
         
+        // TODO: Andrew
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addAction(tapGestureRecognizer:)))
+//        btAdd.isUserInteractionEnabled = true
+//        btAdd.addGestureRecognizer(tapGestureRecognizer)
+        
         // Do any additional setup after loading the view.
     }
+    
+//    @objc func addAction(tapGestureRecognizer: UITapGestureRecognizer){
+//        print("Olá!!!!")
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.btAdd.alpha = 0.5
+//            UIView.animate(withDuration: 0.5, animations:{
+//                self.btAdd.alpha = 1
+//            })
+//
+//        })
+//    }
     
     // TODO: remover dados mockados (lembrar de atualizar OwnerProfile...Controllers)
     func tmpCreatePlaces() {
@@ -54,15 +74,15 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         return cell
     }
     
-    // TODO: Make it possible to select row from collectionview... ERROR WHY?
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectecPlace = places[indexPath.row].name
-        self.performSegue(withIdentifier: "playerSegue", sender: nil)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let yourNextViewController = (segue.destination as! PlaceViewController)
-       yourNextViewController.placeName = selectecPlace
+        // TODO-Later: pass only selectedPass, forget about placeName...
+        let vc = segue.destination as! PlaceViewController
+        if let cell = sender as? UICollectionViewCell,
+           let indexPath = self.collectionView.indexPath(for: cell) {
+            let place = places[indexPath.row]
+            vc.selectedPlace = place
+            vc.placeName = place.name
+        }
     }
     
     /*
