@@ -11,7 +11,9 @@ import UIKit
 class Shopping: Place {
     
     var teste: String?
-    private let iconName = "shopping-cart-big" 	
+    private let iconName = "shopping-cart-big"
+    private let backgroundColor = UIColor(hue: 0.1278, saturation: 0.5, brightness: 0.99, alpha: 1.0) /* #fcde7e */
+
     
     override init(id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String]) {
         super.init(id: id,name: name, description: description, phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName, userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
@@ -27,6 +29,6 @@ class Shopping: Place {
     }
     
     override func getBackgroundColor() -> UIColor {
-        UIColor(hue: 36/360, saturation: 50/100, brightness: 94/100, alpha: 1.0) /* #efc98f */
+        return backgroundColor
     }
 }
