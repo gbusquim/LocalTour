@@ -29,7 +29,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.dao = DaoMemory.getInstance()
         self.places = self.dao!.getAllPlaces()  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
         
-        // TODO: Andrew
+        // TODO: Andrew adjust button
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addAction(tapGestureRecognizer:)))
 //        btAdd.isUserInteractionEnabled = true
 //        btAdd.addGestureRecognizer(tapGestureRecognizer)
@@ -76,12 +76,16 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO-Later: pass only selectedPass, forget about placeName...
-        let vc = segue.destination as! PlaceViewController
-        if let cell = sender as? UICollectionViewCell,
-           let indexPath = self.collectionView.indexPath(for: cell) {
-            let place = places[indexPath.row]
-            vc.selectedPlace = place
-            vc.placeName = place.name
+        
+        // Multiple segues for this view, all go through 'prepare', so need to know which case it is
+        if segue.identifier == "segueOwnerGotoPlace" {
+            let vc = segue.destination as! PlaceViewController
+            if let cell = sender as? UICollectionViewCell,
+               let indexPath = self.collectionView.indexPath(for: cell) {
+                let place = places[indexPath.row]
+                vc.selectedPlace = place
+                vc.placeName = place.name
+            }
         }
     }
     

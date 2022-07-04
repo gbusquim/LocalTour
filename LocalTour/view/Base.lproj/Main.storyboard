@@ -454,20 +454,20 @@
                                         <connections>
                                             <outlet property="imgPlaceIcon" destination="QwP-j3-bd1" id="ZvB-AN-125"/>
                                             <outlet property="lblPlaceName" destination="vVH-7A-mb1" id="hB3-dq-MqA"/>
-                                            <segue destination="8A0-jI-4MF" kind="show" id="Qx6-Gs-kvX"/>
+                                            <segue destination="8A0-jI-4MF" kind="show" identifier="segueOwnerGotoPlace" id="Qx6-Gs-kvX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-UL-WuX">
-                                <rect key="frame" x="153" y="663" width="95" height="71"/>
+                                <rect key="frame" x="153" y="673" width="95" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="createPlace:" destination="yCY-He-Xzo" eventType="touchUpInside" id="gav-hi-vjy"/>
+                                    <action selector="createPlace:" destination="yCY-He-Xzo" eventType="touchUpInside" id="Hwx-SH-QIv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1459,7 +1459,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3qB-ev-jqD"/>
         <segue reference="Qx6-Gs-kvX"/>
         <segue reference="GsR-AE-RTS"/>
         <segue reference="ddA-bs-cyw"/>
