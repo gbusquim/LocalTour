@@ -62,21 +62,29 @@ class Place: PlaceMethods {
         return self.userReviews
     }
     
+    private func getTotalScore() -> Float {
+        return self.userReviews.map( {Float($0.score)} ).reduce(0,+)
+    }
+    
     private func updateScore(latestScore: Int) {
-        self.score = (self.score! + Float(latestScore)) / Float(self.userReviews.count)
+        let total = getTotalScore()
+        let avgScore = (total + Float(latestScore)) / Float(self.userReviews.count)
+        self.score = Float(round(10 * avgScore) / 10)
+        
     }
     
     private func computeScore() {
         // Sum of the score of all reviews
-        let total = self.userReviews.map( {Float($0.score)} ).reduce(0,+)
-        self.score = total / Float(self.userReviews.count)
+        let total = getTotalScore()
+        let avgScore  = total / Float(self.userReviews.count)
+        self.score = Float(round(10 * avgScore) / 10)
     }
   
     func addNewReview(user:Traveler, review:Review) {
         
         // TODO: exemplo de como usar o user anonimo
-//        if (!user.isLogged()) {
-//            return ALERTA
+//        if !(user.isLogged()) {
+////            return ALERTA
 //        }
         
         // Add new review to list

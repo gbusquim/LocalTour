@@ -17,6 +17,7 @@ class PlaceViewController: UIViewController,
     var reviews:[Review] = []
 
     var dao:DaoMemory?
+    var places:[Place] = []
 
     var sustainableImages = [UIImageView]()
     
@@ -36,10 +37,13 @@ class PlaceViewController: UIViewController,
         tableView.delegate = self
         tableView.dataSource = self
         self.dao = DaoMemory.getInstance()
-        let places = self.dao?.getAllPlaces()
+        places = (self.dao?.getAllPlaces())!
 
         //TODO: usar o id do lugar escolhido
-        self.selectedPlace = places!.first(where: {$0.name == placeName})
+        if (selectedPlace == nil) {
+            self.selectedPlace = places.first(where: {$0.name == placeName})
+        }
+        
         self.reviews = (self.selectedPlace?.getReviews())!
         nameLabel.text = selectedPlace?.name
         descriptionLabel.text = selectedPlace?.description
@@ -53,6 +57,11 @@ class PlaceViewController: UIViewController,
    
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let yourNextViewController = (segue.destination as! CreateReviewViewController)
+       yourNextViewController.currPlace = selectedPlace
     }
     
     func showSustainableInfo() {

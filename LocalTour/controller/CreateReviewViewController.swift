@@ -18,8 +18,9 @@ class CreateReviewViewController: UIViewController {
     
     @IBOutlet weak var commentField: UITextView!
     
+    var currPlace:Place?
     var currentScore = 0
-
+    var dao:DaoMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +29,23 @@ class CreateReviewViewController: UIViewController {
         starArray.append(starLabel3)
         starArray.append(starLabel4)
         starArray.append(starLabel5)
-
+        
+        self.dao = DaoMemory.getInstance()
         // Do any additional setup after loading the view.
     }
     
-
     func fillStars(starNumber: Int) {
-    
         for i in 0...starNumber {
             starArray[i].setTitle("★", for: .normal)
         }
         if (starNumber != 4) {
             for i in starNumber + 1...4 {
             starArray[i].setTitle("☆", for: .normal)
-            
-        }
-
+            }
         }
     }
     
-    
+
     @IBAction func fifthStarSelected(_ sender: Any) {
         fillStars(starNumber: 4)
         currentScore = 5
@@ -73,9 +71,16 @@ class CreateReviewViewController: UIViewController {
         currentScore = 1
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let yourNextViewController = (segue.destination as! PlaceViewController)
+       yourNextViewController.selectedPlace = currPlace
+    }
+    
     @IBAction func createReview(_ sender: Any) {
         print(commentField.text!)
         print(currentScore)
+        let review = Review(text: commentField.text!, score: currentScore, author: (self.dao?.getCurrentUser().name)!)
+        currPlace!.addNewReview(user: (self.dao?.getCurrentUser())! as! Traveler, review: review)
         performSegue(withIdentifier: "reviewCreatedSegue", sender: self)
     }
     

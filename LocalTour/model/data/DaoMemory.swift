@@ -19,7 +19,6 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         self.data = DataDemo.getInstance()
     }
     
-    // Get / Read Instances
     static func getInstance() -> DaoMemory {
         if (DaoMemory.instance == nil) {
             DaoMemory.instance = DaoMemory()
@@ -27,36 +26,7 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         return DaoMemory.instance!
     }
     
-    func getOwner(id: String) -> Owner? {
-        // TODO: in case there are multiple owners iterate trough list
-        if (id == self.data?.owner?.cpf) {
-            return self.data!.owner!
-        }
-        return nil
-    }
-    
-    func getTraveler(id: String) -> Traveler? {
-        // TODO: in case there are multiple travelers iterate trough list
-        if (id == self.data?.traveler?.cpf) {
-            return self.data!.traveler!
-        }
-        return nil
-    }
-    
-    func getPlace(id: String) -> Place? {
-        for place in self.data!.places {
-            if (Int(id) == place.id) {
-                return place
-            }
-        }
-        return nil
-    }
-    
-    // TODO: Check if it's ok to use aux functions like this
-    func getAllPlaces() -> [Place] {
-        return self.data!.places
-    }
-    
+    // Get / Read Instances
     // TODO: DELETE
     func printUsers() {
         print(self.data!.travelers)
@@ -87,7 +57,15 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         self.currentUser = user
     }
     
-//    func updateOwner() {}
+    // Owner
+    func getOwner(id: String) -> Owner? {
+        // TODO: in case there are multiple owners iterate trough list
+        if (id == self.data?.owner?.cpf) {
+            return self.data!.owner!
+        }
+        return nil
+    }
+    //    func updateOwner() {}
     func addNewOwner(password:String, email:String, name:String, cpf:String) {
         let newOwner = Owner(password:password, email:email, name:name, cpf:cpf)
         self.data?.owners.append(newOwner)
@@ -95,27 +73,47 @@ class DaoMemory:DAO, ActivityObservableProtocol {
     }
  
 //    
-//    // Place
-//    func getPlace() -> Place {}
+    // Place
+    func getPlace(id: String) -> Place? {
+        for place in self.data!.places {
+            if (Int(id) == place.id) {
+                return place
+            }
+        }
+        return nil
+    }
 //    func addNewPlace() {}	
+    // TODO: Check if it's ok to use aux functions like this
+    func getAllPlaces() -> [Place] {
+        return self.data!.places
+    }
 //    
-//    // Review
+    // Review
 //    func getReview() -> Review {}
-//    func addNewReview() {}
-//    
-//    // Traveler
-//    func getTraveler() -> Traveler {}
-   func addNewTraveler(password:String, email:String, name:String, cpf:String) {
+//    func addNewReview() {
+//        
+//    }
+
+    
+    // Traveler
+    func getTraveler(id: String) -> Traveler? {
+        // TODO: in case there are multiple travelers iterate trough list
+        if (id == self.data?.traveler?.cpf) {
+            return self.data!.traveler!
+        }
+        return nil
+    }
+    func addNewTraveler(password:String, email:String, name:String, cpf:String) {
         let newTraveler = Traveler(password:password, email:email, name:name, cpf:cpf)
        self.data!.travelers.append(newTraveler)
-   }
-    
+    }
+
 
     // Observer
     func registerObserver(_ traveler: Traveler) {
         self.travelerObservers.append(traveler)
     }
-    
+
     // TODO: Check error
 //    func removeObserver(_ traveler: Traveler) {
 //        if let index = self.travelerObservers.firstIndex(where: {$0.value == traveler}) {

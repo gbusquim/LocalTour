@@ -57,10 +57,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-               let yourNextViewController = (segue.destination as! PlaceViewController)
-               yourNextViewController.placeName = selectedPlace
-               
-        }
+       let yourNextViewController = (segue.destination as! PlaceViewController)
+       yourNextViewController.placeName = selectedPlace
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
         if(searchText == "") {
