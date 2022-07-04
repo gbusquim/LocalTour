@@ -21,11 +21,13 @@ class MapViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     private var artworks: [Artwork] = []
     var selectedPlace: String = ""
+    var dao: DaoMemory?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        let initialLocation = CLLocation(latitude: -22.97070589431457, longitude: -43.20798876750632)
+        self.dao = DaoMemory.getInstance()
+        
+        let initialLocation = CLLocation(latitude: -22.974532150362137, longitude: -43.2257270313408)
         map.centerToLocation(initialLocation)
         
         map.delegate = self
@@ -33,7 +35,6 @@ class MapViewController: UIViewController {
           ArtworkMarkerView.self,
           forAnnotationViewWithReuseIdentifier:
             MKMapViewDefaultAnnotationViewReuseIdentifier)
-
         
         loadInitialData()
         map.addAnnotations(artworks)
@@ -41,27 +42,11 @@ class MapViewController: UIViewController {
     }
     
     private func loadInitialData() {
-      // 1
-      guard
-        let fileName = Bundle.main.url(forResource: "locations", withExtension: "geojson"),
-        let artworkData = try? Data(contentsOf: fileName)
-        else {
-          return
-      }
 
-      do {
-        // 2
-        let features = try MKGeoJSONDecoder()
-          .decode(artworkData)
-          .compactMap { $0 as? MKGeoJSONFeature }
-        // 3
-        let validWorks = features.compactMap(Artwork.init)
-        // 4
-        artworks.append(contentsOf: validWorks)
-      } catch {
-        // 5
-        print("Unexpected error: \(error).")
-      }
+        let places = dao?.getAllPlaces()
+        for place in places ?? [] {
+            artworks.append(Artwork(title: place.name, locationName: "", discipline: "", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(place.lat), longitude: CLLocationDegrees(place.lon))))
+        }
     }
 
     
@@ -87,12 +72,7 @@ class MapViewController: UIViewController {
           longitudinalMeters: regionRadius)
         setRegion(coordinateRegion, animated: true)
       }
-        
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//                   let yourNextViewController = (segue.destination as! PlaceViewController)
-//                   yourNextViewController.placeName = selectedPlace
-//
-//            }
+    
     }
 
 

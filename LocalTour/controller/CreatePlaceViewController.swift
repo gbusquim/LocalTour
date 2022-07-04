@@ -10,13 +10,15 @@ import UIKit
 class
 CreatePlaceViewController: UIViewController {
     
+    var dao:DaoMemory?
+    var sustainableCategories: [String] = []
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cnpjField: UITextField!
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var descriptionField: UITextView!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var adressField: UITextField!
-    
     
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var detailsField: UITextField!
@@ -28,6 +30,7 @@ CreatePlaceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dao = DaoMemory.getInstance()
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +59,21 @@ CreatePlaceViewController: UIViewController {
         print(ecoFriendlySwitch.isOn)
         print(adressField.text!)
         print(phoneNumberField.text!)
+        
+        if(fairWageSwitch.isOn) {
+            sustainableCategories.append("fair-wage")
+        }
+        
+        if(localEstablishmentSwitch.isOn) {
+            sustainableCategories.append("local-business")
+        }
+        
+        if(ecoFriendlySwitch.isOn) {
+            sustainableCategories.append("eco-friendly")
+        }
+        
+        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+        
         performSegue(withIdentifier: "placeCreatedSegue", sender: self)
     }
 }

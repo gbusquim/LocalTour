@@ -82,7 +82,23 @@ class DaoMemory:DAO, ActivityObservableProtocol {
         }
         return nil
     }
-//    func addNewPlace() {}	
+    func addNewPlace(id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String], category: String) {
+        var place :Place
+        
+        switch category {
+    case "Restaurant" :
+        let creator = RestaurantCreator()
+
+        place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+    
+    default :
+        let creator = ShoppingCreator()
+
+        place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+        }
+        self.data?.places.append(place)
+}
+
     // TODO: Check if it's ok to use aux functions like this
     func getAllPlaces() -> [Place] {
         return self.data!.places

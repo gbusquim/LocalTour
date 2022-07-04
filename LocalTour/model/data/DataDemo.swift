@@ -54,7 +54,8 @@ class DataDemo {
         let p1 = rc1.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP1(), inputSustainableCategories: ["fair-wage","local-business"])
         places.append(p1)
         let p2 = rc1.factoryMethod(id: 1,name: "Armico 2",description: "Restaurant 1 e bom",phoneNumber: "1234",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP2(), inputSustainableCategories: ["fair-wage"])
-
+        
+    
         print(p1.operation())
         places.append(p2)
 //        places.append(p2)

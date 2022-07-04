@@ -39,8 +39,8 @@ class Place: PlaceMethods {
         self.userReviews = userReviews ?? [] // TODO: fix this
         self.owner = owner
         self.cnpj = cnpj
-        self.lon = -22.975301473976184
-        self.lat = -43.21944727384322
+        self.lon = -43.225262
+        self.lat = -22.97552
         self.date = Date()
         
         self.sustainableInfo = Composite()
