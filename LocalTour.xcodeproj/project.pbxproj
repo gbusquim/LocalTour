@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592A536B28728A16006AFEE8 /* PositionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A536A28728A16006AFEE8 /* PositionStack.swift */; };
 		593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* TravelerObserver.swift */; };
 		59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE0286E431A00702063 /* CreateReviewViewController.swift */; };
 		59642AE4286E5A6200702063 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE3286E5A6200702063 /* Component.swift */; };
@@ -27,6 +28,7 @@
 		59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */; };
 		59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */; };
 		59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD42860FB4600C12C74 /* DataPlaces.swift */; };
+		59F39A3B287273E600662944 /* PositionStackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F39A3A287273E600662944 /* PositionStackResponse.swift */; };
 		B902B2DC286CE9B900FDFF5C /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902B2DB286CE9B900FDFF5C /* CreatePlaceViewController.swift */; };
 		B9137DB8286BC4060061A0B2 /* TouristProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9137DB7286BC4060061A0B2 /* TouristProfileViewController.swift */; };
 		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
@@ -59,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592A536A28728A16006AFEE8 /* PositionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStack.swift; sourceTree = "<group>"; };
 		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/framework/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59642AE0286E431A00702063 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
 		59642AE3286E5A6200702063 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewController.swift; sourceTree = "<group>"; };
 		59C88FD42860FB4600C12C74 /* DataPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlaces.swift; path = LocalTour/model/DataPlaces.swift; sourceTree = SOURCE_ROOT; };
+		59F39A3A287273E600662944 /* PositionStackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStackResponse.swift; sourceTree = "<group>"; };
 		B902B2DB286CE9B900FDFF5C /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
 		B9137DB7286BC4060061A0B2 /* TouristProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristProfileViewController.swift; sourceTree = "<group>"; };
 		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 			);
 			path = framework;
+			sourceTree = "<group>";
+		};
+		59F39A39287273B600662944 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				59F39A3A287273E600662944 /* PositionStackResponse.swift */,
+				592A536A28728A16006AFEE8 /* PositionStack.swift */,
+			);
+			path = http;
 			sourceTree = "<group>";
 		};
 		B911739328514B3B00B3A869 /* map */ = {
@@ -228,6 +241,7 @@
 		B9DA67BD2859545600C56C4B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				59F39A39287273B600662944 /* http */,
 				598D722D286D22470011C61B /* data */,
 				B9B2ACFF286B3F880048596E /* places */,
 				B95A1D2928502FA1006C649A /* Place.swift */,
@@ -357,6 +371,7 @@
 				B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */,
 				B9B28C762872A5B80010122B /* PlacesCollectionViewCell.swift in Sources */,
 				59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */,
+				592A536B28728A16006AFEE8 /* PositionStack.swift in Sources */,
 				598D722C286D21900011C61B /* Dao.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
 				59642AE6286E5BE400702063 /* Composite.swift in Sources */,
@@ -386,6 +401,7 @@
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
 				598D722F286D22610011C61B /* DaoMemory.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
+				59F39A3B287273E600662944 /* PositionStackResponse.swift in Sources */,
 				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,
 				59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */,
 				59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */,
