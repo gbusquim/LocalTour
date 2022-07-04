@@ -38,6 +38,7 @@
 		B98BAE2C286B8C6100165C49 /* PlaceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAE2B286B8C6100165C49 /* PlaceMethods.swift */; };
 		B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9967EDA284BE51800194A60 /* PlaceViewController.swift */; };
 		B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8633E286C9C2500E54B43 /* CreateAccountViewController.swift */; };
+		B9B28C762872A5B80010122B /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B28C752872A5B80010122B /* PlacesCollectionViewCell.swift */; };
 		B9B2AD01286B40AA0048596E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD00286B40AA0048596E /* Restaurant.swift */; };
 		B9B2AD03286B41840048596E /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD02286B41840048596E /* Shopping.swift */; };
 		B9B2AD05286B42400048596E /* RestaurantCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2AD04286B42400048596E /* RestaurantCreator.swift */; };
@@ -88,6 +89,7 @@
 		B98BAE2B286B8C6100165C49 /* PlaceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMethods.swift; sourceTree = "<group>"; };
 		B9967EDA284BE51800194A60 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		B9A8633E286C9C2500E54B43 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B9B28C752872A5B80010122B /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9B2AD00286B40AA0048596E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B9B2AD02286B41840048596E /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		B9B2AD04286B42400048596E /* RestaurantCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCreator.swift; sourceTree = "<group>"; };
@@ -167,27 +169,28 @@
 			children = (
 				B9F7C9C328459E890028ABC3 /* LaunchScreen.storyboard */,
 				B9F7C9BE28459E870028ABC3 /* Main.storyboard */,
-				B94D24A72872718400D98BD9 /* PlaceReviewsCollectionViewCell.swift */,
+				B9B28C752872A5B80010122B /* PlacesCollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		B91742C7285A64330098AB01 /* tableViewCell */ = {
+		B91742C7285A64330098AB01 /* viewCells */ = {
 			isa = PBXGroup;
 			children = (
 				B91742C8285A645C0098AB01 /* SearchPlaceTableViewCell.swift */,
 				B91742CE285A83DE0098AB01 /* ReviewTableViewCell.swift */,
+				B94D24A72872718400D98BD9 /* PlaceReviewsCollectionViewCell.swift */,
 			);
-			path = tableViewCell;
+			path = viewCells;
 			sourceTree = "<group>";
 		};
 		B98F028C285955E30074D0A8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				59C88FCE2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift */,
-				59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */,
 				59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */,
-				B91742C7285A64330098AB01 /* tableViewCell */,
+				59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */,
+				B91742C7285A64330098AB01 /* viewCells */,
 				B911739328514B3B00B3A869 /* map */,
 				B9967EDA284BE51800194A60 /* PlaceViewController.swift */,
 				B9F7C9BC28459E870028ABC3 /* LoginViewController.swift */,
@@ -352,6 +355,7 @@
 				B9B2AD07286B42B80048596E /* CreatorPlace.swift in Sources */,
 				B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */,
 				B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */,
+				B9B28C762872A5B80010122B /* PlacesCollectionViewCell.swift in Sources */,
 				59C88FD32860F57500C12C74 /* OwnerPlacesCollectionViewController.swift in Sources */,
 				598D722C286D21900011C61B /* Dao.swift in Sources */,
 				B9967EDB284BE51800194A60 /* PlaceViewController.swift in Sources */,
