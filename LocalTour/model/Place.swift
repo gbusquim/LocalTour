@@ -6,10 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 class Place: PlaceMethods {
     func operation() -> String {
         return ""
+    }
+    
+    func getIcon() -> String {
+        return "Mural"
+    }
+    
+    func getBackgroundColor() -> UIColor {
+        return UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
     }
     
     var id: Int

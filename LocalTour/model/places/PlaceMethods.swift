@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PlaceMethods {
     func operation() -> String
+    
+    func getIcon() -> String
+    func getBackgroundColor() -> UIColor
 }

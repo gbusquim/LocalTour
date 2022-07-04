@@ -1458,7 +1458,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3qB-ev-jqD"/>
         <segue reference="BdH-Gi-CQi"/>
         <segue reference="GsR-AE-RTS"/>
         <segue reference="ddA-bs-cyw"/>
@@ -1466,14 +1465,14 @@
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
         <image name="bed-big.png" width="56.25" height="45"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="place-action-share-icon" width="60" height="60"/>
         <image name="place-info-icon-address" width="50" height="50"/>
         <image name="place-info-icon-phone" width="50" height="50"/>
         <image name="restaurants-big-icon.png" width="48.75" height="60"/>
         <image name="shopping-cart-big.png" width="49.5" height="60"/>
-        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

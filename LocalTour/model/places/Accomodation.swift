@@ -1,25 +1,26 @@
 //
-//  Shopping.swift
+//  Restaurant.swift
 //  LocalTour
 //
-//  Created by user221918 on 6/28/22.
+//  Created by user221960 on 7/4/22.
 //
 
 import Foundation
 import UIKit
 
-class Shopping: Place {
+class Accomodation: Place {
     
     var teste: String?
-    private let iconName = "shopping-cart-big" 	
+    
+    private let iconName = "bed-big"
+    private let backgroundColor = UIColor(hue: 0.8528, saturation: 0.5, brightness: 0.96, alpha: 1.0) /* #f77bea */
     
     override init(id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String]) {
         super.init(id: id,name: name, description: description, phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName, userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
-        self.teste = "b"
     }
     
     override func operation() -> String {
-        return "Shopping"
+        return "Hostel"
     }
     
     override func getIcon() -> String {
@@ -27,6 +28,6 @@ class Shopping: Place {
     }
     
     override func getBackgroundColor() -> UIColor {
-        UIColor(hue: 36/360, saturation: 50/100, brightness: 94/100, alpha: 1.0) /* #efc98f */
+        return backgroundColor
     }
 }

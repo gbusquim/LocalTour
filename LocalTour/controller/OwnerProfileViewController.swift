@@ -22,7 +22,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.data = DataDemo.getInstance() // TODO: Utilizar DAO aqui ao inves de acessar o Singleton direto?
         DataPlaces.places = self.data!.places
         self.dao = DaoMemory.getInstance()
-        self.places = self.dao!.getAllPlaces()
+        self.places = self.dao!.getAllPlaces()  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
         
         // Do any additional setup after loading the view.
     }
@@ -40,14 +40,15 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5
+        return self.places.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollectionPlaces", for: indexPath) as! PlacesCollectionViewCell
         
-        cell.lblPlaceName.text = "aaa"
-        cell.imgPlaceIcon.image = UIImage(named: "bed-big")
+        cell.lblPlaceName.text = self.places[indexPath.row].name
+        cell.imgPlaceIcon.image = UIImage(named: self.places[indexPath.row].getIcon())
+        cell.contentView.backgroundColor = self.places[indexPath.row].getBackgroundColor()
 
         return cell
     }
