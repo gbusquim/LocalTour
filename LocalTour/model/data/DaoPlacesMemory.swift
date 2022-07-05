@@ -15,13 +15,13 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
     
     private init() {
         self.data = DataDemo.getInstance()
-        var concTravelers: [ConcreteTraveler] = []
-        for traveler in self.data!.travelers {
-            let newConcTraveler = ConcreteTraveler(password: traveler.passowrd, email: traveler.email, name: traveler.name, cpf: traveler.cpf)
-            concTravelers.append(newConcTraveler)
-        }
+//        var concTravelers: [Traveler] = []
+//        for traveler in self.data!.travelers {
+//            let newConcTraveler = Traveler(password: traveler.passowrd, email: traveler.email, name: traveler.name, cpf: traveler.cpf)
+//            concTravelers.append(newConcTraveler)
+//        }
 //        self.travelerObservers.append(contentsOf: self.data!.travelers as! [ConcreteTraveler])
-        self.travelerObservers.append(contentsOf: concTravelers)
+        self.travelerObservers.append(contentsOf: self.data!.travelers)
     }
     
     static func getInstance() -> DaoPlacesMemory {
@@ -81,8 +81,9 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
 
     // Observer
     func registerObserver(_ traveler: Traveler) {
-        let concreteTraveler:ConcreteTraveler = traveler as! ConcreteTraveler
-        self.travelerObservers.append(concreteTraveler)
+//        let concreteTraveler:Traveler = traveler as! Traveler
+//        self.travelerObservers.append(concreteTraveler)
+        self.travelerObservers.append(traveler)
     }
 
     // TODO: Check error

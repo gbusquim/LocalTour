@@ -61,8 +61,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func continueWithoutLogin(_ sender: Any) {
-        self.currentUser = ConcreteTraveler.createAnonymousTraveler() // TODO: Change to use another class
-        self.daoUsers?.updateCurrentUser(ConcreteTraveler.createAnonymousTraveler()) // TODO: check
+        self.currentUser = Traveler.createAnonymousTraveler() // TODO: Change to use another class
+        self.daoUsers?.updateCurrentUser(Traveler.createAnonymousTraveler()) // TODO: check
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
     

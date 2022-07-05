@@ -18,6 +18,14 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     var places:[Place] = []
     var owner:Owner?
     
+    @IBAction func ownerLogout(_ sender: Any) {
+        performSegue(withIdentifier: "logOutProfileSegue", sender: self)
+    }
+//    @IBAction func logOut(_ sender: Any) {
+//        performSegue(withIdentifier: "logOutProfileSegue", sender: self)
+//    }
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblOwnersName: UILabel!
     @IBOutlet weak var lblOwnersCPF: UILabel!

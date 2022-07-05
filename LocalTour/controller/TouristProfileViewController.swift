@@ -30,12 +30,13 @@ class TouristProfileViewController: UIViewController {
         self.dao = DaoUsersMemory.getInstance()
     }
 
-    func checkForNotifications(traveler: ConcreteTraveler) {
+    func checkForNotifications(traveler: Traveler) {
 //        var notifications = traveler.getNotifications()
         var notifications = traveler.dumpNotifications()
         if (notifications.count > 0) {
             repeat {
                 let message = notifications.popLast()
+                print("New Place: " + (message ?? ""))
                 self.strategyNotification = AlertNewPlaceStrategy(view: self)
                 strategyNotification!.strategy()
             } while (notifications.count > 0)
@@ -51,6 +52,8 @@ class TouristProfileViewController: UIViewController {
         if (user.isLoggedIn() && user is Traveler) {
   
 //            self.checkForNotifications(traveler: concTraveler)
+            
+            self.checkForNotifications(traveler: user as! Traveler)
             
             nameValue.text = user.name
             emailValue.text = user.email
