@@ -21,6 +21,9 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     var sustainableImages = [UIImageView]()
     
+    @IBOutlet weak var placeImage: UIImageView!
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -66,6 +69,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         showSustainableInfo()
         // Do any additional setup after loading the view.
+        placeImage.image = UIImage(named: (selectedPlace?.imgName)!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -112,6 +116,12 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         if (self.daoUsers!.getCurrentUser().isLoggedIn() && self.daoUsers!.getCurrentUser() is Traveler) {
             performSegue(withIdentifier: "CreateReviewSegue", sender: self)
         }
+    }
+    
+    @IBAction func sharePlace(_ sender: Any) {
+        let shareText = ["Take a look at " + selectedPlace!.name + "!"]
+        let ac = UIActivityViewController(activityItems: shareText, applicationActivities: nil)
+        present(ac, animated: true)
     }
     
     

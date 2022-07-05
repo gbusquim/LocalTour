@@ -40,6 +40,9 @@ class Place: PlaceMethods {
         self.lat = -22.97552
         self.date = Date()
         
+        
+        
+        
         self.sustainableInfo = Composite()
         for inputCategory in inputSustainableCategories {
             let sustainableCategory = SustainableInfo(name: inputCategory)

@@ -53,15 +53,15 @@ class DataDemo {
         let shopCrtr = ShoppingCreator()
         let hotelCrtr = AccomodationCreator()
         
-        let p1 = restCrtr.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP1(), inputSustainableCategories: ["fair-wage","local-business"])
+        let p1 = restCrtr.factoryMethod(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP1(), inputSustainableCategories: ["fair-wage","local-business"])
         places.append(p1)
-        let p2 = restCrtr.factoryMethod(id: 2,name: "Armico 2",description: "Restaurant 1 e bom",phoneNumber: "1234",address: "Rua b", owner: "Joao", cnpj: "123", imgName:"imagem", userReviews: createReviewsP2(), inputSustainableCategories: ["fair-wage"])
+        let p2 = restCrtr.factoryMethod(id: 2,name: "Armico 2",description: "Restaurant 1 e bom",phoneNumber: "1234",address: "Rua b", owner: "Joao", cnpj: "123", imgName:nil, userReviews: createReviewsP2(), inputSustainableCategories: ["fair-wage"])
         places.append(p2)
         
-        let p3 = shopCrtr.factoryMethod(id: 3, name: "Shopping 3", description: "Uma das primeiras empresas de dedetizacao nao nocivas para o meio ambiente do RJ", phoneNumber: "25696969", address: "Rua Insetisan, 69", owner: "Joao", cnpj: "123", imgName: "", inputSustainableCategories: ["eco-friendly"])
+        let p3 = shopCrtr.factoryMethod(id: 3, name: "Shopping 3", description: "Uma das primeiras empresas de dedetizacao nao nocivas para o meio ambiente do RJ", phoneNumber: "25696969", address: "Rua Insetisan, 69", owner: "Joao", cnpj: "123", imgName: nil, inputSustainableCategories: ["eco-friendly"])
         places.append(p3)
         
-        let p4 = hotelCrtr.factoryMethod(id: 3, name: "Pousada 4", description: "Pousada Vovo Eudina", phoneNumber: "21678969", address: "Rua marica, 128", owner: "Joao", cnpj: "123", imgName: "", inputSustainableCategories: ["eco-friendly, fair-wage"])
+        let p4 = hotelCrtr.factoryMethod(id: 3, name: "Pousada 4", description: "Pousada Vovo Eudina", phoneNumber: "21678969", address: "Rua marica, 128", owner: "Joao", cnpj: "123", imgName: nil, inputSustainableCategories: ["eco-friendly, fair-wage"])
         places.append(p4)
         
         
