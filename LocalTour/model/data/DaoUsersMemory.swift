@@ -25,8 +25,8 @@ class DaoUsersMemory:UsersDAO {
     
     func getAllUsers() -> [User]? {
         var users: [User] = []
-        users.append(self.data!.owner!)
-        users.append(self.data!.traveler!)
+        users.append(contentsOf: self.data!.owners)
+        users.append(contentsOf: self.data!.travelers)
         return users
     }
     
@@ -75,13 +75,5 @@ class DaoUsersMemory:UsersDAO {
     func printUsers() {
         print(self.data!.travelers)
         print(self.data!.owners)
-    }
-    
-    // TODO: Remove
-    func getTempTraveler() -> Traveler {
-        return self.data!.traveler!
-    }
-    func getTempOwner() -> Owner {
-        return self.data!.owner!
     }
 }

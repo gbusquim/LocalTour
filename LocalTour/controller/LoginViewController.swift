@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
   
     var strategyNotification:NewPlacesNotificationStrategy?
-    var dao:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
+    var daoUsers:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
     var authenticator:Authenticator?
     var currentUser:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.dao = DaoUsersMemory.getInstance()
+        self.daoUsers = DaoUsersMemory.getInstance()
         self.authenticator = Authenticator.getInstance(view: self)
         
     }
@@ -48,20 +48,21 @@ class ViewController: UIViewController {
         if (self.authenticator!.authenticateUser(email, passwd, userType.selectedSegmentIndex)) {
             if (userType.selectedSegmentIndex ==  0) {
                 // TODO: TEMP REMOVE This global current user
-                self.dao!.updateCurrentUser(self.dao!.getTempTraveler())
-                self.dao!.getCurrentUser().performLogin()
+                self.daoUsers!.updateCurrentUser(self.daoUsers!.getTraveler(id: email)!)
                 
-                self.currentUser = self.dao!.getTraveler(id: email)
+                self.daoUsers!.getCurrentUser().performLogin()
+                
+                self.currentUser = self.daoUsers!.getTraveler(id: email)
                 self.currentUser?.performLogin()
                 performSegue(withIdentifier: "loginTouristSegue", sender: self)
 
             }
             else if(userType.selectedSegmentIndex == 1) {
                 // TODO: TEMP REMOVE This global current user
-                self.dao!.updateCurrentUser(self.dao!.getTempOwner())
-                self.dao!.getCurrentUser().performLogin()
+                self.daoUsers!.updateCurrentUser(self.daoUsers!.getOwner(id: email)!)
+                self.daoUsers!.getCurrentUser().performLogin()
                 
-                self.currentUser = self.dao!.getOwner(id: email)
+                self.currentUser = self.daoUsers!.getOwner(id: email)
                 self.currentUser?.performLogin()
                 performSegue(withIdentifier: "loginOwnerSegue", sender: self)
             }
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
     
     @IBAction func continueWithoutLogin(_ sender: Any) {
         self.currentUser = ConcreteTraveler.createAnonymousTraveler() // TODO: Change to use another class
-        self.dao?.updateCurrentUser(ConcreteTraveler.createAnonymousTraveler()) // TODO: check
+        self.daoUsers?.updateCurrentUser(ConcreteTraveler.createAnonymousTraveler()) // TODO: check
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
     

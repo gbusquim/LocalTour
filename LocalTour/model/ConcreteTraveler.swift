@@ -19,10 +19,10 @@ class ConcreteTraveler:Traveler, TravelerObserverProtocol {
         super.init(password: password, email: email, name: name, cpf: cpf)
     }
     
-    func onUpdate(places: [Place]) {
-        let latestPlace = places.last
-        if (self.getLastLogin() < latestPlace!.date) {
-            self.updateKnownPlaces(place: latestPlace!)
+    func onUpdate(latestPlace: Place) {
+//        let latestPlace = places.last
+        if (self.getLastLogin() < latestPlace.date) {
+            self.updateKnownPlaces(place: latestPlace)
             print("NEW PLACE WAS ADDED")
         }
     }

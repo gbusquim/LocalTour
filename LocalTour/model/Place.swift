@@ -40,9 +40,6 @@ class Place: PlaceMethods {
         self.lat = -22.97552
         self.date = Date()
         
-        
-        
-        
         self.sustainableInfo = Composite()
         for inputCategory in inputSustainableCategories {
             let sustainableCategory = SustainableInfo(name: inputCategory)
@@ -91,7 +88,7 @@ class Place: PlaceMethods {
         
 //        notifyObserver()
 //        // TODO: Usar assim e apenas passar o ultimo item da lista?
-//
+//	
     }
     
     func getSustainableInfo () -> [String] {

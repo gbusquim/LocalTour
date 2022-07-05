@@ -64,6 +64,7 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
                 let creator = AccomodationCreator()
                 place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
         }
+        self.notifyObserver(place)
         self.data?.places.append(place)
     }
 
@@ -84,9 +85,9 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
 //        }
 //    }
     
-    func notifyObserver() {
-        let places = self.getAllPlaces()
-        self.travelerObservers.forEach({$0.onUpdate(places: places!)})
+    func notifyObserver(_ place: Place) {
+//        let places = self.getAllPlaces()
+        self.travelerObservers.forEach({$0.onUpdate(latestPlace:place)})
     }
 
 }
