@@ -13,7 +13,7 @@ protocol PlacesDAO {
     func getPlace(id:String) -> Place?
     func updatePlace(id:String, place:Place)
     func removePlace(id:String)
-    func addNewPlace(id: Int, name:String, description:String, phoneNumber: String, address: String, cnpj:String, userReviews:[Review], inputSustainableCategories: [String], category: String)
+    func addNewPlace(id: Int, name:String, description:String, phoneNumber: String, address: String, cnpj:String, userReviews:[Review], inputSustainableCategories: Composite, category: String)
     // TODO: Check what to do with imgPath and onwerID
 }
 

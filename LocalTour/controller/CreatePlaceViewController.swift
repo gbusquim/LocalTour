@@ -74,8 +74,24 @@ CreatePlaceViewController: UIViewController {
         
         // TODO: Fix this [Place Init Issue]
 //        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+        let composite = Composite()
+        for inputCategory in sustainableCategories {
+            if (inputCategory == "eco-friendly") {
+                let childComposite = Composite()
+                let ecoFriendlyCategory = SustainableInfo(name: "eco-friendly")
+                let recycleCategory = SustainableInfo(name: "recycle")
+                        
+                childComposite.add(component: ecoFriendlyCategory)
+                childComposite.add(component: recycleCategory)
+                composite.add(component: childComposite)
+            }
+                else {
+                    let sustainableCategory = SustainableInfo(name: inputCategory)
+                    composite.add(component: sustainableCategory)
+                }
+            }
 
-        daoPlaces?.addNewPlace(id: daoPlaces!.getNumberOfPlaces()+1, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+        daoPlaces?.addNewPlace(id: daoPlaces!.getNumberOfPlaces()+1, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: composite, category: categoryField.text!)
         
         performSegue(withIdentifier: "placeCreatedSegue", sender: self)
     }

@@ -64,10 +64,10 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     func tmpCreatePlaces() {
         let rc = RestaurantCreator()
 
-        let p6 = rc.factoryMethod(id: 6,name: "Newest Place",description: "Accomodation e bom", phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "111", imgName:"imagem", inputSustainableCategories: [])
+//        let p6 = rc.factoryMethod(id: 6,name: "Newest Place",description: "Accomodation e bom", phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "111", imgName:"imagem", inputSustainableCategories: Composite())
         
-        self.data?.places.append(p6)
-        DataPlaces.places.append(p6)  // TODO: stop using DataPlaces
+        //self.data?.places.append(p6)
+       // DataPlaces.places.append(p6)  // TODO: stop using DataPlaces
         // TODO: Send/make notifications for new place created
     }
 

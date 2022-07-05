@@ -9,6 +9,6 @@ import Foundation
 
 protocol CreatorPlace {
 
-    func factoryMethod(id: Int,name:String, description:String, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]?, inputSustainableCategories: [String]) -> Place
+    func factoryMethod(id: Int,name:String, description:String, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]?, inputSustainableCategories: Composite) -> Place
 
 }

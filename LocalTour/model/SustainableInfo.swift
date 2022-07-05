@@ -22,6 +22,8 @@ class SustainableInfo: Component {
             self.imgPath = "sustainable-eco-friendly"
         case "local-business":
             self.imgPath = "sustainable-local-business"
+        case "recycle":
+            self.imgPath = "sustainable-recycle"
         default:
             self.imgPath = ""
         }

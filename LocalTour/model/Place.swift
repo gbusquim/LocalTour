@@ -24,7 +24,7 @@ class Place: PlaceMethods {
     var date: Date
     var sustainableInfo: Component
     
-    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String]) {
+    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: Composite) {
 
         self.id = id
         self.name = name
@@ -40,11 +40,11 @@ class Place: PlaceMethods {
         self.lat = -22.97552
         self.date = Date()
         
-        self.sustainableInfo = Composite()
-        for inputCategory in inputSustainableCategories {
-            let sustainableCategory = SustainableInfo(name: inputCategory)
-            self.sustainableInfo.add(component: sustainableCategory)
-        }
+        self.sustainableInfo = inputSustainableCategories
+//        for inputCategory in inputSustainableCategories {
+//            let sustainableCategory = SustainableInfo(name: inputCategory)
+//            self.sustainableInfo.add(component: sustainableCategory)
+//        }
         
         if !(self.userReviews.isEmpty) {
             computeScore()
