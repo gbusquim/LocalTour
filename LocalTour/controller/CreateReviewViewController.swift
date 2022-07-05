@@ -20,7 +20,7 @@ class CreateReviewViewController: UIViewController {
     
     var currPlace:Place?
     var currentScore = 0
-    var dao:DaoMemory?
+    var dao:DaoUsersMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class CreateReviewViewController: UIViewController {
         starArray.append(starLabel4)
         starArray.append(starLabel5)
         
-        self.dao = DaoMemory.getInstance()
+        self.dao = DaoUsersMemory.getInstance()
         // Do any additional setup after loading the view.
     }
     

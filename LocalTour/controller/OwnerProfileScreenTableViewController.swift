@@ -10,12 +10,12 @@ import UIKit
 class OwnerProfileScreenTableViewController: UITableViewController {
   
     var places = [Place]()
-    var dao:DaoMemory?
+    var daoPlaces: DaoPlacesMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dao = DaoMemory.getInstance()
-        places = self.dao!.getAllPlaces()!
+        self.daoPlaces = DaoPlacesMemory.getInstance()
+        places = self.daoPlaces!.getAllPlaces()!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

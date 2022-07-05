@@ -15,7 +15,8 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     var selectedPlace:Place?
     var reviews:[Review] = []
 
-    var dao:DaoMemory?
+    var daoUsers:DaoUsersMemory?
+    var daoPlaces: DaoPlacesMemory?
     var places:[Place] = []
 
     var sustainableImages = [UIImageView]()
@@ -39,8 +40,9 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        self.dao = DaoMemory.getInstance()
-        places = (self.dao?.getAllPlaces())!
+        self.daoUsers = DaoUsersMemory.getInstance()
+        self.daoPlaces = DaoPlacesMemory.getInstance()
+        places = (self.daoPlaces?.getAllPlaces())!
 
         //TODO: usar o id do lugar escolhido
         if (selectedPlace == nil) {
@@ -107,7 +109,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBAction func createReview(_ sender: Any) {
         // TODO: Temporary solution to disable option for Owner to write a Review
-        if (self.dao!.getCurrentUser().isLoggedIn() && self.dao!.getCurrentUser() is Traveler) {
+        if (self.daoUsers!.getCurrentUser().isLoggedIn() && self.daoUsers!.getCurrentUser() is Traveler) {
             performSegue(withIdentifier: "CreateReviewSegue", sender: self)
         }
     }

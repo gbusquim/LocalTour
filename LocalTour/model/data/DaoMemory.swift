@@ -7,20 +7,20 @@
 
 import Foundation
 
-class DaoMemory: PlacesDAO, ActivityObservableProtocol {
+class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
     var data:DataDemo?
-    private static var instance:DaoMemory?
+    private static var instance:DaoPlacesMemory?
     private var travelerObservers = [TravelerObserverProtocol]()
     
     private init() {
         self.data = DataDemo.getInstance()
     }
     
-    static func getInstance() -> DaoMemory {
-        if (DaoMemory.instance == nil) {
-            DaoMemory.instance = DaoMemory()
+    static func getInstance() -> DaoPlacesMemory {
+        if (DaoPlacesMemory.instance == nil) {
+            DaoPlacesMemory.instance = DaoPlacesMemory()
         }
-        return DaoMemory.instance!
+        return DaoPlacesMemory.instance!
     }
     
     // Place

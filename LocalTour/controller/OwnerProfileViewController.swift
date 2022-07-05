@@ -13,7 +13,8 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var btAdd: UIImageView!
     
     var data:DataDemo?
-    var dao:DaoMemory?
+    var daoUsers:DaoUsersMemory?
+    var daoPlaces:DaoPlacesMemory?
     var places:[Place] = []
     var owner:Owner?
     
@@ -28,9 +29,10 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView.dataSource = self
         self.data = DataDemo.getInstance() // TODO: Utilizar DAO aqui ao inves de acessar o Singleton direto?
         DataPlaces.places = self.data!.places
-        self.dao = DaoMemory.getInstance()
-        self.places = self.dao!.getAllPlaces()!  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
-        self.owner = self.dao!.getCurrentUser() as? Owner
+        self.daoUsers = DaoUsersMemory.getInstance()
+        self.daoPlaces = DaoPlacesMemory.getInstance()
+        self.places = self.daoPlaces!.getAllPlaces()!  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
+        self.owner = self.daoUsers!.getCurrentUser() as? Owner
         fillLabels()
         
         // TODO: Andrew adjust button

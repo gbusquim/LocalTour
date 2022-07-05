@@ -21,11 +21,11 @@ class MapViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     private var artworks: [Artwork] = []
     var selectedPlace: String = ""
-    var dao: DaoMemory?
+    var daoPlaces: DaoPlacesMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dao = DaoMemory.getInstance()
+        self.daoPlaces = DaoPlacesMemory.getInstance()
         
         let initialLocation = CLLocation(latitude: -22.974532150362137, longitude: -43.2257270313408)
         map.centerToLocation(initialLocation)
@@ -43,7 +43,7 @@ class MapViewController: UIViewController {
     
     private func loadInitialData() {
 
-        let places = dao?.getAllPlaces()
+        let places = daoPlaces?.getAllPlaces()!
         for place in places ?? [] {
             artworks.append(Artwork(title: place.name, locationName: "", discipline: "", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(place.lat), longitude: CLLocationDegrees(place.lon))))
         }

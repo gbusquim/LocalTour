@@ -10,7 +10,7 @@ import UIKit
 class
 CreatePlaceViewController: UIViewController {
     
-    var dao:DaoMemory?
+    var daoPlaces: DaoPlacesMemory?
     var sustainableCategories: [String] = []
     
     @IBOutlet weak var nameField: UITextField!
@@ -30,7 +30,7 @@ CreatePlaceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dao = DaoMemory.getInstance()
+        self.daoPlaces = DaoPlacesMemory.getInstance()
         // Do any additional setup after loading the view.
     }
     
@@ -75,7 +75,7 @@ CreatePlaceViewController: UIViewController {
         // TODO: Fix this [Place Init Issue]
 //        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
 
-        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+        daoPlaces?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
         
         performSegue(withIdentifier: "placeCreatedSegue", sender: self)
     }

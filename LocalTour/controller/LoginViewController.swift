@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
   
     var strategyNotification:NewPlacesNotificationStrategy?
-    var dao:DaoMemory?  // Check-TODO: Keep Dao here only to set current user?
+    var dao:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
     var authenticator:Authenticator?
     var currentUser:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.dao = DaoMemory.getInstance()
+        self.dao = DaoUsersMemory.getInstance()
         self.authenticator = Authenticator.getInstance(view: self)
         
     }

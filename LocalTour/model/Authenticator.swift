@@ -11,11 +11,11 @@ import UIKit
 class Authenticator {
     
     private static var instance:Authenticator?
-    var dao:DaoMemory?
+    var dao:DaoUsersMemory?
     var view: UIViewController
     
     init(_ view:UIViewController) {
-        self.dao = DaoMemory.getInstance()
+        self.dao = DaoUsersMemory.getInstance()
         self.view = view
     }
     

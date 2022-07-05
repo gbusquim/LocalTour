@@ -22,11 +22,11 @@ class TouristProfileViewController: UIViewController {
     @IBOutlet weak var notLoggedIMessage: UILabel!
     @IBOutlet weak var logInButton: UIButton!
     
-    var dao:DaoMemory?
+    var dao:DaoUsersMemory?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dao = DaoMemory.getInstance()
+        self.dao = DaoUsersMemory.getInstance()
     }
 
     override func viewDidAppear(_ animated: Bool) {
