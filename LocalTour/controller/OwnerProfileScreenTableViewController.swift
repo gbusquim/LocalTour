@@ -15,7 +15,7 @@ class OwnerProfileScreenTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dao = DaoMemory.getInstance()
-        places = self.dao!.getAllPlaces()
+        places = self.dao!.getAllPlaces()!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

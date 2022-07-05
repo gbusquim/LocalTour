@@ -32,7 +32,7 @@ class Authenticator {
             return false
         }
         // TODO: Can change later to only iterate through Travelers or Owners "list" instead of using "getAllUsers()"... Need to adapt alert notifications tho
-        for user in self.dao!.getAllUsers() {
+        for user in self.dao!.getAllUsers()! {
             if (email == user.email) {
                 if ((loginType == 0 && user is Traveler) || (loginType == 1 && user is Owner)) {
                     if (passwd == user.passowrd) {

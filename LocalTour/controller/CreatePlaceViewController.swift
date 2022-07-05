@@ -72,7 +72,10 @@ CreatePlaceViewController: UIViewController {
             sustainableCategories.append("eco-friendly")
         }
         
-        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+        // TODO: Fix this [Place Init Issue]
+//        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
+
+        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
         
         performSegue(withIdentifier: "placeCreatedSegue", sender: self)
     }

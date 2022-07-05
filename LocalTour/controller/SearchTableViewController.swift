@@ -66,7 +66,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             filteredPlaces = self.dao!.getAllPlaces()
         }
         else {
-            for place in self.dao!.getAllPlaces() {
+            for place in self.dao!.getAllPlaces()! {
                 if(place.name.lowercased().starts(with: searchText.lowercased())) {
                     filteredPlaces.append(place)
                 }

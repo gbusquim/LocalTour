@@ -29,7 +29,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         self.data = DataDemo.getInstance() // TODO: Utilizar DAO aqui ao inves de acessar o Singleton direto?
         DataPlaces.places = self.data!.places
         self.dao = DaoMemory.getInstance()
-        self.places = self.dao!.getAllPlaces()  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
+        self.places = self.dao!.getAllPlaces()!  // TODO: Change to use 'self.owner.getPlaces()' instead of using all Places
         self.owner = self.dao!.getCurrentUser() as? Owner
         fillLabels()
         
