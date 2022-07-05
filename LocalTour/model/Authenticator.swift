@@ -52,8 +52,9 @@ class Authenticator:LoginAuthenticatonStrategy {
     }
 
     // TODO: Ideal sollution would be to use Authenticator to validate new account information and pass it do DAO to store in the DB or memory-list...
-    // func validateNewAccount() {}
-
+    func validateNewAccount(_ email: String, _ passwd: String, _ loginType:Int) -> Bool {
+        return true
+    }
     
     func alertEmptyInput() {
         let alert = UIAlertController(title: "Email or Password field is empty", message: "Please type your email and password", preferredStyle: UIAlertController.Style.alert)

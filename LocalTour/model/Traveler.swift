@@ -46,7 +46,7 @@ class Traveler:User, TravelerObserverProtocol {
 // TODO: Traveler as frozen spot
 //import Foundation
 //
-//class Traveler:User, TravelerObserverProtocol {
+//class Traveler:User {
 //    private var lastLogin: Date?
 //
 //    override init(password:String, email:String, name:String, cpf:String) {
@@ -60,12 +60,5 @@ class Traveler:User, TravelerObserverProtocol {
 //    override func performLogin() {
 //        self.lastLogin = Date()
 //        self.setLoginStatus(status: true)
-//    }
-//
-//    func onUpdate(places: [Place]) {
-//        let latestPlace = places.last
-//        if (self.lastLogin! < latestPlace!.date) {
-//            print("Notify Observer")
-//        }
 //    }
 //}

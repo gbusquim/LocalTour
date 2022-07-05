@@ -9,4 +9,5 @@ import Foundation
 
 protocol LoginAuthenticatonStrategy {
     func authenticateUser(_ email: String, _ passwd: String, _ loginType:Int) -> Bool
+    func validateNewAccount(_ email: String, _ passwd: String, _ loginType:Int) -> Bool
 }
