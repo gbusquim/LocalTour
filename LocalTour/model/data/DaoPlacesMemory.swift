@@ -8,6 +8,7 @@
 import Foundation
 
 class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
+
     var data:DataDemo?
     private static var instance:DaoPlacesMemory?
     private var travelerObservers = [TravelerObserverProtocol]()
@@ -39,6 +40,10 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
         }
     }
     
+    func getNumberOfPlaces() -> Int! {
+        return self.data?.places.count ?? 0
+    }
+    
     // TODO: Fix this
     // TODO: Fix this [Place Init Issue]
     func addNewPlace(id: Int, name: String, description: String, phoneNumber: String, address: String, cnpj: String, userReviews: [Review], inputSustainableCategories: [String], category: String) {
@@ -68,7 +73,8 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
 
     // Observer
     func registerObserver(_ traveler: Traveler) {
-        self.travelerObservers.append(traveler)
+        let concreteTraveler:ConcreteTraveler = traveler as! ConcreteTraveler
+        self.travelerObservers.append(concreteTraveler)
     }
 
     // TODO: Check error
@@ -80,7 +86,6 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
     
     func notifyObserver() {
         let places = self.getAllPlaces()
-//        let latest = places.last
         self.travelerObservers.forEach({$0.onUpdate(places: places!)})
     }
 

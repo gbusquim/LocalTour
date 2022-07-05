@@ -10,6 +10,7 @@
 		5914A0F72873B03A00ED1200 /* UsersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0F62873B03A00ED1200 /* UsersDAO.swift */; };
 		5914A0FA2873B7FE00ED1200 /* DaoUsersMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0F92873B7FE00ED1200 /* DaoUsersMemory.swift */; };
 		5914A0FC2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */; };
+		5914A0FE2873EB6600ED1200 /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0FD2873EB6600ED1200 /* Traveler.swift */; };
 		592A536B28728A16006AFEE8 /* PositionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A536A28728A16006AFEE8 /* PositionStack.swift */; };
 		593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* TravelerObserver.swift */; };
 		59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE0286E431A00702063 /* CreateReviewViewController.swift */; };
@@ -21,7 +22,7 @@
 		598D722F286D22610011C61B /* DaoPlacesMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722E286D22610011C61B /* DaoPlacesMemory.swift */; };
 		598D7231286D34E00011C61B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D7230286D34E00011C61B /* Authenticator.swift */; };
 		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
-		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
+		598DCAB8285BC50C0018C4DB /* ConcreteTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* ConcreteTraveler.swift */; };
 		598FB443286A68D000CA404D /* DataDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB442286A68D000CA404D /* DataDemo.swift */; };
 		598FB445286A6B4300CA404D /* AlertNewPlaceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */; };
 		598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */; };
@@ -69,6 +70,7 @@
 		5914A0F62873B03A00ED1200 /* UsersDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDAO.swift; sourceTree = "<group>"; };
 		5914A0F92873B7FE00ED1200 /* DaoUsersMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoUsersMemory.swift; sourceTree = "<group>"; };
 		5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticatonStrategy.swift; sourceTree = "<group>"; };
+		5914A0FD2873EB6600ED1200 /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
 		592A536A28728A16006AFEE8 /* PositionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStack.swift; sourceTree = "<group>"; };
 		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/framework/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59642AE0286E431A00702063 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		598D722E286D22610011C61B /* DaoPlacesMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoPlacesMemory.swift; sourceTree = "<group>"; };
 		598D7230286D34E00011C61B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
+		598DCAB7285BC50C0018C4DB /* ConcreteTraveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteTraveler.swift; sourceTree = "<group>"; };
 		598FB442286A68D000CA404D /* DataDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDemo.swift; sourceTree = "<group>"; };
 		598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNewPlaceStrategy.swift; sourceTree = "<group>"; };
 		598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesNotificationStrategy.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
+				5914A0FD2873EB6600ED1200 /* Traveler.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
 			);
 			path = framework;
@@ -270,9 +273,9 @@
 				59F39A39287273B600662944 /* http */,
 				598D722D286D22470011C61B /* data */,
 				B9B2ACFF286B3F880048596E /* places */,
-				B95A1D2928502FA1006C649A /* Place.swift */,
 				59C88FD42860FB4600C12C74 /* DataPlaces.swift */,
-				598DCAB7285BC50C0018C4DB /* Traveler.swift */,
+				B95A1D2928502FA1006C649A /* Place.swift */,
+				598DCAB7285BC50C0018C4DB /* ConcreteTraveler.swift */,
 				598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */,
 				598D7230286D34E00011C61B /* Authenticator.swift */,
 				59642AEE286E65C400702063 /* SustainableInfo.swift */,
@@ -426,10 +429,11 @@
 				599979762872C2D200FA95B5 /* Accomodation.swift in Sources */,
 				B9B2AD09286B43290048596E /* ShoppingCreator.swift in Sources */,
 				B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */,
-				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
+				598DCAB8285BC50C0018C4DB /* ConcreteTraveler.swift in Sources */,
 				598D722F286D22610011C61B /* DaoPlacesMemory.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 				59F39A3B287273E600662944 /* PositionStackResponse.swift in Sources */,
+				5914A0FE2873EB6600ED1200 /* Traveler.swift in Sources */,
 				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,
 				59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */,
 				59C88FCF2860E20600C12C74 /* OwnerProfileScreenTableViewController.swift in Sources */,
