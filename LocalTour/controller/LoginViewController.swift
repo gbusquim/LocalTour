@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   
     var strategyNotification:NewPlacesNotificationStrategy?
     var daoUsers:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
-    var authenticator:Authenticator?
+    var authenticator:Authenticator?	
     var currentUser:User?
     
     override func viewDidLoad() {
@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         //Se houver reviews novas nos places do owner conectado
         self.strategyNotification = AlertNewPlaceStrategy(view: self)
         strategyNotification!.strategy()
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
             if (userType.selectedSegmentIndex ==  0) {
                 // TODO: TEMP REMOVE This global current user
                 self.daoUsers!.updateCurrentUser(self.daoUsers!.getTraveler(id: email)!)
-                
                 self.daoUsers!.getCurrentUser().performLogin()
                 
                 self.currentUser = self.daoUsers!.getTraveler(id: email)
@@ -76,6 +74,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: Any) {
+        // TODO: Add new users here
         performSegue(withIdentifier: "createAccountSegue", sender: self)
     }
     

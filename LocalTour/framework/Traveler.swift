@@ -8,7 +8,7 @@
 import Foundation
 
 class Traveler:User {
-    private var lastLogin: Date?
+    var lastLogin: Date?
 
     override init(password:String, email:String, name:String, cpf:String) {
         super.init(password: password, email: email, name: name, cpf: cpf)

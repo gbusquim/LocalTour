@@ -11,7 +11,7 @@ class DataDemo {
     private static var instance:DataDemo?
     var places:[Place] = []
     var travelers:[Traveler] = []
-    var owners:[Owner] = []
+    var owners:[Owner] = []	
     
     private init() {
         createOwner()

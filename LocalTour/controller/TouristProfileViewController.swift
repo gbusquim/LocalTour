@@ -23,15 +23,35 @@ class TouristProfileViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     var dao:DaoUsersMemory?
-
+    var strategyNotification:NewPlacesNotificationStrategy?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dao = DaoUsersMemory.getInstance()
     }
 
+    func checkForNotifications(traveler: ConcreteTraveler) {
+//        var notifications = traveler.getNotifications()
+        var notifications = traveler.dumpNotifications()
+        if (notifications.count > 0) {
+            repeat {
+                let message = notifications.popLast()
+                self.strategyNotification = AlertNewPlaceStrategy(view: self)
+                strategyNotification!.strategy()
+            } while (notifications.count > 0)
+//            traveler.removeAllNotifications()
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         let user = self.dao!.getCurrentUser()
-        if (user.isLoggedIn()) {
+//        var concTraveler:ConcreteTraveler
+//        concTraveler = ConcreteTraveler(password: user.passowrd, email: user.email, name: user.name, cpf: user.cpf)
+        
+        if (user.isLoggedIn() && user is Traveler) {
+  
+//            self.checkForNotifications(traveler: concTraveler)
+            
             nameValue.text = user.name
             emailValue.text = user.email
             cpfValue.text = user.cpf
