@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5914A0F72873B03A00ED1200 /* UsersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0F62873B03A00ED1200 /* UsersDAO.swift */; };
 		5914A0FA2873B7FE00ED1200 /* DaoUsersMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0F92873B7FE00ED1200 /* DaoUsersMemory.swift */; };
+		5914A0FC2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */; };
 		592A536B28728A16006AFEE8 /* PositionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A536A28728A16006AFEE8 /* PositionStack.swift */; };
 		593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC32C2861365800079B70 /* TravelerObserver.swift */; };
 		59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AE0286E431A00702063 /* CreateReviewViewController.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		5914A0F62873B03A00ED1200 /* UsersDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDAO.swift; sourceTree = "<group>"; };
 		5914A0F92873B7FE00ED1200 /* DaoUsersMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoUsersMemory.swift; sourceTree = "<group>"; };
+		5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticatonStrategy.swift; sourceTree = "<group>"; };
 		592A536A28728A16006AFEE8 /* PositionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionStack.swift; sourceTree = "<group>"; };
 		593FC32C2861365800079B70 /* TravelerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerObserver.swift; path = LocalTour/framework/TravelerObserver.swift; sourceTree = SOURCE_ROOT; };
 		59642AE0286E431A00702063 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
 				593FC32C2861365800079B70 /* TravelerObserver.swift */,
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
+				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
 			);
@@ -418,6 +421,7 @@
 				59642AE1286E431A00702063 /* CreateReviewViewController.swift in Sources */,
 				593FC32D2861365800079B70 /* TravelerObserver.swift in Sources */,
 				59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */,
+				5914A0FC2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift in Sources */,
 				59642AE4286E5A6200702063 /* Component.swift in Sources */,
 				599979762872C2D200FA95B5 /* Accomodation.swift in Sources */,
 				B9B2AD09286B43290048596E /* ShoppingCreator.swift in Sources */,

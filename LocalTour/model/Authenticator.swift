@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Authenticator {
+class Authenticator:LoginAuthenticatonStrategy {
     
     private static var instance:Authenticator?
     var dao:DaoUsersMemory?
