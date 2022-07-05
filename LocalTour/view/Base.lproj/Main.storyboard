@@ -370,20 +370,6 @@
                                     <action selector="createPlace:" destination="yCY-He-Xzo" eventType="touchUpInside" id="Hwx-SH-QIv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Logout" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-ea-RGn">
-                                <rect key="frame" x="28" y="664" width="345" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="ownerLogout:" destination="yCY-He-Xzo" eventType="editingDidEnd" id="SML-Bb-ve4"/>
-                                    <action selector="tmpDeleteOwnerAction:" destination="yCY-He-Xzo" eventType="editingDidEnd" id="Esc-cO-FjS"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="TOH-S4-5zU"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSG-Bl-0z0">
                                 <rect key="frame" x="105" y="134" width="268" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,6 +391,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-vF-Wca">
+                                <rect key="frame" x="28" y="685" width="345" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <connections>
+                                    <action selector="ownerLogout:" destination="yCY-He-Xzo" eventType="touchUpInside" id="5i7-Hy-Icp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IGS-pr-og8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -418,11 +415,12 @@
                         <segue destination="cxN-TT-NX0" kind="show" identifier="segueTMPdeleteOwnerProfile" id="Kfg-CF-Vp6"/>
                         <segue destination="wqp-cA-w5m" kind="show" identifier="segueTMPPlaces" id="Gm5-Mh-V7r"/>
                         <segue destination="NEq-6x-NdV" kind="showDetail" identifier="placeCreationSegue" id="3qB-ev-jqD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ownerLogoutSegue" id="fcW-hq-mJE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6i-lc-PmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1565.8878504672896" y="600.6479481641469"/>
+            <point key="canvasLocation" x="1454" y="588"/>
         </scene>
         <!--Owner Profile Screen Table View Controller-->
         <scene sceneID="zmL-rd-rOx">
@@ -841,19 +839,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOut:" destination="KhQ-My-1ll" eventType="touchUpInside" id="B6X-nY-lSX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-wX-VIx">
-                                <rect key="frame" x="91" y="589" width="266" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Logout">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.31788079470000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logOut:" destination="KhQ-My-1ll" eventType="touchUpInside" id="fwE-Ao-W0O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1409,7 +1394,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Qx6-Gs-kvX"/>
         <segue reference="cH8-ir-SKY"/>
-        <segue reference="TOH-S4-5zU"/>
+        <segue reference="fcW-hq-mJE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
@@ -1429,9 +1414,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
