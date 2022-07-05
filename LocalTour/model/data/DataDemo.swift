@@ -35,6 +35,8 @@ class DataDemo {
         travelers.append(t2)
         let t3 = Traveler(password: "t", email: "tony", name: "Tony M.", cpf: "11111111")
         travelers.append(t3)
+        let t4 = Traveler(password: "1234", email: "jorge1@gmail.com", name: "Jorge Augusto", cpf: "12567890")
+        travelers.append(t4)
     }
     
     func createOwner(){
