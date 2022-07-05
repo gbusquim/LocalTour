@@ -18,7 +18,7 @@
 		59642AEF286E65C400702063 /* SustainableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59642AEE286E65C400702063 /* SustainableInfo.swift */; };
 		59689CC12861429E00EB98B1 /* ActivityObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59689CC02861429E00EB98B1 /* ActivityObservable.swift */; };
 		598D722C286D21900011C61B /* PlacesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722B286D21900011C61B /* PlacesDAO.swift */; };
-		598D722F286D22610011C61B /* DaoMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722E286D22610011C61B /* DaoMemory.swift */; };
+		598D722F286D22610011C61B /* DaoPlacesMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D722E286D22610011C61B /* DaoPlacesMemory.swift */; };
 		598D7231286D34E00011C61B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D7230286D34E00011C61B /* Authenticator.swift */; };
 		598DCAB6285BC2F40018C4DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB5285BC2F40018C4DB /* User.swift */; };
 		598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* Traveler.swift */; };
@@ -77,7 +77,7 @@
 		59642AEE286E65C400702063 /* SustainableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainableInfo.swift; sourceTree = "<group>"; };
 		59689CC02861429E00EB98B1 /* ActivityObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityObservable.swift; sourceTree = "<group>"; };
 		598D722B286D21900011C61B /* PlacesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDAO.swift; sourceTree = "<group>"; };
-		598D722E286D22610011C61B /* DaoMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoMemory.swift; sourceTree = "<group>"; };
+		598D722E286D22610011C61B /* DaoPlacesMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoPlacesMemory.swift; sourceTree = "<group>"; };
 		598D7230286D34E00011C61B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		598DCAB5285BC2F40018C4DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		598DCAB7285BC50C0018C4DB /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		598D722D286D22470011C61B /* data */ = {
 			isa = PBXGroup;
 			children = (
-				598D722E286D22610011C61B /* DaoMemory.swift */,
+				598D722E286D22610011C61B /* DaoPlacesMemory.swift */,
 				598FB442286A68D000CA404D /* DataDemo.swift */,
 				5914A0F92873B7FE00ED1200 /* DaoUsersMemory.swift */,
 			);
@@ -427,7 +427,7 @@
 				B9B2AD09286B43290048596E /* ShoppingCreator.swift in Sources */,
 				B9A8633F286C9C2500E54B43 /* CreateAccountViewController.swift in Sources */,
 				598DCAB8285BC50C0018C4DB /* Traveler.swift in Sources */,
-				598D722F286D22610011C61B /* DaoMemory.swift in Sources */,
+				598D722F286D22610011C61B /* DaoPlacesMemory.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 				59F39A3B287273E600662944 /* PositionStackResponse.swift in Sources */,
 				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,
