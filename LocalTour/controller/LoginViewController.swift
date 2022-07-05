@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var userType: UISegmentedControl!
     @IBOutlet weak var passwordField: UITextField!
   
-    var strategyNotification:NewPlacesNotificationStrategy?
     var daoUsers:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
     var authenticator:Authenticator?	
     var currentUser:User?
@@ -25,12 +24,6 @@ class ViewController: UIViewController {
         self.daoUsers = DaoUsersMemory.getInstance()
         self.authenticator = Authenticator.getInstance(view: self)
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //Se houver reviews novas nos places do owner conectado
-        self.strategyNotification = AlertNewPlaceStrategy(view: self)
-        strategyNotification!.strategy()
     }
 
     
