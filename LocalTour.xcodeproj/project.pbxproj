@@ -55,7 +55,6 @@
 		B9E60DA728554E5C00AAB18C /* MapIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E60DA628554E5C00AAB18C /* MapIcon.swift */; };
 		B9E60DA928554E7C00AAB18C /* MapIconDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E60DA828554E7C00AAB18C /* MapIconDetail.swift */; };
 		B9E60DAB28554EFB00AAB18C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E60DAA28554EFB00AAB18C /* MapViewController.swift */; };
-		B9E60DAD2855511100AAB18C /* locations.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B9E60DAC2855511000AAB18C /* locations.geojson */; };
 		B9F7C9B928459E870028ABC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9B828459E870028ABC3 /* AppDelegate.swift */; };
 		B9F7C9BB28459E870028ABC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */; };
 		B9F7C9BD28459E870028ABC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7C9BC28459E870028ABC3 /* LoginViewController.swift */; };
@@ -112,7 +111,6 @@
 		B9E60DA628554E5C00AAB18C /* MapIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapIcon.swift; sourceTree = "<group>"; };
 		B9E60DA828554E7C00AAB18C /* MapIconDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapIconDetail.swift; sourceTree = "<group>"; };
 		B9E60DAA28554EFB00AAB18C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		B9E60DAC2855511000AAB18C /* locations.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = locations.geojson; sourceTree = "<group>"; };
 		B9F7C9B528459E870028ABC3 /* LocalTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7C9B828459E870028ABC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9F7C9BA28459E870028ABC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		B911739328514B3B00B3A869 /* map */ = {
 			isa = PBXGroup;
 			children = (
-				B9E60DAC2855511000AAB18C /* locations.geojson */,
 				B9E60DA628554E5C00AAB18C /* MapIcon.swift */,
 				B9E60DAA28554EFB00AAB18C /* MapViewController.swift */,
 				B9E60DA828554E7C00AAB18C /* MapIconDetail.swift */,
@@ -361,7 +358,6 @@
 				B9F7C9C528459E890028ABC3 /* LaunchScreen.storyboard in Resources */,
 				59B0168528517CB20047570D /* (null) in Resources */,
 				B9F7C9C228459E890028ABC3 /* Assets.xcassets in Resources */,
-				B9E60DAD2855511100AAB18C /* locations.geojson in Resources */,
 				B9F7C9C028459E870028ABC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

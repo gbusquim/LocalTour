@@ -90,10 +90,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AWN-gv-2d7">
-                                <rect key="frame" x="153" y="262" width="123" height="32"/>
+                                <rect key="frame" x="146" y="262" width="137" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Tourist"/>
+                                    <segment title="Traveler"/>
                                     <segment title="Owner"/>
                                 </segments>
                             </segmentedControl>
