@@ -8,8 +8,8 @@
 import Foundation
 
 class SustainableInfo: Component {
+   
 
-    
     var name: String
     var imgPath: String
     
@@ -32,9 +32,4 @@ class SustainableInfo: Component {
     func getSustainableInfo() -> [String] {
        return [imgPath]
     }
-    
-    func add(component: Component) {
-        
-    }
-    
 }
