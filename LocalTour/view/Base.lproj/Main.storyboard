@@ -210,10 +210,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-H6-plq">
-                                <rect key="frame" x="146" y="256" width="123" height="32"/>
+                                <rect key="frame" x="139" y="256" width="137" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Tourist"/>
+                                    <segment title="Traveler"/>
                                     <segment title="Owner"/>
                                 </segments>
                             </segmentedControl>
@@ -754,7 +754,7 @@
         <!--Profile-->
         <scene sceneID="a74-WZ-W7y">
             <objects>
-                <viewController id="KhQ-My-1ll" customClass="TouristProfileViewController" customModule="LocalTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KhQ-My-1ll" customClass="TravelerProfileViewController" customModule="LocalTour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lw3-e8-S9o">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1398,8 +1398,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="place-action-share-icon" width="60" height="60"/>
         <image name="place-info-icon-address" width="50" height="50"/>
         <image name="place-info-icon-phone" width="50" height="50"/>
