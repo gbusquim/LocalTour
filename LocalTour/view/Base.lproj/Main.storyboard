@@ -1304,8 +1304,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="place-action-share-icon" width="60" height="60"/>
         <image name="place-info-icon-address" width="50" height="50"/>
         <image name="place-info-icon-phone" width="50" height="50"/>
