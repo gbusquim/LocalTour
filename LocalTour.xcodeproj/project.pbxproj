@@ -83,7 +83,7 @@
 		599979752872C2D200FA95B5 /* Accomodation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accomodation.swift; sourceTree = "<group>"; };
 		599979772872C2E800FA95B5 /* AccomodationCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomodationCreator.swift; sourceTree = "<group>"; };
 		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewCell.swift; sourceTree = "<group>"; };
+		59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerPlacesCollectionViewCell.swift; path = viewCells/OwnerPlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		59C88FD22860F57500C12C74 /* OwnerPlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerPlacesCollectionViewController.swift; sourceTree = "<group>"; };
 		59C88FD42860FB4600C12C74 /* DataPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlaces.swift; path = LocalTour/model/DataPlaces.swift; sourceTree = SOURCE_ROOT; };
 		B902B2DB286CE9B900FDFF5C /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
