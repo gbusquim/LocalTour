@@ -79,7 +79,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func showSustainableInfo() {
         let sustainableInfo = selectedPlace!.getSustainableInfo()
-        print (sustainableInfo[0])
         for i in 0...sustainableInfo.count - 1{
             sustainableImages[i].image = UIImage(named: sustainableInfo[i])
         }
