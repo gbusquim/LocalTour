@@ -50,17 +50,7 @@ class MapViewController: UIViewController {
     }
 
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-     */}
     private extension MKMapView {
       func centerToLocation(
         _ location: CLLocation,
@@ -77,8 +67,7 @@ class MapViewController: UIViewController {
 
 
 extension MapViewController: MKMapViewDelegate {
-  // 1
-
+ 
       func mapView(
         _ mapView: MKMapView,
         annotationView view: MKAnnotationView,

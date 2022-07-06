@@ -23,7 +23,6 @@ class Artwork: NSObject, MKAnnotation {
   }
     
     init?(feature: MKGeoJSONFeature) {
-      // 1
       guard
         let point = feature.geometry.first as? MKPointAnnotation,
         let propertiesData = feature.properties,
@@ -33,20 +32,12 @@ class Artwork: NSObject, MKAnnotation {
           return nil
       }
 
-      // 3
       title = properties["title"] as? String
       locationName = properties["location"] as? String
       discipline = properties["discipline"] as? String
       coordinate = point.coordinate
       super.init()
     }
-
-
-  var subtitle: String? {
-    return locationName
-  }
-    
-    
     
     var mapItem: MKMapItem? {
       guard let location = locationName else {
@@ -62,38 +53,6 @@ class Artwork: NSObject, MKAnnotation {
       return mapItem
     }
     
-    var markerTintColor: UIColor  {
-      switch discipline{
-      case "Monument":
-        return .red
-      case "Mural":
-        return .cyan
-      case "Plaque":
-        return .blue
-      case "Sculpture":
-        return .purple
-      default:
-        return .green
-      }
-    }
-
-    var image: UIImage {
-      guard let name = discipline else {
-        return #imageLiteral(resourceName: "Flag")
-      }
-
-      switch name {
-      case "Monument":
-        return #imageLiteral(resourceName: "Mural")
-      case "Sculpture":
-        return #imageLiteral(resourceName: "Mural")
-      case "Plaque":
-        return #imageLiteral(resourceName: "Mural")
-      case "Mural":
-        return #imageLiteral(resourceName: "Mural")
-      default:
-        return #imageLiteral(resourceName: "Mural")
-      }
-    }
+    var markerTintColor: UIColor = UIColor(ciColor: .green)
 
 }
