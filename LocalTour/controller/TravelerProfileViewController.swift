@@ -23,38 +23,30 @@ class TravelerProfileViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     var dao:DaoUsersMemory?
-    var strategyNotification:NewPlacesNotificationStrategy?
+    var strategyNotification:NotificationStrategy?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dao = DaoUsersMemory.getInstance()
     }
 
+    // After user logs in and go to Profile Screen, checks if there was a new place added since it last logout (the notifications are kept for each user until this momment)
     func checkForNotifications(traveler: Traveler) {
-//        var notifications = traveler.getNotifications()
         var notifications = traveler.dumpNotifications()
         if (notifications.count > 0) {
             repeat {
                 let message = notifications.popLast()
                 print("New Place: " + (message ?? ""))
-                self.strategyNotification = AlertNewPlaceStrategy(view: self)
-                strategyNotification!.strategy()
+                self.strategyNotification = NotificationAlertStrategy(view: self)
+                strategyNotification!.strategy(title: "New Place", message: "There's a new place to explore")
             } while (notifications.count > 0)
-//            traveler.removeAllNotifications()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let user = self.dao!.getCurrentUser()
-//        var concTraveler:ConcreteTraveler
-//        concTraveler = ConcreteTraveler(password: user.passowrd, email: user.email, name: user.name, cpf: user.cpf)
-        
         if (user.isLoggedIn() && user is Traveler) {
-  
-//            self.checkForNotifications(traveler: concTraveler)
-            
             self.checkForNotifications(traveler: user as! Traveler)
-            
             nameValue.text = user.name
             emailValue.text = user.email
             cpfValue.text = user.cpf

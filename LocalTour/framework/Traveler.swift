@@ -7,23 +7,6 @@
 
 import Foundation
 
-//class Traveler:User {
-//    var lastLogin: Date?
-//
-//    override init(password:String, email:String, name:String, cpf:String) {
-//        super.init(password: password, email: email, name: name, cpf: cpf)
-//    }
-//
-//    func getLastLogin() -> Date {
-//        return self.lastLogin!
-//    }
-//
-//    override func performLogin() {
-//        self.lastLogin = Date()
-//        self.setLoginStatus(status: true)
-//    }
-//}
-
 extension Date {
     var dayBefore: Date {
             return Calendar.current.date(byAdding: .day, value: -1, to: self)!
@@ -33,13 +16,9 @@ extension Date {
 class Traveler:User, TravelerObserverProtocol {
     var lastLogin: Date?
     var knownPlaces: [Place]?
-    var strategyNotification: NewPlacesNotificationStrategy?
     var unreadNotifications: [String]?
-//    var view: UIViewController? // TODO: CHeck how to pass view to correctly notify the observer
-    // Should be in User? In case user doesn`t login we still get its position? Tho email, password etc is not required
 
     override init(password:String, email:String, name:String, cpf:String) {
-        // TODO: Change this (decide if this should be treated by DAO, Authenticator or Traveler classes)
         super.init(password: password, email: email, name: name, cpf: cpf)
         self.unreadNotifications = []
     }
@@ -58,10 +37,6 @@ class Traveler:User, TravelerObserverProtocol {
         return notifications
     }
     
-    func removeAllNotifications() {
-        self.unreadNotifications = []
-    }
-    
     func getLastLogin() -> Date {
         return self.lastLogin ?? Date().dayBefore
     }
@@ -70,7 +45,7 @@ class Traveler:User, TravelerObserverProtocol {
         self.knownPlaces?.append(place)
     }
 
-    // TODO: Change this (decide if this should be treated by DAO, Authenticator or Traveler classes)
+    // Login as Anonymous
     static func createAnonymousTraveler() -> Traveler {
         let anonymous: Traveler
         anonymous = Traveler(password: "", email: "", name: "", cpf: "")

@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-class AlertNewPlaceStrategy:NewPlacesNotificationStrategy {
+class NotificationAlertStrategy:NotificationStrategy {
     var view: UIViewController
     
     init(view:UIViewController){
         self.view = view
     }
     
-    func strategy() {
+    func strategy(title: String, message: String) {
         
-        let alert = UIAlertController(title: "New Place", message: "There's a new place to explore", preferredStyle: UIAlertController.Style.alert) // TODO variar mensagem de acordo com tipo de lugar
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         view.present(alert, animated: true, completion: nil)

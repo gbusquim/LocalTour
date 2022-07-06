@@ -10,6 +10,7 @@ import UIKit
 
 class Authenticator:LoginAuthenticatonStrategy {
     
+    var strategyNotification:NotificationStrategy?
     private static var instance:Authenticator?
     var dao:DaoUsersMemory?
     var view: UIViewController
@@ -17,6 +18,7 @@ class Authenticator:LoginAuthenticatonStrategy {
     init(_ view:UIViewController) {
         self.dao = DaoUsersMemory.getInstance()
         self.view = view
+        self.strategyNotification = NotificationAlertStrategy(view: self.view)
     }
     
     static func getInstance(view:UIViewController) -> Authenticator {
@@ -31,7 +33,7 @@ class Authenticator:LoginAuthenticatonStrategy {
             self.alertEmptyInput()
             return false
         }
-        // TODO: Can change later to only iterate through Travelers or Owners "list" instead of using "getAllUsers()"... Need to adapt alert notifications tho
+        
         for user in self.dao!.getAllUsers()! {
             if (email == user.email) {
                 if ((loginType == 0 && user is Traveler) || (loginType == 1 && user is Owner)) {
@@ -50,46 +52,29 @@ class Authenticator:LoginAuthenticatonStrategy {
         self.alertUserNotFound()
         return false
     }
-
-    // TODO: Ideal sollution would be to use Authenticator to validate new account information and pass it do DAO to store in the DB or memory-list...
+	
     func validateNewAccount(_ email: String, _ passwd: String, _ loginType:Int) -> Bool {
-        return true
+        if passwd.count > 0 {
+            return true
+        }
+        return false
     }
     
     func alertEmptyInput() {
-        let alert = UIAlertController(title: "Email or Password field is empty", message: "Please type your email and password", preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        view.present(alert, animated: true, completion: nil)
+        let title = "Email or Password field is empty"
+        let message = "Please type your email and password"
+        strategyNotification!.strategy(title: title, message: message)
     }
     
     func alertUserNotFound() {
-        let alert = UIAlertController(title: "Account not found", message: "There is no user registered with this emai. Please create a new account or use a valid email", preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        view.present(alert, animated: true, completion: nil)
+        let title = "Account not found"
+        let message = "There is no user registered with this email. Please create a new account or use a valid email"
+        strategyNotification!.strategy(title: title, message: message)
     }
     
     func alertInvalidPasswd() {
-        let alert = UIAlertController(title: "Incorrect Password", message: "Please try again", preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        view.present(alert, animated: true, completion: nil)
+        let title = "Incorrect Password"
+        let message = "Please try again"
+        strategyNotification!.strategy(title: title, message: message)
     }
-    
-    func newText(text:String) {
-        let alert = UIAlertController(title: "OKAY", message: text, preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        view.present(alert, animated: true, completion: nil)
-    }
-  
-    // TODO: Decide if this should be here or just use DaoMemory instead
-//    func createNewTravelerAccount() -> Bool {
-//
-//    }
-//    func createNewOwnerAccount() -> Bool {
-//
-//    }
-    
 }
