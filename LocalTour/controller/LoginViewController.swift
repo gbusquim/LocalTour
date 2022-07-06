@@ -9,12 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var userType: UISegmentedControl!
     @IBOutlet weak var passwordField: UITextField!
   
-    var daoUsers:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
+    var daoUsers:DaoUsersMemory?
     var authenticator:Authenticator?	
     var currentUser:User?
     
@@ -31,12 +30,6 @@ class ViewController: UIViewController {
         let email = emailField.text!
         let passwd = passwordField.text!
         
-        print(email)
-        print(passwd)
-        print(userType.selectedSegmentIndex)
-        
-        //TODO: decide if authenticator should return instance or create new one here... And if
-        // TODO: Use 'typeOf' instance to check if it's a Traveler or Owner
         if (self.authenticator!.authenticateUser(email, passwd, userType.selectedSegmentIndex)) {
             if (userType.selectedSegmentIndex ==  0) {
                 // TODO: TEMP REMOVE This global current user
@@ -61,13 +54,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func continueWithoutLogin(_ sender: Any) {
-        self.currentUser = Traveler.createAnonymousTraveler() // TODO: Change to use another class
-        self.daoUsers?.updateCurrentUser(Traveler.createAnonymousTraveler()) // TODO: check
+        self.currentUser = Traveler.createAnonymousTraveler()
+        self.daoUsers?.updateCurrentUser(Traveler.createAnonymousTraveler())
         performSegue(withIdentifier: "loginTouristSegue", sender: self)
     }
     
     @IBAction func createAccount(_ sender: Any) {
-        // TODO: Add new users here
         performSegue(withIdentifier: "createAccountSegue", sender: self)
     }
     
