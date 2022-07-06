@@ -47,7 +47,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.daoPlaces = DaoPlacesMemory.getInstance()
         places = (self.daoPlaces?.getAllPlaces())!
 
-        //TODO: usar o id do lugar escolhido
         if (selectedPlace == nil) {
             self.selectedPlace = places.first(where: {$0.name == placeName})
         }

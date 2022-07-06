@@ -30,7 +30,6 @@
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		59C88FCD2860D5C200C12C74 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FCC2860D5C200C12C74 /* Owner.swift */; };
 		59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */; };
-		59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C88FD42860FB4600C12C74 /* DataPlaces.swift */; };
 		B902B2DC286CE9B900FDFF5C /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902B2DB286CE9B900FDFF5C /* CreatePlaceViewController.swift */; };
 		B9137DB8286BC4060061A0B2 /* TravelerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9137DB7286BC4060061A0B2 /* TravelerProfileViewController.swift */; };
 		B91742C3285A5C3A0098AB01 /* OwnerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */; };
@@ -83,7 +82,6 @@
 		599979772872C2E800FA95B5 /* AccomodationCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomodationCreator.swift; sourceTree = "<group>"; };
 		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		59C88FD02860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerPlacesCollectionViewCell.swift; path = viewCells/OwnerPlacesCollectionViewCell.swift; sourceTree = "<group>"; };
-		59C88FD42860FB4600C12C74 /* DataPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataPlaces.swift; path = LocalTour/model/DataPlaces.swift; sourceTree = SOURCE_ROOT; };
 		B902B2DB286CE9B900FDFF5C /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
 		B9137DB7286BC4060061A0B2 /* TravelerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelerProfileViewController.swift; sourceTree = "<group>"; };
 		B91742C2285A5C3A0098AB01 /* OwnerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +152,13 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		599DFCBB28756EB80037958F /* places */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = places;
+			sourceTree = "<group>";
+		};
 		59D0E2BF28664F0D00D832FA /* framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +171,7 @@
 				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
+				599DFCBB28756EB80037958F /* places */,
 				5914A0FD2873EB6600ED1200 /* Traveler.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
 			);
@@ -247,7 +253,6 @@
 			children = (
 				598D722D286D22470011C61B /* data */,
 				B9B2ACFF286B3F880048596E /* places */,
-				59C88FD42860FB4600C12C74 /* DataPlaces.swift */,
 				B95A1D2928502FA1006C649A /* Place.swift */,
 				598DCAB7285BC50C0018C4DB /* TravelerProfileViewController.swift */,
 				598FB444286A6B4300CA404D /* NotificationAlertStrategy.swift */,
@@ -403,7 +408,6 @@
 				598D722F286D22610011C61B /* DaoPlacesMemory.swift in Sources */,
 				B91742C9285A645C0098AB01 /* SearchPlaceTableViewCell.swift in Sources */,
 				5914A0FE2873EB6600ED1200 /* Traveler.swift in Sources */,
-				59C88FD52860FB4600C12C74 /* DataPlaces.swift in Sources */,
 				59C88FD12860F31000C12C74 /* OwnerPlacesCollectionViewCell.swift in Sources */,
 				B902B2DC286CE9B900FDFF5C /* CreatePlaceViewController.swift in Sources */,
 				B9B2AD01286B40AA0048596E /* Restaurant.swift in Sources */,

@@ -27,19 +27,11 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView.delegate = self
         collectionView.dataSource = self
         self.data = DataDemo.getInstance()
-        DataPlaces.places = self.data!.places
         self.daoUsers = DaoUsersMemory.getInstance()
         self.daoPlaces = DaoPlacesMemory.getInstance()
         self.places = self.daoPlaces!.getAllPlaces()! 
         self.owner = self.daoUsers!.getCurrentUser() as? Owner
         fillLabels()
-        
-        // TODO: Andrew adjust button
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addAction(tapGestureRecognizer:)))
-//        btAdd.isUserInteractionEnabled = true
-//        btAdd.addGestureRecognizer(tapGestureRecognizer)
-        
-        // Do any additional setup after loading the view.
     }
     
     private func fillLabels() {
@@ -47,17 +39,6 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         lblOwnersCPF.text = self.owner?.cpf
         lblOwnersEmail.text = self.owner?.email
     }
-    
-//    @objc func addAction(tapGestureRecognizer: UITapGestureRecognizer){
-//        print("Olá!!!!")
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.btAdd.alpha = 0.5
-//            UIView.animate(withDuration: 0.5, animations:{
-//                self.btAdd.alpha = 1
-//            })
-//
-//        })
-//    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -91,7 +72,6 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
         performSegue(withIdentifier: "placeCreationSegue", sender: self)
     }
     
-
     @IBAction func ownerLogout(_ sender: Any) {
         performSegue(withIdentifier: "ownerLogoutSegue", sender: self)
     }
