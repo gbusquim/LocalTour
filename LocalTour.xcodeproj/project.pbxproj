@@ -155,6 +155,9 @@
 		599DFCBB28756EB80037958F /* places */ = {
 			isa = PBXGroup;
 			children = (
+				B9B2AD02286B41840048596E /* Shopping.swift */,
+				B9B2AD00286B40AA0048596E /* Restaurant.swift */,
+				599979752872C2D200FA95B5 /* Accomodation.swift */,
 			);
 			path = places;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 				596D5E2D2875578400CF3DA1 /* NotificationsStrategy.swift */,
 				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
+				B95A1D2928502FA1006C649A /* Place.swift */,
 				599DFCBB28756EB80037958F /* places */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
@@ -238,9 +242,6 @@
 		B9B2ACFF286B3F880048596E /* places */ = {
 			isa = PBXGroup;
 			children = (
-				B9B2AD02286B41840048596E /* Shopping.swift */,
-				B9B2AD00286B40AA0048596E /* Restaurant.swift */,
-				599979752872C2D200FA95B5 /* Accomodation.swift */,
 				B9B2AD08286B43290048596E /* ShoppingCreator.swift */,
 				B9B2AD04286B42400048596E /* RestaurantCreator.swift */,
 				599979772872C2E800FA95B5 /* AccomodationCreator.swift */,
@@ -253,7 +254,6 @@
 			children = (
 				598D722D286D22470011C61B /* data */,
 				B9B2ACFF286B3F880048596E /* places */,
-				B95A1D2928502FA1006C649A /* Place.swift */,
 				598DCAB7285BC50C0018C4DB /* TravelerProfileViewController.swift */,
 				598FB444286A6B4300CA404D /* NotificationAlertStrategy.swift */,
 				598D7230286D34E00011C61B /* Authenticator.swift */,
