@@ -18,11 +18,11 @@ class Place: PlaceMethods {
     var id: Int
     var name: String
     var description: String
-    var score: Float?  // TODO: deixar de acordo com o diagrama da arq (avgRating) -> Ou mudar no diagrama pra ficar igual aqui, o importante eh manter a consistencia
+    var score: Float?  
     var phoneNumber: String
     var address: String?
     var cnpj: String
-    var owner: String  // TODO: change to ownerID (cpf)
+    var ownerCPF: String
     var imgName: String?
     var userReviews: [Review]
     var lon: Float
@@ -42,7 +42,7 @@ class Place: PlaceMethods {
         self.imgName = imgName // TODO: refactor
         // TODO: Add profile's image
         self.userReviews = userReviews ?? [] // TODO: fix this
-        self.owner = owner
+        self.ownerCPF = owner
         self.cnpj = cnpj
         self.lon = -43.225262
         self.lat = -22.97552
