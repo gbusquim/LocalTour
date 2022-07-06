@@ -91,7 +91,7 @@ CreatePlaceViewController: UIViewController {
                 }
             }
 
-        daoPlaces?.addNewPlace(id: daoPlaces!.getNumberOfPlaces()+1, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: composite, category: categoryField.text!)
+        daoPlaces?.addNewPlace(id: daoPlaces!.getNumberOfPlaces()+1, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, cnpj: cnpjField.text!, userReviews: [], inputSustainableCategories: composite, category: categoryField.text!, additionalInfo: detailsField.text!)
         
         performSegue(withIdentifier: "placeCreatedSegue", sender: self)
     }

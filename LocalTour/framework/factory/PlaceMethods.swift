@@ -17,7 +17,7 @@ protocol PlaceMethods {
     func getIcon() -> String
     func getBackgroundColor() -> UIColor
     func getInfoIcon() -> String
-    func getInfoText() -> String
+    func getAdditionalInfo() -> String
 }
 
 extension PlaceMethods {
@@ -33,7 +33,7 @@ extension PlaceMethods {
         return aditionalInfoIcon
     }
     
-    func getInfoText() -> String {
+    func getAdditionalInfo() -> String {
         return aditionalInfo
     }
 }

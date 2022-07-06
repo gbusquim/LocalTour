@@ -66,15 +66,15 @@ class DataDemo {
         let rootComposite = Composite()
         rootComposite.add(component: composite)
         
-        let p1 = restCrtr.factoryMethod(id: 1,name: "Restaurante Casa Branca",description: "Culinaria tradicional e vegana.",phoneNumber: "99874-1253",address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP1(), inputSustainableCategories: rootComposite)
+        let p1 = restCrtr.factoryMethod(id: 1,name: "Restaurante Casa Branca",description: "Culinaria tradicional e vegana.",phoneNumber: "99874-1253",address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP1(), inputSustainableCategories: rootComposite, additionalInfo: "Vegan")
         places.append(p1)
-        let p2 = restCrtr.factoryMethod(id: 2,name: "Bar da Esquina",description: "Culinaria tradicional e vegana.",phoneNumber: "99874-1253",address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName:nil, userReviews: createReviewsP2(), inputSustainableCategories: rootComposite)
+        let p2 = restCrtr.factoryMethod(id: 2,name: "Bar da Esquina",description: "Culinaria tradicional e vegana.",phoneNumber: "99874-1253",address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName:nil, userReviews: createReviewsP2(), inputSustainableCategories: rootComposite, additionalInfo: "Vegan")
         places.append(p2)
         
-        let p3 = shopCrtr.factoryMethod(id: 3, name: "Loja Cruzeiro", description: "O melhor comercio local do Rio!", phoneNumber: "99874-1253", address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, inputSustainableCategories: rootComposite)
+        let p3 = shopCrtr.factoryMethod(id: 3, name: "Loja Cruzeiro", description: "O melhor comercio local do Rio!", phoneNumber: "99874-1253", address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP2(), inputSustainableCategories: rootComposite, additionalInfo: "Clothes Shop")
         places.append(p3)
         
-        let p4 = hotelCrtr.factoryMethod(id: 3, name: "Pousada do Rio", description: "Uma pousada aconchegante!", phoneNumber: "99874-1253", address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, inputSustainableCategories: rootComposite)
+        let p4 = hotelCrtr.factoryMethod(id: 3, name: "Pousada do Rio", description: "Uma pousada aconchegante!", phoneNumber: "99874-1253", address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP2(), inputSustainableCategories: rootComposite, additionalInfo: "Low Availability")
         places.append(p4)
         
         

@@ -8,6 +8,7 @@
 import Foundation
 
 class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
+    
 
     var data:DataDemo?
     private static var instance:DaoPlacesMemory?
@@ -53,7 +54,7 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
     
     // TODO: Fix this
     // TODO: Fix this [Place Init Issue]
-    func addNewPlace(id: Int, name: String, description: String, phoneNumber: String, address: String, cnpj: String, userReviews: [Review], inputSustainableCategories: Composite, category: String) {
+    func addNewPlace(id: Int, name: String, description: String, phoneNumber: String, address: String, cnpj: String, userReviews: [Review], inputSustainableCategories: Composite, category: String, additionalInfo: String) {
         // TODO: FIX THIS
 //    }
 //
@@ -63,13 +64,13 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
         switch category {
             case "Restaurant" :
                 let creator = RestaurantCreator()
-                place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-restaurant.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+            place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-restaurant.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories, additionalInfo: additionalInfo)
             case "Shopping" :
                 let creator = ShoppingCreator()
-                place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-shopping.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+                place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-shopping.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories, additionalInfo: additionalInfo)
             default :
                 let creator = AccomodationCreator()
-                place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-accomodation.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+                place = creator.factoryMethod(id: id,name: name,description: description,phoneNumber: phoneNumber,address: address, owner: "Joao", cnpj: cnpj, imgName: "image-accomodation.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories, additionalInfo: additionalInfo)
         }
         self.notifyObserver(place)
         self.data?.places.append(place)

@@ -981,6 +981,13 @@
                                 <rect key="frame" x="48" y="85" width="354" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-R2-Qqd">
+                                <rect key="frame" x="65" y="424" width="226" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bIj-w2-cVO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -992,6 +999,7 @@
                         <outlet property="descriptionLabel" destination="awc-x6-b76" id="usE-qk-Bea"/>
                         <outlet property="firstImageSlot" destination="a59-mH-M27" id="qIm-ZP-RLG"/>
                         <outlet property="imgInfoIcon" destination="PsG-V8-BlX" id="FrC-Da-AOW"/>
+                        <outlet property="lblAditionalInfo" destination="wdZ-R2-Qqd" id="7Ht-Cg-Jt6"/>
                         <outlet property="nameLabel" destination="XTM-yw-4CJ" id="FqL-yp-5Ly"/>
                         <outlet property="phoneNumberLabel" destination="ugD-IH-UE0" id="iCf-td-ASy"/>
                         <outlet property="placeImage" destination="9uL-zW-AHS" id="u5e-ym-ver"/>
@@ -1304,8 +1312,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add-new-place-button" width="160" height="160"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="place-action-share-icon" width="60" height="60"/>
         <image name="place-info-icon-address" width="50" height="50"/>
         <image name="place-info-icon-phone" width="50" height="50"/>

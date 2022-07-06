@@ -9,8 +9,8 @@ import Foundation
 
 class RestaurantCreator: CreatorPlace {
     
-    public func factoryMethod(id: Int,name:String, description:String, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]? = [], inputSustainableCategories: Composite)  -> Place {
-        return Restaurant(id: id,name: name, description: description, phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName ?? "image-restaurant.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories)
+    public func factoryMethod(id: Int,name:String, description:String, phoneNumber: String, address: String, owner: String, cnpj: String, imgName: String?, userReviews: [Review]? = [], inputSustainableCategories: Composite, additionalInfo: String)  -> Place {
+        return Restaurant(id: id,name: name, description: description, phoneNumber: phoneNumber, address: address, owner: owner, cnpj: cnpj, imgName: imgName ?? "image-restaurant.jpg", userReviews: userReviews, inputSustainableCategories: inputSustainableCategories, additionalInfo: additionalInfo)
 
     }
 }

@@ -59,10 +59,10 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         phoneNumberLabel.text = selectedPlace?.phoneNumber
         addressLabel.text = selectedPlace?.address
-//
-//        imgInfoIcon.image = UIImage(named: (self.selectedPlace?.getInfoIcon())!)
-//        lblAditionalInfo.text = self.selectedPlace?.getInfoText()
-//
+
+        imgInfoIcon.image = UIImage(named: (self.selectedPlace?.getInfoIcon())!)
+        lblAditionalInfo.text = self.selectedPlace?.getAdditionalInfo()
+
         sustainableImages.append(firstImageSlot)
         sustainableImages.append(secondImageSlot)
         sustainableImages.append(thirdImageSlot)

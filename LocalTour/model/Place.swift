@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class Place: PlaceMethods {
+    
     var iconName: String = ""
     
     var backgroundColor: UIColor = UIColor.white
@@ -33,13 +34,14 @@ class Place: PlaceMethods {
     var sustainableInfo: Component
 
     
-    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: Composite) {
+    init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: Composite, additionalInfo: String) {
 
         self.id = id
         self.name = name
         self.description = description
         self.phoneNumber = phoneNumber
         self.address = address
+        self.aditionalInfo = additionalInfo
         self.imgName = imgName // TODO: refactor
         // TODO: Add profile's image
         self.userReviews = userReviews ?? [] // TODO: fix this

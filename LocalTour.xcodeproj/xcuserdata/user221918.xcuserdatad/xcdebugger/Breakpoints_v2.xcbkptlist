@@ -62,9 +62,9 @@
             filePath = "LocalTour/model/Place.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "init(id:name:description:phoneNumber:address:owner:cnpj:imgName:userReviews:inputSustainableCategories:)"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "init(id:name:description:phoneNumber:address:owner:cnpj:imgName:userReviews:inputSustainableCategories:additionalInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
