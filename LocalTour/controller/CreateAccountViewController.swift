@@ -16,14 +16,12 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    var dao:DaoUsersMemory?  // Check-TODO: Keep Dao here only to set current user?
-    // var authenticator:Authenticator? // TODO-Delete: in case this class call DAO directly to write new user...
+    var dao:DaoUsersMemory?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.dao = DaoUsersMemory.getInstance()
-        // self.authenticator = Authenticator.getInstance(view: self)  // TODO-Delete: in case this class call DAO directly to write new user...
     }
     
     @IBAction func createAccount(_ sender: Any) {
@@ -52,9 +50,6 @@ class CreateAccountViewController: UIViewController {
                 cpf: cpfField.text!
             )
         }
-
-        // TOD: DELETE
-        self.dao!.printUsers()
         
         performSegue(withIdentifier: "accountCreatedLogin", sender: self)
     }
