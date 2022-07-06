@@ -9,7 +9,6 @@ import UIKit
 
 class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-  
     @IBOutlet weak var btAdd: UIImageView!
     
     var data:DataDemo?
@@ -17,8 +16,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     var daoPlaces:DaoPlacesMemory?
     var places:[Place] = []
     var owner:Owner?
- 
-    
+     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblOwnersName: UILabel!
     @IBOutlet weak var lblOwnersCPF: UILabel!
@@ -60,17 +58,6 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
 //
 //        })
 //    }
-    
-    // TODO: remover dados mockados (lembrar de atualizar OwnerProfile...Controllers)
-    func tmpCreatePlaces() {
-        let rc = RestaurantCreator()
-
-//        let p6 = rc.factoryMethod(id: 6,name: "Newest Place",description: "Accomodation e bom", phoneNumber: "123",address: "Rua b", owner: "Joao", cnpj: "111", imgName:"imagem", inputSustainableCategories: Composite())
-        
-        //self.data?.places.append(p6)
-       // DataPlaces.places.append(p6)  // TODO: stop using DataPlaces
-        // TODO: Send/make notifications for new place created
-    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -88,9 +75,7 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO-Later: pass only selectedPass, forget about placeName...
-        
-        // Multiple segues for this view, all go through 'prepare', so need to know which case it is
+        // Multiple segues for this view, all go through 'prepare', so need to know if it's case segueOwnerGotoPlace to treat it
         if segue.identifier == "segueOwnerGotoPlace" {
             let vc = segue.destination as! PlaceViewController
             if let cell = sender as? UICollectionViewCell,
@@ -100,28 +85,6 @@ class OwnerProfileViewController: UIViewController, UICollectionViewDelegate, UI
                 vc.placeName = place.name
             }
         }
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func tmpDeleteOwnerAction(_ sender: Any) {
-        performSegue(withIdentifier: "segueTMPdeleteOwnerProfile", sender: self)
-    }
-    
-    @IBAction func tmpGoToNext(_ sender: Any) {
-        performSegue(withIdentifier: "segueTMPdeleteOwnerProfile", sender: self)
-    }
-    
-    @IBAction func tmpGoToNext2(_ sender: Any) {
-        self.tmpCreatePlaces()
-        performSegue(withIdentifier: "segueTMPPlaces", sender: self)
     }
     
     @IBAction func createPlace(_ sender: Any) {

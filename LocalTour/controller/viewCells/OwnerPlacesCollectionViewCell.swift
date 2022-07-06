@@ -9,6 +9,6 @@ import UIKit
 
 class OwnerPlacesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var lblPlaceName: UILabel!
+    @IBOutlet weak var lblPlaceName: UILabel!	
     @IBOutlet weak var IconBigPlaceType: UIImageView!
 }
