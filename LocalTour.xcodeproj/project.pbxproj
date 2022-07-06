@@ -24,7 +24,6 @@
 		598DCAB8285BC50C0018C4DB /* TravelerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DCAB7285BC50C0018C4DB /* TravelerProfileViewController.swift */; };
 		598FB443286A68D000CA404D /* DataDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB442286A68D000CA404D /* DataDemo.swift */; };
 		598FB445286A6B4300CA404D /* AlertNewPlaceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */; };
-		598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */; };
 		599979762872C2D200FA95B5 /* Accomodation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599979752872C2D200FA95B5 /* Accomodation.swift */; };
 		599979782872C2E800FA95B5 /* AccomodationCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599979772872C2E800FA95B5 /* AccomodationCreator.swift */; };
 		59B0168528517CB20047570D /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -79,7 +78,6 @@
 		598DCAB7285BC50C0018C4DB /* TravelerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelerProfileViewController.swift; path = ../controller/TravelerProfileViewController.swift; sourceTree = "<group>"; };
 		598FB442286A68D000CA404D /* DataDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDemo.swift; sourceTree = "<group>"; };
 		598FB444286A6B4300CA404D /* AlertNewPlaceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNewPlaceStrategy.swift; sourceTree = "<group>"; };
-		598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesNotificationStrategy.swift; sourceTree = "<group>"; };
 		599979752872C2D200FA95B5 /* Accomodation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accomodation.swift; sourceTree = "<group>"; };
 		599979772872C2E800FA95B5 /* AccomodationCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomodationCreator.swift; sourceTree = "<group>"; };
 		59C88FCC2860D5C200C12C74 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				5914A0F82873B5D900ED1200 /* DAO */,
 				59642AE2286E5A3F00702063 /* composite */,
 				B9B2ACFE286B3EE30048596E /* factory */,
-				598FB446286A6B7900CA404D /* NewPlacesNotificationStrategy.swift */,
 				593FC32C2861365800079B70 /* TravelerObserver.swift */,
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
@@ -363,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598FB447286A6B7900CA404D /* NewPlacesNotificationStrategy.swift in Sources */,
 				598D7231286D34E00011C61B /* Authenticator.swift in Sources */,
 				B9B2AD05286B42400048596E /* RestaurantCreator.swift in Sources */,
 				B9137DB8286BC4060061A0B2 /* TravelerProfileViewController.swift in Sources */,
