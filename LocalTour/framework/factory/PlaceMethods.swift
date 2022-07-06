@@ -9,10 +9,31 @@ import Foundation
 import UIKit
 
 protocol PlaceMethods {
-    func operation() -> String
-    
+    var iconName: String { get set }
+    var backgroundColor: UIColor { get set }
+    var aditionalInfoIcon: String { get set }
+    var aditionalInfo: String { get set }
+        
     func getIcon() -> String
     func getBackgroundColor() -> UIColor
     func getInfoIcon() -> String
     func getInfoText() -> String
+}
+
+extension PlaceMethods {
+    func getIcon() -> String {
+        return iconName
+    }
+    
+    func getBackgroundColor() -> UIColor {
+        return backgroundColor
+    }
+    
+    func getInfoIcon() -> String {
+        return aditionalInfoIcon
+    }
+    
+    func getInfoText() -> String {
+        return aditionalInfo
+    }
 }

@@ -9,6 +9,14 @@ import Foundation
 import UIKit
 
 class Place: PlaceMethods {
+    var iconName: String = ""
+    
+    var backgroundColor: UIColor = UIColor.white
+    
+    var aditionalInfoIcon: String = ""
+    
+    var aditionalInfo: String = ""
+    
     var id: Int
     var name: String
     var description: String
@@ -23,6 +31,7 @@ class Place: PlaceMethods {
     var lat: Float
     var date: Date
     var sustainableInfo: Component
+
     
     init (id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: Composite) {
 
@@ -41,10 +50,6 @@ class Place: PlaceMethods {
         self.date = Date()
         
         self.sustainableInfo = inputSustainableCategories
-//        for inputCategory in inputSustainableCategories {
-//            let sustainableCategory = SustainableInfo(name: inputCategory)
-//            self.sustainableInfo.add(component: sustainableCategory)
-//        }
         
         if !(self.userReviews.isEmpty) {
             computeScore()
@@ -94,22 +99,6 @@ class Place: PlaceMethods {
     func getSustainableInfo () -> [String] {
         return self.sustainableInfo.getSustainableInfo()
     }
-    
-    func operation() -> String {
-        return ""
-    }
-    
-    func getIcon() -> String {
-        return "Mural"
-    }
-    func getBackgroundColor() -> UIColor {
-        return UIColor(red: 19.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 0.3)
-    }
-    func getInfoIcon() -> String {
-        ""
-    }
-    func getInfoText() -> String {
-        ""
-    }
+        
 
 }
