@@ -16,7 +16,7 @@ class Place: PlaceMethods {
     var phoneNumber: String
     var address: String?
     var cnpj: String
-    var owner: String  // TODO: change to onwerID (cpf)
+    var owner: String  // TODO: change to ownerID (cpf)
     var imgName: String?
     var userReviews: [Review]
     var lon: Float
