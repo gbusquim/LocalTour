@@ -12,7 +12,7 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
 
     var data:DataDemo?
     private static var instance:DaoPlacesMemory?
-    private var travelerObservers = [TravelerObserverProtocol]()
+    private var travelerObservers = [TravelerObserver]()
     
     private init() {
         self.data = DataDemo.getInstance()

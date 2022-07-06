@@ -7,7 +7,7 @@
 
 import Foundation
 	
-protocol TravelerObserverProtocol {
+protocol TravelerObserver {
 
     func onUpdate(latestPlace: Place)
 	    

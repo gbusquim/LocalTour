@@ -13,7 +13,7 @@ extension Date {
         }
 }
 
-class Traveler:User, TravelerObserverProtocol {
+class Traveler:User, TravelerObserver {
     var lastLogin: Date?
     var knownPlaces: [Place]?
     var unreadNotifications: [String]?
