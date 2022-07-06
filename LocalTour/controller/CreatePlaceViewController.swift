@@ -33,7 +33,6 @@ CreatePlaceViewController: UIViewController {
         self.daoPlaces = DaoPlacesMemory.getInstance()
         // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func categoryChanged(_ sender: Any) {
         switch categoryField.text?.lowercased() {
@@ -72,8 +71,6 @@ CreatePlaceViewController: UIViewController {
             sustainableCategories.append("eco-friendly")
         }
         
-        // TODO: Fix this [Place Init Issue]
-//        dao?.addNewPlace(id: 30, name: nameField.text!, description: descriptionField.text!, phoneNumber: phoneNumberField.text!, address: adressField.text!, owner: "", cnpj: cnpjField.text!, imgName: "", userReviews: [], inputSustainableCategories: sustainableCategories, category: categoryField.text!)
         let composite = Composite()
         for inputCategory in sustainableCategories {
             if (inputCategory == "eco-friendly") {

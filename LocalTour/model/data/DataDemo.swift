@@ -27,8 +27,6 @@ class DataDemo {
     }
     
     func createTraveler(){
-//        traveler = Traveler(password: "t", email: "t", name: "traveler", cpf: "11111111")
-//        travelers.append(traveler!)
         let t1 = Traveler(password: "t", email: "t", name: "Mr. T", cpf: "11111111")
         travelers.append(t1)
         let t2 = Traveler(password: "t", email: "tom", name: "Thomas P.", cpf: "11111111")
@@ -45,14 +43,6 @@ class DataDemo {
     }
     
     func createPlaces(){
-//        var place = Place(id: 1, name: "Place1", description: "Decription Place 1", score: 5, phoneNumber: "99999999", adress: "Rua XXXX ")
-//        places.append(place)
-//        let p1 = Place(id: 1,name: "Armico 1",description: "Restaurant 1 e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "restaurants-big")
-//        let p2 = Place(id: 1,name: "Restaurant 2",description: "Restaurant 2 e bom",score: 2,phoneNumber: "123",address: "Rua b", imgName: "restaurants-big")
-//        let p3 = Place(id: 1,name: "Shopping 1",description: "Restaurant 3 e bom",score: 3,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
-//        let p4 = Place(id: 1,name: "Hostel 1",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "bed-big")
-//        let p5 = Place(id: 1,name: "Shopping 2",description: "Accomodation e bom",score: 1,phoneNumber: "123",address: "Rua b", imgName: "shopping-cart-big")
-        
         let restCrtr = RestaurantCreator()
         let shopCrtr = ShoppingCreator()
         let hotelCrtr = AccomodationCreator()
@@ -76,14 +66,6 @@ class DataDemo {
         
         let p4 = hotelCrtr.factoryMethod(id: 3, name: "Pousada do Rio", description: "Uma pousada aconchegante!", phoneNumber: "99874-1253", address: "Avenida Bartolomeu Mitre, 314", owner: "Joao", cnpj: "123", imgName: nil, userReviews: createReviewsP2(), inputSustainableCategories: rootComposite, additionalInfo: "Low Availability")
         places.append(p4)
-        
-        
-        
-//        places.append(p2)
-//        places.append(p3)
-//        places.append(p4)
-//        places.append(p5)
-        
     }
     
     func createReviewsP1() -> [Review] {

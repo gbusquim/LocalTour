@@ -62,18 +62,11 @@ class DaoUsersMemory:UsersDAO {
         self.data!.travelers.append(newTraveler)
     }
     
-    // TODO: Verify this idea
     func getCurrentUser() -> User {
         return self.currentUser!
     }
     func updateCurrentUser(_ user: User) {
         self.currentUser = user
     }
-    
-    // Get / Read Instances
-    // TODO: DELETE
-    func printUsers() {
-        print(self.data!.travelers)
-        print(self.data!.owners)
-    }
+
 }

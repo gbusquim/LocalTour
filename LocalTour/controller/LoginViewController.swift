@@ -25,14 +25,12 @@ class ViewController: UIViewController {
         
     }
 
-    
     @IBAction func login(_ sender: Any) {
         let email = emailField.text!
         let passwd = passwordField.text!
         
         if (self.authenticator!.authenticateUser(email, passwd, userType.selectedSegmentIndex)) {
             if (userType.selectedSegmentIndex ==  0) {
-                // TODO: TEMP REMOVE This global current user
                 self.daoUsers!.updateCurrentUser(self.daoUsers!.getTraveler(id: email)!)
                 self.daoUsers!.getCurrentUser().performLogin()
                 
@@ -42,7 +40,6 @@ class ViewController: UIViewController {
 
             }
             else if(userType.selectedSegmentIndex == 1) {
-                // TODO: TEMP REMOVE This global current user
                 self.daoUsers!.updateCurrentUser(self.daoUsers!.getOwner(id: email)!)
                 self.daoUsers!.getCurrentUser().performLogin()
                 

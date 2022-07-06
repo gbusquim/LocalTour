@@ -169,9 +169,9 @@
 				59689CC02861429E00EB98B1 /* ActivityObservable.swift */,
 				596D5E2D2875578400CF3DA1 /* NotificationsStrategy.swift */,
 				5914A0FB2873CFCE00ED1200 /* LoginAuthenticatonStrategy.swift */,
+				599DFCBB28756EB80037958F /* places */,
 				598DCAB5285BC2F40018C4DB /* User.swift */,
 				59C88FCC2860D5C200C12C74 /* Owner.swift */,
-				599DFCBB28756EB80037958F /* places */,
 				5914A0FD2873EB6600ED1200 /* Traveler.swift */,
 				B91742D0285A87710098AB01 /* Review.swift */,
 			);

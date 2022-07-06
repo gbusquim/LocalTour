@@ -11,11 +11,8 @@ import UIKit
 class Place: PlaceMethods {
     
     var iconName: String = ""
-    
     var backgroundColor: UIColor = UIColor.white
-    
     var aditionalInfoIcon: String = ""
-    
     var aditionalInfo: String = ""
     
     var id: Int
@@ -85,22 +82,9 @@ class Place: PlaceMethods {
             // Update Score
             self.computeScore()
         }
-//        else { TODO: ALERTA para fazer login
-//            ALERTA
-//        }
-        
-        // Notify owner
-//        notifyObserver(review:Review)
-        //   TODO: Posso usar o notify assim ou precisa ser sem parametros?
-        
-//        notifyObserver()
-//        // TODO: Usar assim e apenas passar o ultimo item da lista?
-//	
     }
     
     func getSustainableInfo () -> [String] {
         return self.sustainableInfo.getSustainableInfo()
     }
-        
-
 }

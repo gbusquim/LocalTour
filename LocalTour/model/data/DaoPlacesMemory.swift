@@ -51,16 +51,10 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
     func getNumberOfPlaces() -> Int! {
         return self.data?.places.count ?? 0
     }
-    
-    // TODO: Fix this
-    // TODO: Fix this [Place Init Issue]
+
     func addNewPlace(id: Int, name: String, description: String, phoneNumber: String, address: String, cnpj: String, userReviews: [Review], inputSustainableCategories: Composite, category: String, additionalInfo: String) {
-        // TODO: FIX THIS
-//    }
-//
-//    func addNewPlace(id: Int, name:String, description:String, phoneNumber: String, address: String, owner:String, cnpj:String, imgName:String? = "", userReviews:[Review]? = [], inputSustainableCategories: [String], category: String) {
+
         var place :Place
-        
         switch category {
             case "Restaurant" :
                 let creator = RestaurantCreator()
@@ -82,20 +76,10 @@ class DaoPlacesMemory: PlacesDAO, ActivityObservableProtocol {
 
     // Observer
     func registerObserver(_ traveler: Traveler) {
-//        let concreteTraveler:Traveler = traveler as! Traveler
-//        self.travelerObservers.append(concreteTraveler)
         self.travelerObservers.append(traveler)
     }
-
-    // TODO: Check error
-//    func removeObserver(_ traveler: Traveler) {
-//        if let index = self.travelerObservers.firstIndex(where: {$0.value == traveler}) {
-//            self.travelerObservers.remove(at: index)
-//        }
-//    }
     
     func notifyObserver(_ place: Place) {
-//        let places = self.getAllPlaces()
         self.travelerObservers.forEach({$0.onUpdate(latestPlace:place)})
     }
 

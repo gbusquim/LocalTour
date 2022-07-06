@@ -42,7 +42,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
         let place = filteredPlaces[indexPath.row]
         cell.resultLabel.text? = place.name
-        //TODO: alterar a imagem/cor de fundo de acordo com os dados do place
         cell.resultImage.image = UIImage(named: place.getIcon())
         cell.contentView.backgroundColor = place.getBackgroundColor()
 

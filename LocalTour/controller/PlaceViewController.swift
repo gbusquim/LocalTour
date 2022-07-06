@@ -8,9 +8,7 @@
 import UIKit
 
 class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-   
 
-    //TODO: Usar outro dado que nao o nome do lugar escolhido?
     var placeName = String()
     var selectedPlace:Place?
     var reviews:[Review] = []
@@ -112,7 +110,8 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     @IBAction func createReview(_ sender: Any) {
-        // TODO: Temporary solution to disable option for Owner to write a Review
+        // Basic solution to disable option for Owner to write a Review.
+        // But the ideal solution would be to disable and hide button
         if (self.daoUsers!.getCurrentUser().isLoggedIn() && self.daoUsers!.getCurrentUser() is Traveler) {
             performSegue(withIdentifier: "CreateReviewSegue", sender: self)
         }
