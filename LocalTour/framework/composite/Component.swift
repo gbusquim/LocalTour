@@ -11,13 +11,11 @@ protocol Component {
     
     func getSustainableInfo() -> [String]
     func add(component: Component)
+    func isComposite() -> Bool
 }
 
 extension Component {
     
     func add(component: Component) {}
 
-    func isComposite() -> Bool {
-        return false
-    }
 }

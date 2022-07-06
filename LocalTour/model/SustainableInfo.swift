@@ -32,4 +32,8 @@ class SustainableInfo: Component {
     func getSustainableInfo() -> [String] {
        return [imgPath]
     }
+    
+    func isComposite() -> Bool {
+        return false
+    }
 }
